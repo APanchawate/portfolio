@@ -116,7 +116,7 @@ function App() {
         <div className="section-head"><div><p className="kicker">EDUCATION & CERTIFICATIONS</p><h2>Academic foundation. <em>Applied expertise.</em></h2></div></div>
         <div className="case-grid">
           <article className="case"><div className="case-top"><span>EDUCATION</span></div><h3>MBA & Engineering (Operational Excellence)</h3><dl><div><dt>Institution</dt><dd>Hof University of Applied Sciences, Germany</dd></div><div><dt>Period</dt><dd>October 2022 – May 2025</dd></div><div><dt>Thesis</dt><dd>Master’s thesis grade: 1.3</dd></div></dl></article>
-          <article className="case"><div className="case-top"><span>CERTIFICATIONS</span></div><h3>Professional Certifications</h3><dl><div><dt>Completed</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate</dd></div></dl></article>
+          <article className="case"><div className="case-top"><span>CREDENTIALS</span></div><h3>Certifications</h3><dl><div><dt>Certified</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate<br/>Google Project Management Professional Certificate — Google</dd></div><div><dt>Professional Training</dt><dd>SAP S/4HANA — University coursework covering MM, PM, SD, PP and CO<br/>PMI Agile Certified Practitioner (PMI-ACP)® Exam Preparation — LinkedIn Learning<br/>ISTQB® Advanced Level Test Management (CTAL-TM) — Training in Progress</dd></div></dl></article>
         </div>
       </section>
 
