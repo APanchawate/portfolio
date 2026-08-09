@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ArrowDown, ArrowRight, BarChart3, Bot, Braces, CheckCircle2, ChevronRight, CircleDot, Code2, Contact, Download, ExternalLink, GitBranch, MapPin, Menu, Network, ShieldCheck, Sparkles, Target, X } from 'lucide-react'
+import { ArrowDown, ArrowRight, BarChart3, Bot, Braces, CheckCircle2, ChevronRight, CircleDot, Code2, MapPin, Menu, Network, ShieldCheck, Sparkles, Target, X } from 'lucide-react'
 
 const metrics = [
   ['7,000+', 'Test Cases Governed'], ['30+', 'Automation Scripts', 'Bulk Custom-Field Updates • Test-Evidence Management • Reporting Dashboards'], ['20+', 'Company codes'],
@@ -27,7 +27,7 @@ const cases = [
 ]
 
 const experience = [
-  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB) | Client Project', subtitle:'', role:'Test Management, Automation & Reporting', text:'Driving test-management operations, governance, reporting and automation within a complex global SAP S/4HANA Finance transformation.' },
+  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Driving test-management operations, governance, reporting and automation within a complex global SAP S/4HANA Finance transformation.' },
   { period:'Previous', company:'Bosch Powertrain Solutions', subtitle:'International Programs', role:'Project Management & SAP Processes', text:'Supported international project coordination and enterprise processes across SAP-enabled product and operational landscapes.' },
   { period:'Foundation', company:'UNR Engineering Technologies', subtitle:'Technology Delivery', role:'Junior IT Project Engineer', text:'Built an early foundation in technical project delivery, stakeholder support and structured problem solving.' },
 ]
@@ -68,9 +68,7 @@ function App() {
           <p className="location"><MapPin size={17}/> Munich, Germany</p>
           <div className="actions">
             <a className="button primary" href="#projects">View projects <ArrowDown size={17}/></a>
-            <a className="button icon-button" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Contact size={19}/></a>
-            <a className="button icon-button" href="https://github.com/APanchawate" target="_blank" rel="noreferrer" aria-label="GitHub"><GitBranch size={19}/></a>
-            <button className="button secondary" onClick={() => window.print()}><Download size={17}/> Download CV</button>
+            <a className="button secondary" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="3" fill="#0A66C2"/><path fill="#fff" d="M7.1 20.45H3.54V8.98H7.1v11.47zM5.32 7.41a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29z"/></svg> LinkedIn</a>
           </div>
         </div>
         <div className="hero-visual" aria-hidden="true">
@@ -117,7 +115,6 @@ function App() {
 
       <section className="contact section" id="contact">
         <div className="contact-glow"/><p className="kicker">LET’S BUILD WHAT’S NEXT</p><h2>Turning complex test-management processes into <em>automated, scalable and data-driven solutions.</em></h2><p>Interested in enterprise test transformation, intelligent automation or applied GenAI? Let’s connect.</p>
-        <div className="contact-actions"><a className="button primary" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer"><Contact size={18}/> Connect on LinkedIn <ExternalLink size={15}/></a><a className="button secondary" href="https://github.com/APanchawate" target="_blank" rel="noreferrer"><GitBranch size={18}/> Explore GitHub</a></div>
       </section>
     </main>
     <footer><a className="brand" href="#top"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate. Built with intent in Munich.</p><a href="#top">Back to top ↑</a></footer>
