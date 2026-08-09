@@ -79,7 +79,11 @@ function App() {
         </div>
       </section>
 
-      <section className="story-band" id="about">
+      <section className="section" id="about">
+        <div className="section-head"><div><p className="kicker">ABOUT ME</p><h2>Connecting delivery, data and <em>automation.</em></h2></div><p>I combine test management leadership, cross-functional project coordination and software automation to support large-scale SAP S/4HANA transformation programs. I lead and govern end-to-end testing activities across stakeholders, product teams and rollout markets—turning complex Jira/Xray processes and testing data into efficient workflows, reliable reporting and clear management insights.</p></div>
+      </section>
+
+      <section className="story-band">
         <p>MY PROFESSIONAL EVOLUTION</p>
         <div className="story-flow">{['Enterprise Test Management','Reporting & Analytics','Automation','Digital Transformation','GenAI'].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong>{i<4&&<ChevronRight/>}</div>)}</div>
       </section>
@@ -106,6 +110,14 @@ function App() {
       <section className="section experience" id="experience">
         <div className="section-head"><div><p className="kicker">EXPERIENCE</p><h2>From engineering delivery to <em>enterprise transformation.</em></h2></div></div>
         <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4><div>{e.text}</div></div></article>)}</div>
+      </section>
+
+      <section className="section" id="education">
+        <div className="section-head"><div><p className="kicker">EDUCATION & CERTIFICATIONS</p><h2>Academic foundation. <em>Applied expertise.</em></h2></div></div>
+        <div className="case-grid">
+          <article className="case"><div className="case-top"><span>EDUCATION</span></div><h3>MBA & Engineering (Operational Excellence)</h3><dl><div><dt>Institution</dt><dd>Hof University of Applied Sciences, Germany</dd></div><div><dt>Period</dt><dd>October 2022 – May 2025</dd></div><div><dt>Thesis</dt><dd>Master’s thesis grade: 1.3</dd></div></dl></article>
+          <article className="case"><div className="case-top"><span>CERTIFICATIONS</span></div><h3>Professional Certifications</h3><dl><div><dt>Completed</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate</dd></div></dl></article>
+        </div>
       </section>
 
       <section className="section tech" id="stack">
