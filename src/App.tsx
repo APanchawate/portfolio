@@ -27,7 +27,7 @@ const cases = [
 ]
 
 const experience = [
-  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Driving test-management operations, governance, reporting and automation within a complex global SAP S/4HANA Finance transformation.' },
+  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Leading and coordinating test-management activities across product teams, business testers, rollout markets and management stakeholders within a global SAP S/4HANA Finance transformation. Supporting end-to-end testing from acceptance testing and pre-UAT through UAT and regression testing, including execution governance, defect coordination, management reporting and Jira/Xray automation.', points:['Coordinating daily test execution, stakeholder follow-ups, blocker resolution and readiness tracking across distributed teams and rollout markets.','Establishing governance standards for test repositories, traceability, dashboards and reporting across 7,000+ test cases and 22 Finance Product Teams.','Providing decision-ready testing, defect and market-readiness reporting to management and market leadership, including CFO stakeholders.'] },
   { period:'Previous', company:'Bosch Powertrain Solutions', subtitle:'International Programs', role:'Project Management & SAP Processes', text:'Supported international project coordination and enterprise processes across SAP-enabled product and operational landscapes.' },
   { period:'Foundation', company:'UNR Engineering Technologies', subtitle:'Technology Delivery', role:'Junior IT Project Engineer', text:'Built an early foundation in technical project delivery, stakeholder support and structured problem solving.' },
 ]
@@ -53,7 +53,7 @@ function App() {
       <nav className={open ? 'nav open' : 'nav'} aria-label="Primary navigation">
         {nav.map(x => <a key={x} href={`#${x.toLowerCase()}`} onClick={close}>{x}</a>)}
       </nav>
-      <a className="nav-cta" href="#contact">Let’s connect <ArrowRight size={15}/></a>
+      <a className="nav-cta" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer">Let’s connect <ArrowRight size={15}/></a>
       <button className="menu" onClick={() => setOpen(!open)} aria-label="Toggle menu">{open ? <X/> : <Menu/>}</button>
     </header>
 
@@ -63,7 +63,7 @@ function App() {
           <div className="eyebrow"><span className="pulse"/> Available for transformative challenges</div>
           <p className="intro">HELLO, I’M</p>
           <h1>Akshay<br/><em>Panchawate.</em></h1>
-          <h2>Engineering Smarter Test Management <span>Through Automation</span></h2>
+          <h2>Leading Enterprise Test Management <span>Through Governance, Data & Automation</span></h2>
           <p className="hero-text">Test Management <b>•</b> SAP S/4HANA <b>•</b> Python/API Automation <b>•</b> Analytics <b>•</b> GenAI</p>
           <p className="location"><MapPin size={17}/> Munich, Germany</p>
           <div className="actions">
@@ -85,7 +85,7 @@ function App() {
 
       <section className="story-band">
         <p>MY PROFESSIONAL EVOLUTION</p>
-        <div className="story-flow">{['Enterprise Test Management','Reporting & Analytics','Automation','Digital Transformation','GenAI'].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong>{i<4&&<ChevronRight/>}</div>)}</div>
+        <div className="story-flow">{['Test Leadership & Governance','Reporting & Analytics','Automation','Digital Transformation','GenAI'].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong>{i<4&&<ChevronRight/>}</div>)}</div>
       </section>
 
       <section className="section snapshot">
@@ -99,7 +99,7 @@ function App() {
       </section>
 
       <section className="leadership section">
-        <div className="leadership-icon"><Network/></div><div><p className="kicker">TESTING LEADERSHIP & STAKEHOLDER COORDINATION</p><blockquote>“Driving daily test execution through close coordination with business testers, proactive follow-ups, blocker resolution and hands-on support, while coordinating defect assignees, business stakeholders and market teams to accelerate defect resolution.”</blockquote></div>
+        <div className="leadership-icon"><Network/></div><div><p className="kicker">TESTING LEADERSHIP & STAKEHOLDER COORDINATION</p><blockquote>Coordinating daily test execution across business testers, product teams and rollout markets—driving proactive follow-ups, resolving blockers and aligning defect owners and stakeholders to maintain delivery momentum.</blockquote></div>
       </section>
 
       <section className="section projects" id="projects">
@@ -109,7 +109,7 @@ function App() {
 
       <section className="section experience" id="experience">
         <div className="section-head"><div><p className="kicker">EXPERIENCE</p><h2>From engineering delivery to <em>enterprise transformation.</em></h2></div></div>
-        <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4><div>{e.text}</div></div></article>)}</div>
+        <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4><div>{e.text}</div>{'points' in e && <ul className="exp-points">{e.points?.map(point=><li key={point}>{point}</li>)}</ul>}</div></article>)}</div>
       </section>
 
       <section className="section" id="education">
