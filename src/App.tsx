@@ -2,18 +2,20 @@ import { useState } from 'react'
 import { ArrowDown, ArrowRight, BarChart3, Bot, Braces, CheckCircle2, ChevronRight, CircleDot, Code2, MapPin, Menu, Network, ShieldCheck, Sparkles, Target, X } from 'lucide-react'
 
 const metrics = [
-  ['7,000+', 'Test Cases Governed'], ['30+', 'Automation Scripts', 'Bulk Custom-Field Updates • Test-Evidence Management • Reporting Dashboards'], ['20+', 'Company codes'],
+  ['7,000+', 'Test Cases Governed'], ['30+', 'Automation Solutions', 'Bulk Custom-Field Updates • Test-Evidence Management • Reporting Dashboards'], ['20+', 'Company Codes'],
   ['22', 'Finance Product Teams'], ['400+', 'Test Plans / Test Executions'], ['100+', 'Jira/Xray dashboards'],
   ['≈100%', 'Dashboard Setup Automation', 'Jira/Xray • Python • REST APIs'], ['1,500+', 'Defects Tracked'],
 ]
 
 const capabilities = [
-  { icon: Target, title: 'UAT & Regression Testing', text: 'Structured planning, execution oversight and evidence-led validation across complex enterprise releases.' },
-  { icon: ShieldCheck, title: 'Test Governance', text: 'Scalable standards, repository controls, traceability and transparent quality gates across teams.' },
-  { icon: CheckCircle2, title: 'Test Execution', text: 'Daily orchestration, progress monitoring and hands-on support that keeps distributed teams moving.' },
-  { icon: CircleDot, title: 'Defect Management', text: 'End-to-end triage, ownership coordination and actionable reporting from discovery to closure.' },
-  { icon: BarChart3, title: 'Reporting & Analytics', text: 'Decision-ready dashboards, meaningful KPIs and consistent reporting for every stakeholder level.' },
-  { icon: Braces, title: 'Python / API Automation', text: 'Reliable tooling that removes repetitive administration and turns process into reusable capability.' },
+  { icon: Target, title: 'Test Strategy & Planning', text: 'Translating market scope into executable approaches, timelines, responsibilities, dependencies and Jira/Xray structures across Acceptance Testing, Pre-UAT, UAT and Regression Testing.' },
+  { icon: ShieldCheck, title: 'Readiness & Quality Gates', text: 'Coordinating scope, test-case readiness, tester availability, environments, authorisations and blockers using structured assessments and measurable entry/exit criteria.' },
+  { icon: CheckCircle2, title: 'Resource & Execution Control', text: 'Mapping testers to scope, defining tester-level deadlines and ramp-up curves, and monitoring planned-versus-actual execution across international markets.' },
+  { icon: CircleDot, title: 'Defect Lifecycle Coordination', text: 'Defect-quality review, triage coordination, ageing and ownership tracking, escalation, retesting and management decision support.' },
+  { icon: BarChart3, title: 'Reporting & KPI Ownership', text: 'Designing decision-ready KPI frameworks, automated dashboards and management reporting across markets, Product Teams, workstreams and testing statuses.' },
+  { icon: Network, title: 'Recovery & Escalation', text: 'Analysing schedule deviations and blockers, defining recovery actions, adjusting operational targets and supporting testing-window extension recommendations.' },
+  { icon: Bot, title: 'Training & Stakeholder Enablement', text: 'Training market testers on Jira/Xray execution, evidence, defects and governance standards while coordinating Product Teams and support partners.' },
+  { icon: Braces, title: 'Automation & Continuous Improvement', text: 'Converting recurring Test Management problems into reusable Python/API workflows, standardised reporting, repository controls and self-service tools.' },
 ]
 
 const cases = [
@@ -24,16 +26,17 @@ const cases = [
   { n:'05', title:'Test Repository Governance and Dashboard Automation', challenge:'Repository growth and dashboard demand made manual governance difficult to sustain.', role:'Governance model, automation strategy and rollout support.', approach:'Defined reusable structures, automated dashboard provisioning and introduced health checks for repository quality.', tech:'Jira · Xray · Python · JQL · REST APIs', scale:'7,000+ master cases and 100+ dashboards.', impact:'Approximately 100% automated dashboard setup and stronger portfolio-wide standards.' },
   { n:'06', title:'GenAI Knowledge and Test Management Assistant', challenge:'Teams needed quicker access to process knowledge without losing control or context.', role:'Use-case design, AI-agent configuration, knowledge grounding and implementation.', approach:'Built and implemented two project-specific AI agents for the team using BMW’s internal GenAI platform: one providing access to broader GFBB project knowledge and another focused on Test Management processes, status and updates. Both agents were grounded in project documentation to provide relevant and context-aware information.', tech:'Generative AI · AI Agents · Enterprise Knowledge Grounding · BMW GAIA', scale:'Two working AI agents supporting team members, management stakeholders and new joiners across project knowledge and Test Management use cases.', impact:'Improved access to project timelines, rollout information, UAT updates and Test Management knowledge, reducing dependency on manual Confluence searches and supporting faster onboarding and decision-making.' },
   { n:'07', title:'Confluence Live Dashboard Automation', challenge:'Testing KPI and management views required continuous manual updates across Jira and Confluence.', role:'Automation design, API integration and reporting workflow implementation.', approach:'Automated the creation and updating of Confluence reporting pages using Python and REST APIs, dynamically integrating Jira filter/JQL data to create live testing dashboards and continuously updated testing KPI and management views.', tech:'Python · REST APIs · Jira · JQL · Confluence', scale:'Reusable reporting pages connected to live Jira testing data.', impact:'Reduced manual reporting effort while keeping testing KPI and management views continuously current.' },
+  { n:'08', title:'Market UAT Planning, Readiness & Execution Control', challenge:'International rollout markets required a structured operating model to prepare and complete UAT within fixed programme timelines.', role:'Test planning, readiness coordination, tester-capacity planning, execution control and management decision support.', approach:'Translated market scope into executable test structures, mapped testers to business processes and test cases, established tester-level deadlines and expected ramp-up curves, and monitored planned-versus-actual progress. Coordinated blockers, defects, support requirements and recovery actions across markets, Product Teams, Workstream Leads, the BMW South Africa testing hub and technical partners.', tech:'Jira · Xray · JQL · Confluence · Excel · Power Query · Python · REST APIs', scale:'International SAP S/4HANA market rollouts across 20+ company codes and 22 Finance Product Teams.', impact:'Improved transparency of readiness, capacity, execution progress and emerging risks, enabling timely recovery actions and informed management decisions.' },
 ]
 
 const experience = [
-  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Leading and coordinating test-management activities across product teams, business testers, rollout markets and management stakeholders within a global SAP S/4HANA Finance transformation. Supporting end-to-end testing from acceptance testing and pre-UAT through UAT and regression testing, including execution governance, defect coordination, management reporting and Jira/Xray automation.', points:['Coordinating daily test execution, stakeholder follow-ups, blocker resolution and readiness tracking across distributed teams and rollout markets.','Establishing governance standards for test repositories, traceability, dashboards and reporting across 7,000+ test cases and 22 Finance Product Teams.','Providing decision-ready testing, defect and market-readiness reporting to management and market leadership, including CFO stakeholders.'] },
+  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Driving and coordinating operational Test Management activities across Finance Product Teams, business testers, rollout markets and management stakeholders within a global SAP S/4HANA Finance transformation. Supporting the complete testing lifecycle from Acceptance Testing and Pre-UAT through UAT and Regression Testing, including planning, readiness, execution control, tester coordination, defect governance, escalation, reporting and automation.', points:['Developing market- and release-specific testing plans, execution structures, responsibilities and ramp-up curves.','Coordinating tester assignments, training, availability and coverage gaps.','Monitoring planned versus actual execution and defining recovery actions.','Establishing repository, evidence, traceability, dashboard and reporting standards.','Providing management and market leadership with decision-ready testing, defect and readiness reporting.','Supporting conditional-start and go-live-with-conditions recommendations through testing evidence and risk analysis.'] },
   { period:'Previous', company:'Bosch Powertrain Solutions', subtitle:'International Programs', role:'Project Management & SAP Processes', text:'Supported international project coordination and enterprise processes across SAP-enabled product and operational landscapes.' },
   { period:'Foundation', company:'UNR Engineering Technologies', subtitle:'Technology Delivery', role:'Junior IT Project Engineer', text:'Built an early foundation in technical project delivery, stakeholder support and structured problem solving.' },
 ]
 
 const stack = [
-  ['Test & Project Management', 'Jira · Xray · Confluence · Tosca · Agile · Scrum · UAT · Regression Testing · Defect Management'],
+  ['Test & Project Management', 'Jira · Xray · JQL · Confluence · Tosca · UAT · Regression Testing · Test Readiness · Test Planning · Quality Gates · Resource Planning · Defect Triage · Management Reporting · Stakeholder Coordination · Continuous Improvement'],
   ['Automation & Backend', 'Python · REST APIs · FastAPI · SQL · SQLite · JSON'],
   ['Frontend & Testing', 'React · Next.js · TypeScript · Playwright'],
   ['DevOps & Development', 'GitHub · GitHub Actions · GitHub Copilot · CI/CD'],
@@ -63,7 +66,7 @@ function App() {
           <div className="eyebrow"><span className="pulse"/> Available for transformative challenges</div>
           <p className="intro">HELLO, I’M</p>
           <h1>Akshay<br/><em>Panchawate.</em></h1>
-          <h2>Leading Enterprise Test Management <span>Through Governance, Data & Automation</span></h2>
+          <h2>Driving Enterprise Test Management <span>Through Governance, Data & Automation</span></h2>
           <p className="hero-text">Test Management <b>•</b> SAP S/4HANA <b>•</b> Python/API Automation <b>•</b> Analytics <b>•</b> GenAI</p>
           <p className="location"><MapPin size={17}/> Munich, Germany</p>
           <div className="actions">
@@ -80,7 +83,7 @@ function App() {
       </section>
 
       <section className="section" id="about">
-        <div className="section-head"><div><p className="kicker">ABOUT ME</p><h2>Connecting delivery, data and <em>automation.</em></h2></div><p>I combine test management leadership, cross-functional project coordination and software automation to support large-scale SAP S/4HANA transformation programs. I lead and govern end-to-end testing activities across stakeholders, product teams and rollout markets—turning complex Jira/Xray processes and testing data into efficient workflows, reliable reporting and clear management insights.</p></div>
+        <div className="section-head"><div><p className="kicker">ABOUT ME</p><h2>Connecting delivery, data and <em>automation.</em></h2></div><p>I combine hands-on Test Management, cross-functional coordination and software automation to support large-scale SAP S/4HANA transformation programmes. I coordinate and operationalise end-to-end testing activities across stakeholders, Finance Product Teams and international rollout markets—covering planning, readiness, execution control, defect coordination, reporting and automation. I translate complex Jira/Xray processes and testing data into reliable workflows, transparent governance and decision-ready management insights.</p></div>
       </section>
 
       <section className="story-band">
@@ -99,7 +102,7 @@ function App() {
       </section>
 
       <section className="leadership section">
-        <div className="leadership-icon"><Network/></div><div><p className="kicker">TESTING LEADERSHIP & STAKEHOLDER COORDINATION</p><blockquote>Coordinating daily test execution across business testers, product teams and rollout markets—driving proactive follow-ups, resolving blockers and aligning defect owners and stakeholders to maintain delivery momentum.</blockquote></div>
+        <div className="leadership-icon"><Network/></div><div><p className="kicker">TESTING LEADERSHIP & STAKEHOLDER COORDINATION</p><blockquote>Coordinating daily test execution across market testers, Finance Product Teams, Workstream Leads, rollout organisations and technical partners—driving proactive follow-ups, blocker resolution, recovery actions and transparent reporting to maintain delivery momentum.</blockquote><p className="leadership-support">I independently organise cross-functional testing and defect meetings, prepare status material, document actions, track owners and deadlines, and escalate overdue items.</p></div>
       </section>
 
       <section className="section projects" id="projects">
@@ -116,7 +119,7 @@ function App() {
         <div className="section-head"><div><p className="kicker">EDUCATION & CERTIFICATIONS</p><h2>Academic foundation. <em>Applied expertise.</em></h2></div></div>
         <div className="case-grid">
           <article className="case"><div className="case-top"><span>EDUCATION</span></div><h3>MBA & Engineering (Operational Excellence)</h3><dl><div><dt>Institution</dt><dd>Hof University of Applied Sciences, Germany</dd></div><div><dt>Period</dt><dd>October 2022 – May 2025</dd></div><div><dt>Thesis</dt><dd>Master’s thesis grade: 1.3</dd></div></dl></article>
-          <article className="case"><div className="case-top"><span>CREDENTIALS</span></div><h3>Certifications</h3><dl><div><dt>Certified</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate<br/>Google Project Management Professional Certificate — Google</dd></div><div><dt>Professional Training</dt><dd>SAP S/4HANA — University coursework covering MM, PM, SD, PP and CO<br/>PMI Agile Certified Practitioner (PMI-ACP)® Exam Preparation — LinkedIn Learning<br/>ISTQB® Advanced Level Test Management (CTAL-TM) — Planned</dd></div></dl></article>
+          <article className="case"><div className="case-top"><span>CREDENTIALS</span></div><h3>Certifications</h3><dl><div><dt>Certified</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate<br/>Google Project Management Professional Certificate — Google</dd></div><div><dt>Professional Training</dt><dd>SAP S/4HANA — University coursework covering MM, PM, SD, PP and CO<br/>PMI Agile Certified Practitioner (PMI-ACP)® Exam Preparation — LinkedIn Learning<br/>ISTQB® Certified Tester Foundation Level (CTFL) — Planned</dd></div></dl></article>
         </div>
       </section>
 
