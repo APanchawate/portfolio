@@ -129,7 +129,14 @@ function App() {
       </section>
 
       <section className="contact section" id="contact">
-        <div className="contact-glow"/><p className="kicker">LET’S BUILD WHAT’S NEXT</p><h2>Turning complex test-management processes into <em>automated, scalable and data-driven solutions.</em></h2><p>Interested in enterprise test transformation, intelligent automation or applied GenAI? Let’s connect.</p>
+        <div className="contact-glow"/>
+        <p className="kicker">CONTACT</p>
+        <h2>Let’s <em>connect.</em></h2>
+        <p>Interested in Test Management, SAP transformation, intelligent automation or applied GenAI? I’m available for new opportunities from November 2026 and would be happy to discuss how I can contribute.</p>
+        <div className="contact-actions">
+          <a className="button primary" href="mailto:akshaysipune15@gmail.com">Email <ArrowRight size={17}/></a>
+          <a className="button secondary" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer">LinkedIn <ArrowRight size={17}/></a>
+        </div>
       </section>
     </main>
     <footer><a className="brand" href="#top"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate. Built with intent in Munich.</p><a href="#top">Back to top ↑</a></footer>
