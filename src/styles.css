@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 
-/* Expanded command center and leadership detail */
+/* Expanded command centre and leadership detail */
 @media (min-width:901px){.cap-grid{grid-template-columns:repeat(4,1fr)}.cap-card{min-height:310px;padding:26px}}
 .leadership-support{max-width:850px;margin:18px 0 0;color:var(--muted);font-size:13px;line-height:1.7}
 
