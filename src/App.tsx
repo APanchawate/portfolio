@@ -1,146 +1,187 @@
-import { useState } from 'react'
-import { ArrowDown, ArrowRight, BarChart3, Bot, Braces, CheckCircle2, ChevronRight, CircleDot, Code2, MapPin, Menu, Network, ShieldCheck, Sparkles, Target, X } from 'lucide-react'
-
-const metrics = [
-  ['7,000+', 'Test Cases Governed'], ['30+', 'Automation Solutions', 'Bulk Custom-Field Updates • Test-Evidence Management • Reporting Dashboards'], ['20+', 'Company Codes'],
-  ['22', 'Finance Product Teams'], ['400+', 'Test Plans / Test Executions'], ['100+', 'Jira/Xray dashboards'],
-  ['≈100%', 'Dashboard Setup Automation', 'Jira/Xray • Python • REST APIs'], ['1,500+', 'Defects Tracked'],
-]
-
-const capabilities = [
-  { icon: Target, title: 'Test Strategy Contribution & Planning', text: 'Translating market scope into executable approaches, timelines, responsibilities, dependencies and Jira/Xray structures across Acceptance Testing, Pre-UAT, UAT and Regression Testing.' },
-  { icon: ShieldCheck, title: 'Readiness & Quality Gates', text: 'Coordinating scope, test-case readiness, tester availability, environments, authorisations and blockers using structured assessments and measurable entry/exit criteria.' },
-  { icon: CheckCircle2, title: 'Resource & Execution Control', text: 'Mapping testers to scope, defining tester-level deadlines and ramp-up curves, and monitoring planned-versus-actual execution across international markets.' },
-  { icon: CircleDot, title: 'Defect Lifecycle Coordination', text: 'Defect-quality review, triage coordination, ageing and ownership tracking, escalation, retesting and management decision support.' },
-  { icon: BarChart3, title: 'Reporting & KPI Ownership', text: 'Designing decision-ready KPI frameworks, automated dashboards and management reporting across markets, Product Teams, workstreams and testing statuses.' },
-  { icon: Network, title: 'Recovery & Escalation', text: 'Analysing schedule deviations and blockers, defining recovery actions, adjusting operational targets and supporting testing-window extension recommendations.' },
-  { icon: Bot, title: 'Training & Stakeholder Enablement', text: 'Training market testers on Jira/Xray execution, evidence, defects and governance standards while coordinating Product Teams and support partners.' },
-  { icon: Braces, title: 'Automation & Continuous Improvement', text: 'Converting recurring Test Management problems into reusable Python/API workflows, standardised reporting, repository controls and self-service tools.' },
-]
-
-const cases = [
-  { n:'01', title:'Jira/Xray Test Management Automation', challenge:'High-volume test administration created repetitive work and inconsistent setup.', role:'Automation concept, process design and implementation.', approach:'Converted repeatable Jira/Xray activities into governed API workflows with validation and audit-friendly outputs.', tech:'Python · REST APIs · Jira · Xray · JSON', scale:'Enterprise test cycles spanning multiple teams and entities.', impact:'Faster setup, reduced manual effort and more consistent execution readiness.' },
-  { n:'02', title:'Market Testing and Management Analytics', challenge:'Distributed market activity required one dependable view of progress, risk and readiness.', role:'Test management coordination, reporting design and stakeholder management.', approach:'Delivered daily market-testing reporting for management and market leadership, including CFO stakeholders, combining overall and workstream/product-level test execution, all test statuses, defects and key testing KPIs using Jira/Xray filter and API-driven data.', tech:'Jira · Xray · JQL · REST APIs · Excel · Power Query · Power BI', scale:'20+ company codes and cross-functional market teams.', impact:'Enabled daily management visibility into testing progress, defects, risks and market readiness through consistent, data-driven reporting.' },
-  { n:'03', title:'Test Management Automation Hub', challenge:'Useful automation existed as separate scripts without a unified user experience.', role:'Product concept, solution architecture and full-stack delivery.', approach:'Created a modular hub that makes repeatable test-management workflows accessible through one interface.', tech:'React · TypeScript · FastAPI · Python · SQLite', scale:'Reusable workflows across test preparation, execution and reporting.', impact:'A scalable foundation for self-service operations and continuous process improvement.' },
-  { n:'04', title:'Automated Test-Case Creation', challenge:'Manual case creation was time intensive and vulnerable to formatting inconsistencies.', role:'Workflow analysis, automation design and quality controls.', approach:'Developed Python/API-driven workflows to extract test information from Confluence pages and generate structured Jira/Xray Test Cases, alongside bulk test-case creation and cloning from Excel-based inputs.', tech:'Python · REST APIs · Jira · Xray · Confluence · Excel · JSON', scale:'Thousands of structured test artefacts.', impact:'Accelerated test preparation while improving consistency and traceability.' },
-  { n:'05', title:'Test Repository Governance and Dashboard Automation', challenge:'Repository growth and dashboard demand made manual governance difficult to sustain.', role:'Governance model, automation strategy and rollout support.', approach:'Defined reusable structures, automated dashboard provisioning and introduced health checks for repository quality.', tech:'Jira · Xray · Python · JQL · REST APIs', scale:'7,000+ master cases and 100+ dashboards.', impact:'Approximately 100% automated dashboard setup and stronger portfolio-wide standards.' },
-  { n:'06', title:'GenAI Knowledge and Test Management Assistant', challenge:'Teams needed quicker access to process knowledge without losing control or context.', role:'Use-case design, AI-agent configuration, knowledge grounding and implementation.', approach:'Built and implemented two project-specific AI agents for the team using BMW’s internal GenAI platform: one providing access to broader GFBB project knowledge and another focused on Test Management processes, status and updates. Both agents were grounded in project documentation to provide relevant and context-aware information.', tech:'Generative AI · AI Agents · Enterprise Knowledge Grounding · BMW GAIA', scale:'Two working AI agents supporting team members, management stakeholders and new joiners across project knowledge and Test Management use cases.', impact:'Improved access to project timelines, rollout information, UAT updates and Test Management knowledge, reducing dependency on manual Confluence searches and supporting faster onboarding and decision-making.' },
-  { n:'07', title:'Confluence Live Dashboard Automation', challenge:'Testing KPI and management views required continuous manual updates across Jira and Confluence.', role:'Automation design, API integration and reporting workflow implementation.', approach:'Automated the creation and updating of Confluence reporting pages using Python and REST APIs, dynamically integrating Jira filter/JQL data to create live testing dashboards and continuously updated testing KPI and management views.', tech:'Python · REST APIs · Jira · JQL · Confluence', scale:'Reusable reporting pages connected to live Jira testing data.', impact:'Reduced manual reporting effort while keeping testing KPI and management views continuously current.' },
-  { n:'08', title:'Market UAT Planning, Readiness & Execution Control', challenge:'International rollout markets required a structured operating model to prepare and complete UAT within fixed programme timelines.', role:'Test planning, readiness coordination, tester-capacity planning, execution control and management decision support.', approach:'Translated market scope into executable test structures, mapped testers to business processes and test cases, established tester-level deadlines and expected ramp-up curves, and monitored planned-versus-actual progress. Coordinated blockers, defects, support requirements and recovery actions across markets, Product Teams, Workstream Leads, the BMW South Africa testing hub and technical partners.', tech:'Jira · Xray · JQL · Confluence · Excel · Power Query · Python · REST APIs', scale:'International SAP S/4HANA market rollouts across 20+ company codes and 22 Finance Product Teams.', impact:'Improved transparency of readiness, capacity, execution progress and emerging risks, enabling timely recovery actions and informed management decisions.' },
-]
+import Localized from './i18n/Localized'
+import ExploreDetails from './ExploreDetails'
+import AiExperience from './AiExperience'
+import { useEffect, useState } from 'react'
+import HeroActions from './DocumentActions'
+import { usePortfolioResources } from './resourceAssets'
+import { ExpertiseExplorer, ProfessionalOverview } from './RecruiterOverview'
+import BackToTop from './navigation/BackToTop'
+import SiteNavigation from './navigation/SiteNavigation'
+import FloatingBackToTop from './navigation/FloatingBackToTop'
+import { goToSection, handleSectionLink } from './navigation/sectionNavigation'
+import { careerAvailability } from './careerAvailability'
+import DecisionCentre from './decision-centre/DecisionCentre'
+import ProfessionalResources from './ProfessionalResources'
+import FeaturedCaseStudies from './FeaturedCaseStudies'
+import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
+import type { ShowcaseRequest } from './resourceLinks'
+import { ArrowRight, CalendarDays, Code2, MapPin, Plane, Workflow } from 'lucide-react'
 
 const experience = [
-  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', text:'Driving and coordinating operational Test Management activities across Finance Product Teams, business testers, rollout markets and management stakeholders within a global SAP S/4HANA Finance transformation. Supporting the complete testing lifecycle from Acceptance Testing and Pre-UAT through UAT and Regression Testing, including planning, readiness, execution control, tester coordination, defect governance, escalation, reporting and automation.', points:['Developing market- and release-specific testing plans, execution structures, responsibilities and ramp-up curves.','Coordinating tester assignments, training, availability and coverage gaps.','Monitoring planned versus actual execution and defining recovery actions.','Establishing repository, evidence, traceability, dashboard and reporting standards.','Providing management and market leadership with decision-ready testing, defect and readiness reporting.','Supporting conditional-start and go-live-with-conditions recommendations through testing evidence and risk analysis.'] },
-  { period:'Previous', company:'Bosch Powertrain Solutions', subtitle:'International Programmes', role:'Project Management & SAP Processes', text:'Supported international project coordination and enterprise processes across SAP-enabled product and operational landscapes.' },
+  { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', summary:'Coordinating international UAT delivery across business and technical stakeholders, with planning, progress tracking, management reporting and process modernization.', text:'Supporting Central and Market Rollout Managers through operational Test Management governance, coordination, automation and reporting within a global SAP S/4HANA Finance transformation. Supporting the complete testing lifecycle from Acceptance Testing and Pre-UAT through UAT and Regression Testing, including planning, readiness, execution control, tester coordination, defect governance, escalation, reporting and automation.', points:['Coordinating market- and release-specific test planning, readiness milestones and delivery commitments with Rollout Management and Finance Product Teams.','Aligning international testers and technical partners, tracking coverage gaps, risks and dependencies, and following up on execution progress.','Connecting business reporting needs with Jira/Xray configuration and automation to improve reporting consistency and reduce repetitive preparation.','Developing market- and release-specific testing plans, execution structures, responsibilities and ramp-up curves.','Coordinating tester assignments, training, availability and coverage gaps.','Monitoring planned versus actual execution and defining recovery actions.','Establishing repository, evidence, traceability, dashboard and reporting standards.','Providing management and market leadership with decision-ready testing, defect and readiness reporting.','Supporting release-readiness assessments through testing evidence and risk analysis; final approvals remain with authorized decision-makers.'] },
+  { period:'Previous', company:'Bosch Powertrain Solutions', subtitle:'International Programmes', role:'Project Management & SAP Processes', summary:'Supported international project coordination across SAP-enabled product and operational processes, connecting business and technical stakeholders on planning, progress and dependencies.', points:['Supported cross-functional planning, milestone and risk tracking, stakeholder communication and management reporting.','Contributed to process testing, documentation and reporting improvements to strengthen operational transparency and business/IT alignment.'], text:'Supported international project coordination and enterprise processes across SAP-enabled product and operational landscapes.' },
   { period:'Foundation', company:'UNR Engineering Technologies', subtitle:'Technology Delivery', role:'Junior IT Project Engineer', text:'Built an early foundation in technical project delivery, stakeholder support and structured problem solving.' },
 ]
 
+const opportunityRoles = [
+ 'Test Manager', 'Technical Test Manager', 'UAT / Test Coordinator',
+ 'Test Management Support', 'Defect Manager', 'QA Governance Specialist',
+ 'Automation Specialist', 'Jira/Xray Specialist', 'Process Automation Specialist',
+ 'IT Project / PMO Support',
+]
+const classifications = ['Partner system', 'Training', 'Test data', 'Implementation', 'New requirement', 'New minor requirement', 'Migration']
+const enterpriseMetrics = [
+  ['7,000+', 'Master Test Cases', 'Central reusable repository supported'],
+  ['22', 'Finance Product Teams', 'Cross-functional programme environment'],
+  ['400+', 'Test Plans / Executions', 'Repository and execution scope'],
+  ['', 'Automation Hub', 'Integrated Jira/Xray automation for test management, dashboards and reporting.'],
+]
+const stages = [
+  { title: 'Scope Preparation', objective: 'Turn rollout inputs into a proposed market-specific UAT scope.', contributions: ['Review company codes, rollout requirements, Finance Product coverage and the reusable master test-case repository.', 'Map reusable master cases, consolidate proposed market scope and identify potential coverage gaps.'], output: 'Draft UAT scope for review.', note: 'Business and implementation stakeholders own FIT/GAP analysis; I coordinate the downstream testing preparation.' },
+  { title: 'Business Validation', objective: 'Coordinate relevance reviews and test-case quality readiness.', contributions: ['Coordinate scope reviews with Central Finance Product Teams, market representatives and rollout stakeholders; track relevance decisions.', 'Identify missing GAP scenarios and support new test-case preparation and quality reviews.'], output: 'Reviewed scope and test-case quality readiness.', note: 'Finance Product Teams and business stakeholders determine scope relevance. Product Teams or implementation partners create required GAP cases; I coordinate the process and quality reviews, without independently approving business scope.' },
+  { title: 'Execution Readiness', objective: 'Prepare testers, commitments and Jira/Xray execution structures.', contributions: ['Coordinate tester allocation, responsibilities, access and execution prerequisites; check test-case quality and follow up on readiness gaps.', 'Prepare Jira/Xray Test Plans and Test Executions; agree execution due dates with testers and Workstream Leads and establish the planning baseline.', 'Align timelines and reporting expectations; support UAT kickoff and stakeholder alignment as a readiness milestone.'], output: 'Structured UAT execution setup.' },
+  { title: 'UAT Execution Monitoring', objective: 'Make progress, issues and follow-up priorities visible.', contributions: ['Monitor planned versus actual execution and changing test scope; track Pass, Fail, Executing and Blocked statuses in source reporting.', 'Follow up on defects, retesting, evidence requirements and test-data issues with testers, WS Leads and technical owners.', 'Coordinate workstream and market-level reporting, escalation and recovery discussions.'], output: 'Current testing status, issues and follow-up priorities.', note: 'Technical owners resolve defects; testers execute cases and capture appropriate evidence. I coordinate governance, monitoring and follow-up.' },
+  { title: 'Reporting & Stakeholder Follow-up', objective: 'Connect execution monitoring with structured management discussions.', contributions: ['Generate the automated 15-page UAT KPI reporting package to support monitoring and stakeholder follow-up.', 'Review overall execution trends, failure rates by workstream, defect evolution and workstream execution performance.', 'Communicate risks, remaining workload and outstanding actions; consolidate readiness evidence for accountable stakeholders.'], output: 'Consolidated management reporting and decision-support information.', note: 'Formal business acceptance, UAT sign-off and go-live authorization remain with authorized business and programme stakeholders.' },
+]
+const platformOwnershipDetails = [
+     ['Platform governance','Primary technical ownership of custom fields and testing-specific Jira/Xray setup. Configure filters, JQL, dashboards, reporting structures and KPI gadgets; automate through Jira REST APIs v2/v3 and Xray APIs.'],
+     ['Test repository governance','Maintain reusable master cases, organization and labels. Apply quality standards and templates, review test-case quality and support cross-market reuse. Product Teams or implementation partners create required GAP cases.'],
+     ['Regression governance','Prepare regression scope, case labels, Test Plans and dashboards. Coordinate execution monitoring and technical enablement with the dedicated automation team; that team owns Tosca scripts.'],
+     ['Defect governance','Configure Defect Classification and relevant Jira filters to support categorization, routing, test-data blocker monitoring, reporting and follow-up. Technical owners resolve defects; classification does not automatically establish root cause.'],
+    ]
 const stack = [
-  ['Test & Project Management', 'Jira · Xray · JQL · Confluence · Tosca · UAT · Regression Testing · Test Readiness · Test Planning · Quality Gates · Resource Planning · Defect Triage · Management Reporting · Stakeholder Coordination · Continuous Improvement'],
-  ['Automation & Backend', 'Python · REST APIs · FastAPI · SQL · SQLite · JSON'],
-  ['Frontend & Testing', 'React · Next.js · TypeScript · Playwright'],
-  ['DevOps & Development', 'GitHub · GitHub Actions · GitHub Copilot · CI/CD'],
-  ['Data & Reporting', 'Power BI · Excel · Power Query · VBA · JQL'],
-  ['Enterprise Transformation', 'SAP S/4HANA · SAP MM · SAP SD · SAP PP · SAP PLM/ECR'],
-  ['AI & Emerging Technologies', 'Generative AI · AI Agents'],
+ ['Test Management & Governance', 'UAT · Regression Testing · Defect Management · Test Planning · Traceability · Test-Case Quality · Management Reporting · Stakeholder Coordination'],
+ ['Jira/Xray Configuration & Administration', 'Custom fields · Testing-specific configuration · Repository governance · Test Plans & Executions · Filters · Dashboards · KPI gadgets · JQL · REST APIs'],
+ ['Engineering Technologies', 'Python · REST APIs · FastAPI · React / TypeScript · SQL / SQLite · Playwright · GitHub Actions · Self-hosted runners · GitHub · VS Code · CI/CD · JavaScript · Next.js · Excel Power Query · VBA'],
+ ['Hands-on AI Applications', 'AI coding assistance · GitHub Copilot · Prompt engineering · Knowledge assistant configuration · AI-assisted debugging · AI-supported documentation and reporting'],
+ ['Learning & Exploration', 'Exploring Azure cloud services, cloud-based workflow orchestration and AI agent development frameworks. Azure KPI reporting orchestration is planned, not deployed.'],
+ ['Enterprise Systems', 'SAP S/4HANA Finance programme exposure · International business testing · SAP-related delivery coordination · SAP module coursework'],
 ]
 
+function SectionHead({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
+ return <Localized>{<div className="section-head"><div><p className="kicker">{kicker}</p><h2>{title}</h2></div>{text && <p>{text}</p>}</div>}</Localized>
+}
 function App() {
-  const [open, setOpen] = useState(false)
-  const nav = ['About', 'Expertise', 'Projects', 'Experience', 'Stack', 'Contact']
-  const close = () => setOpen(false)
-  return <div className="app">
-    <div className="ambient one" /><div className="ambient two" />
-    <header className="nav-wrap">
-      <a className="brand" href="#top" aria-label="Home"><span>AP</span><i /></a>
-      <nav className={open ? 'nav open' : 'nav'} aria-label="Primary navigation">
-        {nav.map(x => <a key={x} href={`#${x.toLowerCase()}`} onClick={close}>{x}</a>)}
-      </nav>
-      <a className="nav-cta" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer">Let’s connect <ArrowRight size={15}/></a>
-      <button className="menu" onClick={() => setOpen(!open)} aria-label="Toggle menu">{open ? <X/> : <Menu/>}</button>
-    </header>
-
-    <main id="top">
-      <section className="hero section">
-        <div className="hero-copy reveal">
-          <div className="eyebrow"><span className="pulse"/> Available from November 2026 · Munich</div>
-          <p className="intro">HELLO, I’M</p>
-          <h1>Akshay<br/><em>Panchawate.</em></h1>
-          <h2>Driving Enterprise Test Management <span>Through Governance, Data & Automation</span></h2>
-          <p className="hero-text">Test Management <b>•</b> SAP S/4HANA <b>•</b> Python/API Automation <b>•</b> Analytics <b>•</b> GenAI</p>
-          <p className="location"><MapPin size={17}/> Munich, Germany</p>
-          <div className="actions">
-            <a className="button primary" href="#projects">View projects <ArrowDown size={17}/></a>
-            <a className="button secondary" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer"><svg width="23" height="23" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="3" fill="#0A66C2"/><path fill="#fff" d="M7.1 20.45H3.54V8.98H7.1v11.47zM5.32 7.41a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V8.98h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.29z"/></svg> LinkedIn</a>
-          </div>
-        </div>
-        <div className="hero-visual" aria-hidden="true">
-          <div className="orbit orbit-a"/><div className="orbit orbit-b"/>
-          <div className="core"><div className="core-logo">AP</div><span>TRANSFORM</span></div>
-          <div className="node n1"><Braces/>AUTOMATE</div><div className="node n2"><BarChart3/>ANALYSE</div><div className="node n3"><Bot/>AUGMENT</div>
-          <div className="code-card"><span>workflow.status</span><b>OPTIMISED</b><i>100%</i></div>
-        </div>
-      </section>
-
-      <section className="section" id="about">
-        <div className="section-head"><div><p className="kicker">ABOUT ME</p><h2>Connecting delivery, data and <em>automation.</em></h2></div><p>I combine hands-on Test Management, cross-functional coordination and software automation to support large-scale SAP S/4HANA transformation programmes. I coordinate and operationalise end-to-end testing activities across stakeholders, Finance Product Teams and international rollout markets—covering planning, readiness, execution control, defect coordination, reporting and automation. I translate complex Jira/Xray processes and testing data into reliable workflows, transparent governance and decision-ready management insights.</p></div>
-      </section>
-
-      <section className="story-band">
-        <p>MY PROFESSIONAL EVOLUTION</p>
-        <div className="story-flow">{['Test Leadership & Governance','Reporting & Analytics','Automation','Digital Transformation','GenAI'].map((x,i)=><div key={x}><span>0{i+1}</span><strong>{x}</strong>{i<4&&<ChevronRight/>}</div>)}</div>
-      </section>
-
-      <section className="section snapshot">
-        <div className="section-head"><div><p className="kicker">PROFESSIONAL SNAPSHOT</p><h2>Enterprise scale. <em>Measurable impact.</em></h2></div><p>Verified scope across test management, analytics and automation — translated into dependable delivery systems.</p></div>
-        <div className="metrics">{metrics.map(([v,l,supporting],i)=><div className="metric" key={l}><span>0{i+1}</span><strong>{v}</strong><p>{l}</p>{supporting && <small>{supporting}</small>}</div>)}</div>
-      </section>
-
-      <section className="section command" id="expertise">
-        <div className="section-head"><div><p className="kicker">TEST MANAGEMENT COMMAND CENTRE</p><h2>Control complexity.<br/><em>Enable confident decisions.</em></h2></div><p>A connected operating model covering governance, delivery, insights and automation.</p></div>
-        <div className="cap-grid">{capabilities.map(({icon:Icon,title,text},i)=><article className="cap-card" key={title}><div className="cap-number">0{i+1}</div><Icon className="cap-icon"/><h3>{title}</h3><p>{text}</p><div className="line"/></article>)}</div>
-      </section>
-
-      <section className="leadership section">
-        <div className="leadership-icon"><Network/></div><div><p className="kicker">TESTING LEADERSHIP & STAKEHOLDER COORDINATION</p><blockquote>Coordinating daily test execution across market testers, Finance Product Teams, Workstream Leads, rollout organisations and technical partners—driving proactive follow-ups, blocker resolution, recovery actions and transparent reporting to maintain delivery momentum.</blockquote><p className="leadership-support">I independently organise cross-functional testing and defect meetings, prepare status material, document actions, track owners and deadlines, and escalate overdue items.</p></div>
-      </section>
-
-      <section className="section projects" id="projects">
-        <div className="section-head"><div><p className="kicker">SELECTED PORTFOLIO</p><h2>Systems built to <em>move work forward.</em></h2></div><p>Confidentiality-safe case studies focused on transferable challenges, approaches and outcomes.</p></div>
-        <div className="case-grid">{cases.map(c=><article className="case" key={c.title}><div className="case-top"><span>{c.n}</span><Sparkles size={18}/></div><h3>{c.title}</h3><dl><div><dt>Challenge</dt><dd>{c.challenge}</dd></div><div><dt>My role</dt><dd>{c.role}</dd></div><div><dt>Approach</dt><dd>{c.approach}</dd></div><div><dt>Technology</dt><dd>{c.tech}</dd></div><div><dt>Scale</dt><dd>{c.scale}</dd></div><div><dt>Impact</dt><dd>{c.impact}</dd></div></dl></article>)}</div>
-      </section>
-
-      <section className="section experience" id="experience">
-        <div className="section-head"><div><p className="kicker">EXPERIENCE</p><h2>From engineering delivery to <em>enterprise transformation.</em></h2></div></div>
-        <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4><div>{e.text}</div>{'points' in e && <ul className="exp-points">{e.points?.map(point=><li key={point}>{point}</li>)}</ul>}</div></article>)}</div>
-      </section>
-
-      <section className="section" id="education">
+ const [open, setOpen] = useState(false)
+ const [showcaseRequest, setShowcaseRequest] = useState<ShowcaseRequest | null>(null)
+ const assets = usePortfolioResources()
+ useEffect(() => {
+  const revealHash = () => { try { const id = decodeURIComponent(window.location.hash.slice(1)); if (id) goToSection(id) } catch { /* Ignore malformed URL fragments. */ } }
+  const frame = requestAnimationFrame(revealHash)
+  window.addEventListener('hashchange', revealHash); window.addEventListener('popstate', revealHash)
+  return () => { cancelAnimationFrame(frame); window.removeEventListener('hashchange', revealHash); window.removeEventListener('popstate', revealHash) }
+ }, [])
+ return <Localized>{<div className="app">
+  <a className="skip-link" href="#main">Skip to content</a>
+  <div className="ambient one"/><div className="ambient two"/>
+  <SiteNavigation open={open} onToggle={() => setOpen(!open)} onClose={() => setOpen(false)} cv={assets.cv} presentation={assets.presentation}/>
+  <main id="main" tabIndex={-1}>
+   <section className="hero section" id="top" tabIndex={-1}>
+    <div className="hero-copy reveal">
+     <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
+     <p className="intro">AKSHAY PANCHAWATE</p>
+     <h1>Enterprise Test Management &amp; <em>Automation Specialist</em></h1>
+     <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
+     <p className="hero-text">I combine enterprise Test Management governance with hands-on Python automation and AI-assisted engineering, supporting international SAP S/4HANA Finance rollouts through UAT coordination, Jira/Xray technical ownership, automated reporting and knowledge-driven workflows.</p>
+     <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
+     <HeroActions assets={assets}/>
+    </div>
+    <aside className="governance-visual enterprise-hero-panel" aria-label="Enterprise experience and contribution">
+     <p className="kicker">BUSINESS GOVERNANCE. TECHNICAL OWNERSHIP.</p><h2>Enterprise context.<br/><em>Hands-on delivery.</em></h2>
+     <div className="hero-enterprise-metrics">{enterpriseMetrics.map(([value,label,note])=><div key={label}>{label === 'Automation Hub' ? <Workflow className="hub-metric-icon" size={32} aria-hidden="true"/> : <strong>{value}</strong>}<h3>{label}</h3><p>{note}</p></div>)}</div>
+     <p className="visual-foot">Core member of a two-person internal Central Test Management team, with primary technical ownership of testing-specific Jira/Xray configurations, repository governance and automation solutions.</p>
+    </aside>
+   </section>
+   <ProfessionalOverview/>
+   <ExpertiseExplorer/>
+   <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
+   <OperatingModel/>
+   <FeaturedCaseStudies/>
+   <ScopeEngineering/>
+   <ParallelRollouts/>
+   <section className="section" id="expertise" tabIndex={-1}>
+    <SectionHead kicker="A HANDS-ON DIFFERENTIATOR" title="Jira/Xray Platform & Test Repository Governance" text="Primary technical ownership of testing-specific configuration, repository standards and automation, with business relevance validated by Product Teams and markets."/>
+    <div className="cap-grid platform-governance-grid">{[
+      ['Repository Governance', 'Reusable master cases, quality standards and cross-market coverage.'],
+      ['Test Execution Governance', 'Structured Jira/Xray plans, executions and tester commitments.'],
+      ['Reporting & Dashboards', 'Consistent filters, automated dashboards and management visibility.'],
+      ['Regression Management', 'Coordinated scope, reusable coverage and automation-team collaboration.'],
+    ].map(([title,text],i)=><article className="cap-card" key={title}><span className="cap-number">0{i+1}</span><h3>{title}</h3><p>{text}</p><div className="line"/></article>)}</div>
+    <ExploreDetails heading="Explore Jira/Xray Technical Ownership"><dl className="disclosure-definition-list">{platformOwnershipDetails.map(([title,text])=><div key={title}><dt>{title}</dt><dd>{text}</dd></div>)}</dl>
+    <div className="workflow" aria-label="From requirements to management visibility">{['Business / testing requirements','Jira/Xray configuration','Test Plans & Executions','Jira filters','Automated dashboards & KPI gadgets','Management visibility'].map((step,i)=><div key={step}><span>{step}</span>{i<5 && <ArrowRight size={18} aria-hidden="true"/>}</div>)}</div>
+    <div className="configuration-example" id="defect-classification" tabIndex={-1}><div><p className="kicker">CONFIGURATION IN PRACTICE</p><h3>Defect Classification</h3><p>I created this seven-category custom Jira field to support structured categorization, dashboard filtering, reporting and follow-up. It does not automatically establish root cause or make me the technical resolution owner.</p></div><ul className="classification-list">{classifications.map(label=><li key={label}>{label}</li>)}</ul></div>
+    </ExploreDetails>
+    <p className="governance-value">Standardized structures and reporting help reduce repetitive administration, prepare market-specific testing views and give stakeholders relevant information for parallel testing activities.</p>
+   <BackToTop/>
+   </section>
+   <section className="section approach" id="approach" tabIndex={-1}>
+    <SectionHead kicker="A CONNECTED DELIVERY RECIPE" title="My Enterprise UAT Management Recipe" text="From market-specific scope preparation to execution monitoring and stakeholder reporting."/>
+    <div className="lifecycle-rails"><span>Stakeholder alignment</span><span>Traceability</span><span>Risk reporting</span></div>
+    <ol className="lifecycle uat-recipe" aria-label="Five connected stages of my UAT management recipe">{stages.map((stage,i)=><li key={stage.title}><span className="stage-number">0{i+1}</span><h3>{stage.title}</h3><p>{stage.objective}</p><p className="stage-output"><strong>Management output</strong>{stage.output}</p></li>)}</ol>
+    <ExploreDetails heading="Explore UAT Methodology">{stages.map((stage,i)=><div className="methodology-detail" key={stage.title}><h3>{stage.title}</h3><ul>{stage.contributions.map(text=><li key={text}>{text}</li>)}</ul>{i===3 && <p>I created the <a href="#defect-classification" onClick={event => handleSectionLink(event, 'defect-classification')}>Defect Classification dropdown field</a> to support consistent categorization and reporting.</p>}{stage.note && <p className="ownership-note">{stage.note}</p>}</div>)}</ExploreDetails>
+    <div className="lifecycle-loop"><p>Defect management, retesting, evidence capture and reporting overlap execution. The reporting package supports both UAT monitoring and stakeholder follow-up.</p><p><a className="text-link" href="#reporting-transformation" onClick={event => handleSectionLink(event, 'reporting-transformation')}>Explore the 15-page reporting framework <ArrowRight size={15} aria-hidden="true"/></a></p></div>
+    <div className="industry-practices" role="group" aria-labelledby="industry-practices-title">
+      <h3 id="industry-practices-title">Industry-Aligned Test Management Practices</h3>
+      <div className="industry-practices-grid">{[
+        ['Test Planning & Control', 'UAT scope, tester and Workstream Lead alignment, agreed execution due dates, readiness and execution baselines.'],
+        ['Test Monitoring & Reporting', 'Daily and weekly cumulative execution tracking, scope changes, overdue cases, Jira/Xray dashboards and management reporting.'],
+        ['Defect & Quality Management', 'Defect classification, triage coordination, Jira filters, test-data blockers, retesting and evidence completeness.'],
+        ['Test Completion & Readiness', 'Execution status, outstanding defects, evidence quality, residual risks and reporting to support Rollout Management decisions.'],
+      ].map(([title, description]) => <article key={title}><h4>{title}</h4><p>{description}</p></article>)}</div>
+      <p className="industry-practices-note">Reflects established testing principles described in ISTQB syllabi, adapted to practical enterprise UAT delivery.</p>
+    </div>
+   <BackToTop/>
+   </section>
+   <DecisionCentre showcaseRequest={showcaseRequest}/>
+   <section className="section experience" id="experience" tabIndex={-1}>
+    <SectionHead kicker="PROFESSIONAL EXPERIENCE" title="From engineering delivery to enterprise transformation."/>
+    <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4>{'points' in e ? <><p>{e.summary}</p><ul className="exp-points">{e.points?.slice(0,3).map(point=><li key={point}>{point}</li>)}</ul><ExploreDetails heading="Explore Responsibilities & Achievements"><p>{e.text}</p>{(e.points?.length ?? 0)>3 && <ul className="exp-points">{e.points?.slice(3).map(point=><li key={point}>{point}</li>)}</ul>}</ExploreDetails></> : <div>{e.text}</div>}</div></article>)}</div>
+   <BackToTop/>
+   </section>
+   <section className="section tech" id="stack" tabIndex={-1}>
+    <SectionHead kicker="TECHNICAL ENABLERS" title="Technology that reinforces governance." text="Hands-on automation and configuration complement delivery coordination. Tosca development belongs to the dedicated automation team; my SAP experience is in programme delivery and business testing."/>
+    <div className="stack-grid">{stack.map(([title,items],i)=><article key={title}><div><Code2 size={18} aria-hidden="true"/><span>0{i+1}</span></div><h3>{title}</h3><ExploreDetails heading="Explore Tools & Experience" summary={['UAT, quality governance and stakeholder coordination.', 'Testing-specific configuration, repository standards and reporting.', 'Python/API development, application delivery and automation infrastructure.', 'Implemented AI support for coding, knowledge access and communication.', 'Learning and planned workflows; Azure reporting orchestration is not deployed.', 'SAP programme delivery and business-testing exposure.'][i]}><p>{items}</p></ExploreDetails></article>)}</div>
+    <AiExperience/>
+   <BackToTop/>
+   </section>
+      <section className="section" id="education" tabIndex={-1}>
         <div className="section-head"><div><p className="kicker">EDUCATION & CERTIFICATIONS</p><h2>Academic foundation. <em>Applied expertise.</em></h2></div></div>
         <div className="case-grid">
           <article className="case"><div className="case-top"><span>EDUCATION</span></div><h3>MBA & Engineering (Operational Excellence)</h3><dl><div><dt>Institution</dt><dd>Hof University of Applied Sciences, Germany</dd></div><div><dt>Period</dt><dd>October 2022 – May 2025</dd></div><div><dt>Thesis</dt><dd>Master’s thesis grade: 1.3</dd></div></dl></article>
           <article className="case"><div className="case-top"><span>CREDENTIALS</span></div><h3>Certifications</h3><dl><div><dt>Certified</dt><dd>Lean Six Sigma Green Belt<br/>Atlassian Agile Project Management Professional Certificate<br/>Google Project Management Professional Certificate — Google</dd></div><div><dt>Professional Training</dt><dd>SAP S/4HANA — University coursework covering MM, PM, SD, PP and CO<br/>PMI Agile Certified Practitioner (PMI-ACP)® Exam Preparation — LinkedIn Learning<br/>ISTQB® Certified Tester Foundation Level (CTFL) — Planned</dd></div></dl></article>
         </div>
-      </section>
+      <BackToTop/>
+   </section>
 
-      <section className="section tech" id="stack">
-        <div className="section-head"><div><p className="kicker">TECHNOLOGY STACK</p><h2>Tools selected for <em>real outcomes.</em></h2></div><p>Enterprise platforms, engineering tools and emerging technologies connected into pragmatic solutions.</p></div>
-        <div className="stack-grid">{stack.map(([title,items],i)=><article key={title}><div><Code2 size={18}/><span>0{i+1}</span></div><h3>{title}</h3><p>{items}</p></article>)}</div>
-      </section>
 
-      <section className="contact section" id="contact">
-        <div className="contact-glow"/>
-        <p className="kicker">CONTACT</p>
-        <h2>Let’s <em>connect.</em></h2>
-        <p>Interested in Test Management, SAP transformation, intelligent automation or applied GenAI? I’m available for new opportunities from November 2026 and would be happy to discuss how I can contribute.</p>
-        <div className="contact-actions">
-          <a className="button primary" href="mailto:akshaysipune15@gmail.com">Email <ArrowRight size={17}/></a>
-          <a className="button secondary" href="https://www.linkedin.com/in/akshaypanchawate/" target="_blank" rel="noreferrer">LinkedIn <ArrowRight size={17}/></a>
-        </div>
-      </section>
-    </main>
-    <footer><a className="brand" href="#top"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate. Built with intent in Munich.</p><a href="#top">Back to top ↑</a></footer>
-  </div>
+   <ProfessionalResources assets={assets} onExplore={target => setShowcaseRequest({ target })}/>
+   <section className="section opportunities" id="opportunities" aria-labelledby="opportunities-title" tabIndex={-1}>
+    <div className="opportunities-panel">
+     <h2 id="opportunities-title">Open to my next opportunity</h2>
+     <p className="availability-summary">{careerAvailability.summary}</p>
+     <p>Actively exploring new professional opportunities in enterprise testing, QA governance, technical coordination and automation. Open to hands-on specialist positions as well as consulting and coordination responsibilities.</p>
+     <p className="opportunities-strengths">Enterprise Test Management · Stakeholder coordination · Jira/Xray governance · Python/API automation</p>
+     <ul className="opportunity-roles" aria-label="Roles of interest">{opportunityRoles.map(role=><li key={role}>{role}</li>)}</ul>
+     <dl className="career-mobility-details">
+      <div><dt><CalendarDays size={17} aria-hidden="true"/> Availability</dt><dd>{careerAvailability.date}</dd></div>
+      <div><dt><MapPin size={17} aria-hidden="true"/> Location &amp; Relocation</dt><dd>{careerAvailability.relocationDetail}</dd></div>
+      <div><dt><Plane size={17} aria-hidden="true"/> Business Travel</dt><dd>{careerAvailability.travelDetail}</dd></div>
+     </dl>
+     <div className="language-development" role="group" aria-labelledby="languages-title">
+      <h3 id="languages-title">Languages &amp; Development</h3>
+      <dl className="language-grid">
+       <div><dt>English <span>— Fluent</span></dt><dd>Professional working language.</dd></div>
+       <div><dt>German <span>— B1 Certified</span></dt><dd>Actively improving German proficiency through continued learning and speaking practice, with the goal of progressing beyond B1.</dd></div>
+      </dl>
+     </div>
+    </div>
+   <BackToTop/>
+   </section>
+   <section className="contact section" id="contact" tabIndex={-1}><div className="contact-glow"/><p className="kicker">CONTACT</p><h2>Let’s discuss <em>your transformation.</em></h2><p>Enterprise Test Management, UAT governance, Jira/Xray configuration and business readiness — supported by practical automation.</p><p className="availability-summary">{careerAvailability.summary}</p><div className="contact-actions"><a className="button primary" href="mailto:akshaysipune15@gmail.com">Email / Request CV <ArrowRight size={17}/></a><a className="button secondary" href="#resources">CV &amp; Presentation <ArrowRight size={17}/></a></div><BackToTop/>
+   </section>
+  </main>
+  <FloatingBackToTop menuOpen={open}/>
+  <footer><a className="brand" href="#top" aria-label="Back to home"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate.<span className="footer-availability">{careerAvailability.summary}</span></p><a href="#top" onClick={event => handleSectionLink(event, 'top')}>Back to top ↑</a></footer>
+ </div>}</Localized>
 }
-
 export default App
