@@ -124,3 +124,7 @@ The default view keeps business summaries, methodology diagrams, expertise/AI ca
 ## English and German
 
 The navbar now offers EN / DE. English is the first-visit default; a stored German preference persists where localStorage is available. Central, type-checked dictionaries in `src/i18n/` translate presentation text, dynamic messages and accessibility labels while retaining English scenario identifiers, control values and all original English documents. Resources explicitly identifies document language. The [language-switcher QA report](docs/language-switcher-qa.md) describes maintenance, changed files, 37 passing tests and the outstanding browser visual/state-switch review.
+
+## Shorter default view
+
+Supporting operating-model context, full case-study narratives, regional activity descriptions and advanced Decision Centre configuration now use the existing disclosure system. Main diagrams, six expertise/AI cards, primary chart/KPIs, resources and contact remain accessible without opening supporting detail. See [the shorter-portfolio QA report](docs/shorter-portfolio-qa.md) for the modified-file list, retained-content audit, 40 passing tests and the distinction between measured text reduction and unverified browser page height.

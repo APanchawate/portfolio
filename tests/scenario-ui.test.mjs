@@ -94,7 +94,7 @@ test('executive overview has three KPIs, a single four-card module navigation an
   assert.equal((overview.match(/<dd>/g)||[]).length,3)
   assert.equal((html.match(/aria-label="Decision Centre modules"/g)||[]).length,1)
   for(const label of ['UAT Execution','Defect &amp; Quality Risks','Release Readiness','International Rollouts'])assert(html.includes(`class="dc-navigation-title">${label}`))
-  const accordion=html.match(/<details class="scenario-controls dc-advanced-settings"([^>]*)>([\s\S]*?)<\/details>/)
+  const accordion=html.match(/<details class="explore-details dc-advanced-exploration"([^>]*)>([\s\S]*?)<\/details>/)
   assert(accordion);assert(!accordion[1].includes('open'))
   for(const label of ['Scenario preset','Market','Finance Product','Reporting date','Scenario assumptions'])assert(accordion[2].includes(label))
   const status=html.match(/<div class="scenario-state-line"><p role="status">([\s\S]*?)<\/p>/)[1]
@@ -207,7 +207,7 @@ test('optional details collapse by default while diagrams, summaries, AI cards a
   for(const text of ['Repository Governance','Test Execution Governance','Reporting &amp; Dashboards','Regression Management'])assert.equal(closedAncestorsAt(html,html.indexOf(`>${text}</h3>`)),0,text)
   assert(closedAncestorsAt(html,html.indexOf('id="defect-classification"'))>0)
   assert(closedAncestorsAt(html,html.indexOf('id="reporting-framework-title"'))>0)
-  for(const heading of ['Explore Collaboration Details','Explore Scope Engineering Methodology','Explore International Delivery Approach','Explore Jira/Xray Technical Ownership','Explore UAT Methodology','Explore Responsibilities &amp; Achievements'])assert(html.includes(heading),heading)
+  for(const heading of ['Explore Detailed Operating Model','Explore Scope Engineering Methodology','Explore International Delivery Details','Explore Jira/Xray Technical Details','Explore Complete UAT Methodology','Explore Responsibilities &amp; Achievements'])assert(html.includes(heading),heading)
 })
 test('detailed source content remains available without duplicating the reporting or AI showcase',()=>{
   globalThis.__testMainModule=0;globalThis.__testSubView=0
@@ -242,4 +242,23 @@ test('verified presentation assets give direct consistent PDF actions and a sepa
   }
   assert(resources.includes('href="/portfolio/resources/enterprise-test-management.pptx" download="Akshay-Panchawate-Test-Management.pptx"'))
   assert(resources.includes('Download PowerPoint'));assert(!resources.includes('presentation-options'))
+})
+
+test('shorter defaults retain five scope stages, all original detail and direct access to the primary chart',()=>{
+ globalThis.__testMainModule=0;globalThis.__testSubView=0
+ const html=renderToStaticMarkup(React.createElement(App))
+ const scope=html.slice(html.indexOf('class="scope-process"'),html.indexOf('Explore Scope Engineering Methodology'))
+ assert.equal((scope.match(/<li>/g)||[]).length,5)
+ for(const marker of ['class="expertise-navigation-grid"','class="ai-experience-grid"','class="dc-overview-kpis"','class="uat-chart due-chart"','class="due-toolbar"','id="resources"','id="contact"'])assert.equal(closedAncestorsAt(html,html.indexOf(marker)),0,marker)
+ assert(closedAncestorsAt(html,html.indexOf('class="overview-card-grid"'))>0)
+ assert(closedAncestorsAt(html,html.indexOf('class="uat-tabs dc-navigation-cards"'))>0)
+ assert(closedAncestorsAt(html,html.indexOf('class="due-metrics"'))>0)
+ for(const region of content.rolloutRegions)assert(html.includes(escapedText(region.activity)),region.name)
+ assert.equal((html.match(/class="case featured-case"/g)||[]).length,4)
+ assert(!/<details[^>]*class="case-supporting-project"/.test(html))
+ assert(!/<details[^>]*class="scope-example"/.test(html))
+ const centre=html.slice(html.indexOf('id="decision-centre"'),html.indexOf('id="experience"'))
+ assert.equal((centre.match(/Scenario preset<select/g)||[]).length,1)
+ assert.equal((centre.match(/class="uat-chart due-chart"/g)||[]).length,1)
+ assert(centre.includes('Explore Advanced Decision Centre'))
 })

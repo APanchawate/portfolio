@@ -1,3 +1,4 @@
+import ExploreDetails from './ExploreDetails'
 import Localized from './i18n/Localized'
 import { ArrowUpRight, BarChart3, BrainCircuit, ClipboardCheck, Globe2, Settings2, ShieldCheck, Workflow } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
@@ -19,12 +20,12 @@ function NavigationCard({ card }: { card: ExplorationCard }) {
 }
 export function ProfessionalOverview() {
   return <Localized>{<section className="section recruiter-overview" id="about" tabIndex={-1} aria-labelledby="overview-title"><p className="kicker">PROFESSIONAL OVERVIEW</p><h2 id="overview-title">Enterprise understanding. Technical delivery.</h2>
-    <div className="overview-card-grid">{[
+    <ExploreDetails heading="Explore Professional Profile"><div className="overview-card-grid">{[
       { title: 'Enterprise UAT Governance', text: 'International SAP S/4HANA Finance testing, market scope, execution monitoring, evidence and defect follow-up.', icon: ShieldCheck, destination: 'scope-engineering' },
       { title: 'Jira/Xray Technical Ownership', text: 'Configuration, custom fields, repository standards, dashboards, filters and regression infrastructure.', icon: Settings2, destination: 'expertise' },
       { title: 'Automation Engineering', text: 'An integrated Hub, Python/APIs, FastAPI, React/TypeScript, SQLite, reporting and AI-assisted workflows.', icon: Workflow, destination: 'automation-hub', expandCase: true },
     ].map(card => <NavigationCard key={card.title} card={card}/>)}</div>
-    <details className="overview-context"><summary>Professional context</summary><p>Within a two-person internal Central Test Management team, I support Rollout Management, Finance Product Teams and markets with testing preparation, execution commitments, evidence and stakeholder follow-up.</p><p>I am the primary technical owner of testing-specific Jira/Xray configuration and custom fields, maintain the reusable master repository and develop automation for execution setup and reporting.</p></details><BackToTop/>
+    <div className="overview-context"><h3>Professional context</h3><p>Within a two-person internal Central Test Management team, I support Rollout Management, Finance Product Teams and markets with testing preparation, execution commitments, evidence and stakeholder follow-up.</p><p>I am the primary technical owner of testing-specific Jira/Xray configuration and custom fields, maintain the reusable master repository and develop automation for execution setup and reporting.</p></div></ExploreDetails><BackToTop/>
   </section>}</Localized>
 }
 export function ExpertiseExplorer() {

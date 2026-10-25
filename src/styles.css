@@ -950,3 +950,55 @@ html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages but
 .hero .intro{margin-bottom:12px}
 .hero-capabilities+.hero-text{margin-top:10px}
 @media(max-width:600px){.hero-capabilities{font-size:10px;line-height:1.7}}
+
+/* Recruiter-first density: same cards and typography, less default vertical space. */
+.section:not(.hero):not(.opportunities):not(.contact):not(.professional-resources){padding-block:48px}
+#about.recruiter-overview{padding-block:24px}
+#scope-engineering,#rollouts,#expertise,#approach,#experience,#stack,#education,#operating-model{padding-block:36px}
+.section-head{margin-bottom:22px}
+.section-return{margin-top:14px;padding-top:4px}
+.overview-context>h3{font:600 15px/1.6 Manrope;color:#d2e1f3}
+.platform-governance-grid .cap-card{padding:20px}
+.cap-ident{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--cyan)}
+.platform-governance-grid .cap-card h3{font-size:17px;margin:14px 0 8px}
+.platform-governance-grid .cap-card p{font-size:13px;margin:0}
+.platform-governance-grid .cap-card .line{margin-top:16px}
+.featured-case{padding:22px}
+.featured-case>dl>div{padding:10px 0;grid-template-columns:110px minmax(0,1fr);gap:10px}
+.featured-case h3{margin-block:16px 14px}
+.case-supporting-project>h4,.reporting-logic>h6,.scope-example>h3,.rollout-timeline-details>h3{font:600 14px/1.6 Manrope;color:var(--cyan);margin:16px 0 10px}
+.scope-process{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.scope-process>li{padding:18px}
+.regional-rollout-cards article{padding:18px}
+.regional-rollout-cards h3{margin-bottom:0}
+.lifecycle.uat-recipe>li:nth-child(n){padding:16px}
+.lifecycle.uat-recipe p{margin-bottom:0}
+.stack-grid .skill-preview{font-size:12px;line-height:1.7;margin:10px 0;color:#c9d9ec}
+.stack-grid .explore-details{margin-top:8px}
+.ai-experience-grid{gap:12px}
+.ai-experience-card{padding:16px}
+.ai-experience-card h4{margin-block:10px 6px}
+.dc-advanced-exploration{margin:16px 0 20px}
+.dc-advanced-exploration .dc-advanced-settings{padding:14px;margin-top:14px}
+.dc-advanced-settings>h4{font:600 13px/1.6 Manrope;color:#d2e1f3;margin:0 0 10px}
+.dc-advanced-exploration .dc-simulation-settings{margin-bottom:0}
+.decision-centre .scenario-state-line{margin:12px 0}
+.decision-centre .scenario-state-line>p{font-size:11px;color:var(--muted)}
+.due-execution>.explore-details{margin-top:12px}
+@media(max-width:1100px){.scope-process{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.scope-process>li:not(:last-child):after{display:none}}
+@media(max-width:600px){
+ .section:not(.hero):not(.opportunities):not(.contact):not(.professional-resources){padding-block:32px}
+ #about.recruiter-overview{padding-block:20px}
+ .section-head{margin-bottom:18px;gap:12px}
+ .scope-process{grid-template-columns:1fr;gap:12px}
+ .scope-process>li{padding:14px 16px;display:flex;align-items:baseline;gap:12px}
+ .scope-process h3{margin:0}
+ .featured-case>dl>div{grid-template-columns:1fr;gap:4px;padding-block:8px}
+ .featured-case,.platform-governance-grid .cap-card{padding:18px}
+ .regional-rollout-cards article{padding:16px}
+ .lifecycle.uat-recipe>li:nth-child(n){padding:18px}
+ .section-return{margin-top:12px}
+}
+
+/* Technical Enablers show all card content without disclosure controls. */
+.stack-grid article>p+p{margin-top:10px}

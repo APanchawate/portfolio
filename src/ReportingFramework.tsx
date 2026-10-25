@@ -22,7 +22,7 @@ export default function ReportingFramework() {
     <p>Four key management views within an automated reporting package.</p>
     <div className="reporting-view-grid">{views.map(view => <article key={view.title} className="reporting-view-card">
       <view.icon size={20} aria-hidden="true"/><h5>{view.title}</h5><p>{view.description}</p>
-      <details><summary>View reporting logic<span className="uat-sr-only"> — {view.title}</span></summary><p className="report-original-title">Report: {view.original}</p><p>{view.detail}</p></details>
+      <div className="reporting-logic"><h6>View reporting logic<span className="uat-sr-only"> — {view.title}</span></h6><p className="report-original-title">Report: {view.original}</p><p>{view.detail}</p></div>
     </article>)}</div>
     <p className="reporting-boundary">One integrated 15-page package; these four views are representative. The other eleven pages are not specified here. Descriptions only — no original client charts, report figures or templates are reproduced.</p>
   </div>}</Localized>

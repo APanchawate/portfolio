@@ -12,7 +12,7 @@ import DueDateExecution from './DueDateExecution'
 import RiskIntelligence from './RiskIntelligence'
 import ScenarioReadiness from './scenario/ScenarioReadiness'
 import ScopeChanges from './scenario/ScopeChanges'
-import ScenarioControls from './scenario/ScenarioControls'
+import ScenarioControls, { ScenarioSummary } from './scenario/ScenarioControls'
 import { ScenarioProvider, useScenario } from './scenario/ScenarioContext'
 import MarketGovernance from './MarketGovernance'
 import { interpretations } from './data'
@@ -59,8 +59,8 @@ function DecisionCentreContent({ showcaseRequest }: { showcaseRequest?: Showcase
     <div className="dc-surface">
       <p className="dc-disclaimer dc-compact-disclaimer">Interactive demonstration · Synthetic data<span className="uat-sr-only"> — not actual client or programme performance.</span></p>
       <div className="dc-overview-kpis"><Kpis items={[['Execution Progress', percent(metrics.executionCompletion)], ['Open Defects', metrics.openDefects], ['Test Scope', metrics.scope]]}/></div>
-      <Tabs labels={navigationLabels} cards={navigationCards} label="Decision Centre modules" active={active} onChange={setActive} onActivate={() => setRequestedFocus('dc-module-content')}>
-        <ScenarioControls hasGadgetChanges={gadgetModified}/>
+      <ScenarioSummary hasGadgetChanges={gadgetModified}/>
+      <Tabs navigationWrapper={navigation => <ExploreDetails heading="Explore Advanced Decision Centre" className="dc-advanced-exploration">{navigation}<ScenarioControls hasGadgetChanges={gadgetModified} embedded hideSummary/></ExploreDetails>} labels={navigationLabels} cards={navigationCards} label="Decision Centre modules" active={active} onChange={setActive} onActivate={() => setRequestedFocus('dc-module-content')}>
         <h3 className="dc-module-title" id="dc-module-content" tabIndex={-1}>{modules[active]}</h3>
         <div key={epoch} onChangeCapture={() => setGadgetModified(true)}>{active === 0 ? <ExecutionControl active={executionView} onChange={setExecutionView}/> : active === 1 ? <RiskIntelligence key={riskKey} requestedView={riskView}/> : active === 2 ? <Tabs labels={['Readiness Assessment','Risk Drivers']} label="Readiness gadgets" active={readinessView} onChange={setReadinessView}><ScenarioReadiness drivers={readinessView===1}/></Tabs> : <MarketGovernance/>}</div>
       </Tabs>

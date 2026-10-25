@@ -22,6 +22,6 @@ export default function AiExperience() {
         <p>My contribution: knowledge-source organization, agent instruction configuration, prompt design, testing and refinement, and practical application in daily work. Configuration uses an existing AI platform; foundation models and AI infrastructure are provided by that platform. The assistants support knowledge access and leave enterprise decisions with accountable stakeholders.</p>
       </ExploreDetails>}
     </article>)}</div>
-    <p className="ai-experience-note">The first five areas reflect implemented and used applications. Azure reporting orchestration is being explored and is not deployed. Engineering tools provide implementation, execution, storage and testing; AI assistants support development and knowledge access.</p>
+    <ExploreDetails heading="Explore AI Engineering Context"><p className="ai-experience-note">The first five areas reflect implemented and used applications. Azure reporting orchestration is being explored and is not deployed. Engineering tools provide implementation, execution, storage and testing; AI assistants support development and knowledge access.</p></ExploreDetails>
   </div>}</Localized>
 }

@@ -128,6 +128,12 @@ test('coordination and transformation positioning is visible in both languages w
  const history=english.slice(english.indexOf('id="experience"'),english.indexOf('id="stack"'))
  assert(history.includes('Test Management, Automation &amp; Reporting'));assert(history.includes('Project Management &amp; SAP Processes'));assert(history.includes('Junior IT Project Engineer'))
  for(const period of ['Current','Previous','Foundation'])assert(history.includes(period))
- for(const phrase of ['delivery commitments','risks and dependencies','business/IT alignment','Explore Responsibilities &amp; Achievements'])assert(history.includes(phrase),phrase)
+ for(const phrase of ['execution commitments','risks and dependencies','business/IT alignment','Explore Responsibilities &amp; Achievements'])assert(history.includes(phrase),phrase)
  assert(german.includes('Meilenstein- und Risikoverfolgung'))
+})
+
+test('shorter-view disclosure labels and case summaries are translated without altering document access',()=>{
+ const english=render(App,'en'),german=render(App,'de')
+ for(const [en,de]of [['Explore Advanced Decision Centre','Erweiterte Funktionen des Decision Centre'],['Explore Detailed Operating Model','Detailliertes Betriebsmodell ansehen'],['Explore Complete UAT Methodology','Vollständige UAT-Methodik ansehen'],['Explore Execution KPI Breakdown','Detaillierte Durchführungskennzahlen ansehen'],['Developed an integrated Hub to centralize repeatable testing workflows.','Einen integrierten Hub zur Bündelung wiederholbarer Testmanagement-Workflows entwickelt.']]){assert(english.includes(en),en);assert(german.includes(de),de)}
+ for(const html of [english,german]){assert.equal((html.match(/class="ai-experience-card"/g)||[]).length,6);assert.equal((html.match(/class="stage-number"/g)||[]).length,5)}
 })
