@@ -13,6 +13,7 @@ import { careerAvailability } from './careerAvailability'
 import DecisionCentre from './decision-centre/DecisionCentre'
 import ProfessionalResources from './ProfessionalResources'
 import FeaturedCaseStudies from './FeaturedCaseStudies'
+import DeliveryImpactStories from './DeliveryImpactStories'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
 import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, MapPin, Plane, Repeat2, ShieldCheck, Workflow } from 'lucide-react'
@@ -97,6 +98,7 @@ function App() {
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <OperatingModel/>
    <FeaturedCaseStudies/>
+   <DeliveryImpactStories/>
    <ScopeEngineering/>
    <ParallelRollouts/>
    <section className="section" id="expertise" tabIndex={-1}>
