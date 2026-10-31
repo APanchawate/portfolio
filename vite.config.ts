@@ -14,6 +14,6 @@ export default defineConfig({
       },
     },
   }],
-  base: '/portfolio/',
+  base: '/',
   build: { rolldownOptions: { output: { codeSplitting: { groups: [{ name: 'translations', test: /src\/i18n\/(?:en|de)\.ts$/ }] } } } },
 })
