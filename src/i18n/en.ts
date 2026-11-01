@@ -1513,7 +1513,12 @@ const en = {
   "warm_contact_1": "Let’s build something",
   "warm_contact_2": "valuable together.",
   "warm_contact_text": "Whether you’re strengthening programme governance, improving delivery visibility or exploring practical automation and AI, I’d be happy to learn about your challenge.",
-  "warm_contact_action": "Start a conversation"
+  "warm_contact_action": "Start a conversation",
+  "portrait_aria": "Portrait of Akshay Panchawate",
+  "portrait_alt": "Akshay Panchawate in professional attire",
+  "portrait_line_1": "Management clarity.",
+  "portrait_line_2": "Hands-on delivery.",
+  "portrait_roles": "PMO · Transformation · Automation"
 } as const
 export default en
 export type TranslationKey = keyof typeof en

@@ -1513,6 +1513,11 @@ const de = {
   "warm_contact_1": "Lassen Sie uns gemeinsam etwas",
   "warm_contact_2": "Wertvolles schaffen.",
   "warm_contact_text": "Ob Sie Programm-Governance stärken, Umsetzungstransparenz verbessern oder praktische Automatisierung und KI erkunden möchten – ich freue mich, mehr über Ihre Herausforderung zu erfahren.",
-  "warm_contact_action": "Gespräch beginnen"
+  "warm_contact_action": "Gespräch beginnen",
+  "portrait_aria": "Porträt von Akshay Panchawate",
+  "portrait_alt": "Akshay Panchawate in professioneller Kleidung",
+  "portrait_line_1": "Klarheit im Management.",
+  "portrait_line_2": "Praktische Umsetzung.",
+  "portrait_roles": "PMO · Transformation · Automatisierung"
 } satisfies Record<TranslationKey, string>
 export default de
