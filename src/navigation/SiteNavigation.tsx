@@ -6,7 +6,7 @@ import { resourceFiles, resourceUrl } from '../resourceAssets'
 import type { AssetState } from '../resourceAssets'
 import { handleSectionLink } from './sectionNavigation'
 
-export const navigationItems = [['Home', 'top'], ['About', 'about'], ['Expertise', 'portfolio-guide'], ['Projects', 'projects'], ['Experience', 'experience'], ['Contact', 'contact']] as const
+export const navigationItems = [['Home', 'top'], ['Projects', 'projects'], ['Expertise', 'portfolio-guide'], ['About', 'about'], ['Experience', 'experience'], ['Contact', 'contact']] as const
 const menuItems = [...navigationItems.slice(0, 5), ['Resources', 'resources'] as const, ['Live Demo', 'decision-centre'] as const, ...navigationItems.slice(5)]
 const navigationGroup: Record<string, string> = { top: 'top', about: 'about', 'portfolio-guide': 'portfolio-guide', 'explore-expertise': 'portfolio-guide', 'operating-model': 'portfolio-guide', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'portfolio-guide', approach: 'portfolio-guide', 'decision-centre': 'decision-centre', experience: 'experience', stack: 'portfolio-guide', education: 'experience', resources: 'resources', opportunities: 'contact', contact: 'contact' }
 
