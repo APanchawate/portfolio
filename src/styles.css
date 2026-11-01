@@ -9,6 +9,8 @@ a{color:inherit;text-decoration:none}
 button{font:inherit}
 button,a,summary{-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+/* Section links move focus for screen-reader context; do not draw a page-sized control outline. */
+main[tabindex="-1"]:focus,main section[tabindex="-1"]:focus{outline:none}
 p{line-height:1.75}
 h1,h2,h3,h4{font-family:Manrope,sans-serif}
 h1,h2,h3{overflow-wrap:break-word}
@@ -154,7 +156,8 @@ dd{overflow-wrap:anywhere;margin:0;color:var(--muted);font-size:13px;line-height
 .contact>p:not(.kicker){color:var(--muted);font-size:14px;max-width:700px;margin-inline:auto}
 .contact-actions{justify-content:center}
 .contact-glow{position:absolute;width:350px;height:180px;background:#4f57ff;opacity:.1;filter:blur(90px);left:50%;top:80px;transform:translateX(-50%);pointer-events:none}
-footer{max-width:1180px;margin:auto;padding:28px 24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:24px;color:var(--muted);font-size:11px}
+footer{width:100%;max-width:1180px;margin:auto;padding:28px 24px;border-top:1px solid var(--line);display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;color:var(--muted);font-size:11px}
+footer>p{max-width:760px;margin:0 0 0 auto;text-align:right}
 
 @media(max-width:1000px){.hero{gap:28px;grid-template-columns:1.2fr 1fr}
 .governance-visual{padding:24px}
@@ -212,7 +215,8 @@ footer{max-width:1180px;margin:auto;padding:28px 24px;border-top:1px solid var(-
 .actions .button{width:100%}
 .configuration-example{padding:22px}
 .technical-project{padding:12px 20px}
-footer{flex-direction:column;gap:12px;text-align:center}
+footer{grid-template-columns:1fr;justify-items:center;gap:12px;text-align:center}
+footer>p{margin:0;text-align:center}
 .contact h2{font-size:35px}
 }
 
