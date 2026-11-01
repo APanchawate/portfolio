@@ -81,9 +81,9 @@ function App() {
     <div className="hero-copy reveal">
      <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
      <p className="intro">AKSHAY PANCHAWATE</p>
-     <h1>Enterprise Test Management &amp; <em>Automation Specialist</em></h1>
+     <h1>Enterprise Technology.<br/><em>Automation &amp; AI.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
-     <p className="hero-text">I combine enterprise Test Management governance with hands-on Python automation and AI-assisted engineering, supporting international SAP S/4HANA Finance rollouts through UAT coordination, Jira/Xray technical ownership, automated reporting and knowledge-driven workflows.</p>
+     <p className="hero-text">I bridge business operations and technical engineering to make complex enterprise transformations easier to deliver. From international SAP S/4HANA testing governance to Python automation, management intelligence and practical AI solutions, my focus is measurable execution and clarity.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
@@ -93,12 +93,12 @@ function App() {
      <p className="visual-foot">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
     </aside>
    </section>
+   <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
+   <FeaturedCaseStudies/>
    <PortfolioPathways/>
    <ProfessionalOverview/>
    <ExpertiseExplorer/>
-   <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <OperatingModel/>
-   <FeaturedCaseStudies/>
    <ScopeEngineering/>
    <ParallelRollouts/>
    <section className="section" id="expertise" tabIndex={-1}>
