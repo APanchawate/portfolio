@@ -6,7 +6,7 @@ const pillars = [
   { title: 'Enterprise Test Management', summary: 'International UAT governance, readiness, execution and defect coordination.', href: 'projects', Icon: ClipboardCheck },
   { title: 'Automation Engineering', summary: 'Python, Jira/Xray APIs, Playwright and repeatable testing workflows.', href: 'automation-hub', Icon: Workflow },
   { title: 'Reporting & Test Intelligence', summary: 'Management KPIs, dashboard automation, defect trends and execution visibility.', href: 'reporting-transformation', Icon: ChartNoAxesCombined },
-  { title: 'AI & Digital Transformation', summary: 'Enterprise knowledge assistants and practical AI-assisted engineering.', href: 'ai-engineering', Icon: BrainCircuit },
+  { title: 'AI & Digital Transformation', summary: 'Enterprise knowledge assistants and practical AI-assisted engineering.', href: 'explore-expertise', Icon: BrainCircuit },
 ] as const
 
 export default function PortfolioPathways() {
