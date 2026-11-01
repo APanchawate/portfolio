@@ -1495,7 +1495,25 @@ const en = {
   "copy_676b4468efbb": "Product Teams and markets validate business relevance; my focus is reliable technical configuration and reusable testing structures.",
   "copy_f42a286064f7": "A structured working approach: prepare scope, validate readiness, monitor agreed execution commitments and report exceptions.",
   "copy_a82b03aca714": "Where Central Test Management contributes and how Rollout Managers, Product Teams, Workstream Leads and testers collaborate.",
-  "copy_797f01d5f86d": "Business challenges, my contribution and operational value—with technical implementation available on demand."
+  "copy_797f01d5f86d": "Business challenges, my contribution and operational value—with technical implementation available on demand.",
+  "warm_hero": "I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.",
+  "warm_note": "I enjoy turning complexity into clear plans, useful automation and momentum that teams can feel.",
+  "warm_kicker": "HOW I WORK",
+  "warm_title_1": "Structured delivery.",
+  "warm_title_2": "Human collaboration.",
+  "warm_intro": "I combine disciplined programme execution with an approachable working style—so stakeholders understand what matters, teams know what comes next and progress stays visible.",
+  "warm_collaborative": "Collaborative",
+  "warm_collaborative_text": "I connect business, project and technical teams around shared outcomes.",
+  "warm_structured": "Structured",
+  "warm_structured_text": "I turn complex work into clear priorities, ownership and next steps.",
+  "warm_curious": "Curious",
+  "warm_curious_text": "I keep exploring better processes, practical automation and responsible AI.",
+  "warm_dependable": "Dependable",
+  "warm_dependable_text": "I follow through, communicate risks early and keep delivery visible.",
+  "warm_contact_1": "Let’s build something",
+  "warm_contact_2": "valuable together.",
+  "warm_contact_text": "Whether you’re strengthening programme governance, improving delivery visibility or exploring practical automation and AI, I’d be happy to learn about your challenge.",
+  "warm_contact_action": "Start a conversation"
 } as const
 export default en
 export type TranslationKey = keyof typeof en

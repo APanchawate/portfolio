@@ -1495,6 +1495,24 @@ const de = {
   "copy_676b4468efbb": "Product Teams und Märkte validieren die fachliche Relevanz; mein Schwerpunkt liegt auf verlässlicher technischer Konfiguration und wiederverwendbaren Teststrukturen.",
   "copy_f42a286064f7": "Ein strukturiertes Vorgehen: Testumfang vorbereiten, Testbereitschaft validieren, vereinbarte Ausführungszusagen überwachen und Abweichungen berichten.",
   "copy_a82b03aca714": "Wo das zentrale Testmanagement beiträgt und wie Rollout Manager, Product Teams, Workstream Leads und Tester zusammenarbeiten.",
-  "copy_797f01d5f86d": "Geschäftliche Herausforderungen, mein Beitrag und operativer Nutzen – mit technischen Details bei Bedarf."
+  "copy_797f01d5f86d": "Geschäftliche Herausforderungen, mein Beitrag und operativer Nutzen – mit technischen Details bei Bedarf.",
+  "warm_hero": "Ich bringe Menschen, Pläne, Daten und Technologie zusammen, um komplexe Unternehmenstransformationen leichter umsetzbar zu machen. Von internationaler SAP S/4HANA-Governance bis zu praktischer Automatisierung und KI liegt mein Fokus auf klarer Verantwortung, sicheren Entscheidungen und messbarem Fortschritt.",
+  "warm_note": "Ich verwandle Komplexität gerne in klare Pläne, nützliche Automatisierung und spürbaren Fortschritt für Teams.",
+  "warm_kicker": "MEINE ARBEITSWEISE",
+  "warm_title_1": "Strukturierte Umsetzung.",
+  "warm_title_2": "Menschliche Zusammenarbeit.",
+  "warm_intro": "Ich verbinde disziplinierte Programmumsetzung mit einer zugänglichen Arbeitsweise – damit Stakeholder verstehen, was zählt, Teams die nächsten Schritte kennen und Fortschritt sichtbar bleibt.",
+  "warm_collaborative": "Kollaborativ",
+  "warm_collaborative_text": "Ich verbinde Business-, Projekt- und technische Teams rund um gemeinsame Ergebnisse.",
+  "warm_structured": "Strukturiert",
+  "warm_structured_text": "Ich übersetze komplexe Arbeit in klare Prioritäten, Verantwortlichkeiten und nächste Schritte.",
+  "warm_curious": "Neugierig",
+  "warm_curious_text": "Ich suche kontinuierlich nach besseren Prozessen, praktischer Automatisierung und verantwortungsvoller KI.",
+  "warm_dependable": "Verlässlich",
+  "warm_dependable_text": "Ich halte Zusagen ein, kommuniziere Risiken frühzeitig und halte die Umsetzung transparent.",
+  "warm_contact_1": "Lassen Sie uns gemeinsam etwas",
+  "warm_contact_2": "Wertvolles schaffen.",
+  "warm_contact_text": "Ob Sie Programm-Governance stärken, Umsetzungstransparenz verbessern oder praktische Automatisierung und KI erkunden möchten – ich freue mich, mehr über Ihre Herausforderung zu erfahren.",
+  "warm_contact_action": "Gespräch beginnen"
 } satisfies Record<TranslationKey, string>
 export default de
