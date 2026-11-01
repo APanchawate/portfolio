@@ -15,6 +15,7 @@ import ProfessionalResources from './ProfessionalResources'
 import FeaturedCaseStudies from './FeaturedCaseStudies'
 import PortfolioPathways from './PortfolioPathways'
 import AuroraObjects from './theme/AuroraObjects'
+import ChapterTransition from './theme/ChapterTransition'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
 import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, Lightbulb, ListChecks, MapPin, Plane, Repeat2, ShieldCheck, UsersRound, Workflow } from 'lucide-react'
@@ -107,6 +108,7 @@ function App() {
     ].map(([title,text,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p></article> })}</div>
    </section>
    <PortfolioPathways/>
+   <ChapterTransition number="01" label="GOVERNANCE" title="Govern" accent="complex delivery." detail="PMO · UAT · Stakeholder Coordination"/>
    <FeaturedCaseStudies/>
    <details className="portfolio-deep-dive">
     <summary><span><strong>Explore the full portfolio</strong><small>Detailed governance methods, operating models and the interactive decision centre</small></span><span aria-hidden="true">+</span></summary>
@@ -154,11 +156,13 @@ function App() {
    <DecisionCentre showcaseRequest={showcaseRequest}/>
     </div>
    </details>
+   <ChapterTransition number="02" label="INTELLIGENCE" title="Turn visibility" accent="into decisions." detail="Reporting · KPIs · Risk & Readiness"/>
    <section className="section experience" id="experience" tabIndex={-1}>
     <SectionHead kicker="PROFESSIONAL EXPERIENCE" title="From engineering delivery to enterprise transformation."/>
     <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4>{'points' in e ? <><ul className="exp-points">{e.points?.slice(0,3).map(point=><li key={point}>{point}</li>)}</ul><ExploreDetails heading="Explore Responsibilities & Achievements"><p>{e.summary}</p><p>{e.text}</p>{(e.points?.length ?? 0)>3 && <ul className="exp-points">{e.points?.slice(3).map(point=><li key={point}>{point}</li>)}</ul>}</ExploreDetails></> : <div>{e.text}</div>}</div></article>)}</div>
    <BackToTop/>
    </section>
+   <ChapterTransition number="03" label="TRANSFORMATION" title="Automate" accent="repeatable work." detail="Jira/Xray · Python · APIs · Responsible AI"/>
    <section className="section tech" id="stack" tabIndex={-1}>
     <SectionHead kicker="TECHNICAL ENABLERS" title="Technology that reinforces governance." text="Hands-on automation and configuration complement delivery coordination. Tosca development belongs to the dedicated automation team; my SAP experience is in programme delivery and business testing."/>
     <div className="stack-grid">{stack.map(([title,items],i)=><article key={title}><div><Code2 size={18} aria-hidden="true"/><span>0{i+1}</span></div><h3>{title}</h3><p className="skill-preview">{['UAT · Jira/Xray · Reporting','JQL · Custom fields · Xray','Python · FastAPI · React/TypeScript','GitHub Copilot · Knowledge assistants','Azure (exploring) · GitHub Actions','SAP S/4HANA · Finance testing'][i]}</p><><p>{['UAT, quality governance and stakeholder coordination.', 'Testing-specific configuration, repository standards and reporting.', 'Python/API development, application delivery and automation infrastructure.', 'Implemented AI support for coding, knowledge access and communication.', 'Learning and planned workflows; Azure reporting orchestration is not deployed.', 'SAP programme delivery and business-testing exposure.'][i]}</p><p>{items}</p></></article>)}</div>
