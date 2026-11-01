@@ -200,7 +200,7 @@ function App() {
    </section>
   </main>
   <FloatingBackToTop menuOpen={open}/>
-  <footer><a className="brand" href="#top" aria-label="Back to home"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate.<span className="footer-availability">{careerAvailability.summary}</span></p><a href="#top" onClick={event => handleSectionLink(event, 'top')}>Back to top ↑</a></footer>
+  <footer><a className="brand" href="#top" aria-label="Back to home"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate.<span className="footer-availability">{careerAvailability.summary}</span></p></footer>
  </div>}</Localized>
 }
 export default App
