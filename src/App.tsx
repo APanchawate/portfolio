@@ -74,7 +74,7 @@ function App() {
  }, [])
  return <Localized>{<div className="app">
   <a className="skip-link" href="#main">Skip to content</a>
-  <div className="ambient one"/><div className="ambient two"/>
+  <div className="ambient one"/><div className="ambient two"/><div className="ambient three"/>
   <SiteNavigation open={open} onToggle={() => setOpen(!open)} onClose={() => setOpen(false)} cv={assets.cv} presentation={assets.presentation}/>
   <main id="main" tabIndex={-1}>
    <section className="hero section" id="top" tabIndex={-1}>

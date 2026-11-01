@@ -17,6 +17,7 @@ em{font-style:normal;color:var(--cyan)}
 .ambient{position:absolute;border-radius:50%;filter:blur(110px);opacity:.1;pointer-events:none;z-index:-1}
 .ambient.one{width:520px;height:520px;background:#6044ff;top:200px;right:-180px}
 .ambient.two{width:500px;height:500px;background:#1ad7e7;top:1850px;left:-350px}
+.ambient.three{width:420px;height:420px;background:#f3b86b;top:920px;left:40%;opacity:0}
 .skip-link{position:absolute;top:8px;left:16px;transform:translateY(-160%);z-index:100;background:#101625;padding:14px;border:1px solid var(--cyan)}
 .skip-link:focus{transform:translateY(0)}
 
@@ -922,6 +923,9 @@ main [id]{scroll-margin-top:8px}
 
 /* EN / DE changes presentation only; document assets and scenario values stay shared. */
 .language-switcher{display:inline-flex;align-items:center;gap:2px;flex-shrink:0;white-space:nowrap}
+.theme-switcher{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex-shrink:0;min-height:44px;padding:8px 11px;border:1px solid #a995ff55;border-radius:999px;background:#a995ff0c;color:#dcd6ff;font:600 11px/1.5 Manrope;cursor:pointer;transition:color .2s,border-color .2s,background .2s,transform .2s}
+.theme-switcher:hover{color:#fff;border-color:#a995ff99;background:#a995ff1c;transform:translateY(-1px)}
+.theme-switcher[aria-pressed=true]{color:#071016;border-color:#67f5dd;background:linear-gradient(110deg,#67f5dd,#9d8cff);box-shadow:0 0 22px #67f5dd2e}
 .language-switcher>button{background:transparent;border:1px solid transparent;border-radius:5px;color:var(--muted);font:600 11px/1.5 Manrope;min-width:30px;min-height:44px;padding:8px 5px;cursor:pointer}
 .language-switcher>button[aria-pressed=true]{color:var(--cyan);border-color:#62e6f244;background:#62e6f208}
 .language-switcher>span{color:#6d7f99;font-size:11px}
@@ -942,6 +946,25 @@ html[lang=de] .nav-doc-short{display:none}
  html[lang=de] .nav-wrap .nav-mobile-presentation{border-top:1px solid var(--line);margin-top:8px;color:var(--cyan)}
 }
 @media(max-width:600px){.nav-wrap{gap:8px;padding-inline:16px}.language-switcher>button{min-width:40px;padding-inline:3px}.nav-document-actions .nav-cv{min-width:50px;padding-inline:8px}.language-switcher{margin-left:auto}.nav-document-actions{margin-left:0}html[lang=de] .nav-wrap{gap:8px}html[lang=de] .nav-document-actions{margin-left:0}}
+
+/* Temporary theme comparison: Executive remains the default; Aurora adds restrained motion and depth. */
+html[data-theme=aurora]{--cyan:#67f5dd;--violet:#a58cff;--warm:#ffbf6b;--panel:#111a2e;--line:rgba(185,215,255,.16)}
+html[data-theme=aurora] body{background:radial-gradient(circle at 78% 12%,#3f2d7b55 0,transparent 31%),radial-gradient(circle at 10% 52%,#074f5c55 0,transparent 34%),linear-gradient(145deg,#060914 0%,#0b1020 48%,#080c18 100%);background-attachment:fixed}
+html[data-theme=aurora] .app{isolation:isolate}
+html[data-theme=aurora] .ambient{position:fixed;opacity:.22;filter:blur(95px);will-change:transform}
+html[data-theme=aurora] .ambient.one{animation:aurora-drift-one 17s ease-in-out infinite alternate}
+html[data-theme=aurora] .ambient.two{animation:aurora-drift-two 21s ease-in-out infinite alternate}
+html[data-theme=aurora] .ambient.three{opacity:.14;animation:aurora-drift-three 19s ease-in-out infinite alternate}
+html[data-theme=aurora] .nav-wrap{background:#080d18b8;backdrop-filter:blur(18px);border-color:#a995ff38}
+html[data-theme=aurora] .governance-visual,html[data-theme=aurora] .case,html[data-theme=aurora] .cap-card,html[data-theme=aurora] .how-i-work-grid article,html[data-theme=aurora] .portfolio-pathway-card{background:linear-gradient(145deg,rgba(28,37,65,.82),rgba(9,15,30,.72));backdrop-filter:blur(12px);box-shadow:inset 0 1px #ffffff0a,0 20px 55px #0003}
+html[data-theme=aurora] .hero h1 em{background-image:linear-gradient(110deg,#67f5dd 10%,#a58cff 55%,#ffbf6b);background-size:180% 180%;animation:aurora-text 7s ease-in-out infinite alternate}
+@keyframes aurora-drift-one{to{transform:translate(-28vw,36vh) scale(1.18)}}
+@keyframes aurora-drift-two{to{transform:translate(48vw,-26vh) scale(.82)}}
+@keyframes aurora-drift-three{to{transform:translate(-35vw,32vh) scale(1.12)}}
+@keyframes aurora-text{to{background-position:100% 50%}}
+@media(max-width:1180px){.theme-switcher{width:44px;padding:0}.theme-switcher span{display:none}}
+@media(max-width:600px){.theme-switcher{width:40px;min-height:40px}.language-switcher{margin-left:0}}
+@media(prefers-reduced-motion:reduce){html[data-theme=aurora] .ambient,html[data-theme=aurora] .hero h1 em{animation:none}}
 html[lang=de] .dc-navigation-title,html[lang=de] .uat-tabs button,html[lang=de] .stack-grid h3{overflow-wrap:anywhere;hyphens:auto}
 html[lang=de] .button{white-space:normal;text-align:center}
 html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages button,html[lang=de] .uat-timeline button,html[lang=de] .scope-process h3,html[lang=de] .reporting-view-card h5,html[lang=de] .ai-experience-card h4,html[lang=de] .scenario-market-grid .market-card-title{overflow-wrap:anywhere;hyphens:auto;min-width:0}

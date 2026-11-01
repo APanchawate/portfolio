@@ -1,4 +1,5 @@
 import LanguageSwitcher from '../i18n/LanguageSwitcher'
+import ThemeSwitcher from './ThemeSwitcher'
 import Localized from '../i18n/Localized'
 import { useEffect, useState } from 'react'
 import { Download, Menu, Presentation, X } from 'lucide-react'
@@ -33,6 +34,7 @@ export default function SiteNavigation({ open, onToggle, onClose, cv, presentati
   return <Localized>{<header className="nav-wrap" onBlurCapture={event => { if (open && !event.currentTarget.contains(event.relatedTarget)) onClose() }} onKeyDown={event => { if (event.key === 'Escape' && open) { onClose(); document.getElementById('menu-toggle')?.focus() } }}>
     <a className="brand" href="#top" aria-label="Akshay Panchawate — Home" onClick={event => { onClose(); handleSectionLink(event, 'top') }}><span>AP</span><i/></a>
     <nav id="primary-nav" className={open ? 'nav open' : 'nav'} aria-label="Primary navigation">{menuItems.map(([label, id]) => <a className={id === 'resources' ? 'nav-mobile-only' : undefined} key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={event => { onClose(); handleSectionLink(event, id) }}>{label}</a>)}{presentationLink(true)}</nav>
+    <ThemeSwitcher/>
     <LanguageSwitcher/>
     <div className="nav-document-actions">{presentationLink(false)}
     {cv === 'available' && <a className="nav-cv" href={resourceUrl(resourceFiles.cv)} download="Akshay-Panchawate-CV.pdf" aria-label="Download CV" onClick={onClose}><Download size={16} aria-hidden="true"/><span className="nav-doc-full">Download CV</span><span className="nav-doc-short" data-i18n-ignore="true" aria-hidden="true">CV</span></a>}
