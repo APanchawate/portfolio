@@ -41,10 +41,10 @@ const deliveryScaleMetrics = [
   ['', 'Automation Hub', 'Integrated Jira/Xray automation for test management, dashboards and reporting.'],
 ]
 const businessImpacts = [
-  ['Decision Visibility', 'Turned delivery data into management-ready visibility, risks and next actions.', BarChart3],
-  ['Scalable Governance', 'Supported repeatable ways of working across international teams and company structures.', Repeat2],
-  ['Cross-functional Alignment', 'Connected business, technical, market and central stakeholders around shared outcomes.', UsersRound],
-  ['Practical Automation', 'Built automation for reporting, dashboards and recurring administration.', Workflow],
+  ['Management-ready visibility', 'Transformed complex programme data into dashboards, risk signals and clear next actions.', BarChart3],
+  ['Governance at enterprise scale', 'Established repeatable test and reporting practices across 22 product teams and 20+ company codes.', Repeat2],
+  ['Cross-functional coordination', 'Aligned business, technology, market and central stakeholders around ownership, dependencies and delivery priorities.', UsersRound],
+  ['Automation that saves effort', 'Built 200+ Jira automated dashboards and repeatable workflows, reducing manual reporting and administration.', Workflow],
 ] as const
 const stages = [
   { title: 'Scope Preparation', objective: 'Turn rollout inputs into a proposed market-specific UAT scope.', contributions: ['Review company codes, rollout requirements, Finance Product coverage and the reusable master test-case repository.', 'Map reusable master cases, consolidate proposed market scope and identify potential coverage gaps.'], output: 'Draft UAT scope for review.', note: 'Business and implementation stakeholders own FIT/GAP analysis; I coordinate the downstream testing preparation.' },
@@ -99,7 +99,7 @@ function App() {
      <HeroActions assets={assets}/>
     </div>
     <aside className="governance-visual enterprise-hero-panel" aria-label="Business impact and transformation contribution">
-     <p className="kicker">BUSINESS IMPACT. PRACTICAL TRANSFORMATION.</p><h2>Clarity for decisions.<br/><em>Momentum for delivery.</em></h2>
+     <p className="kicker">BUSINESS IMPACT. PRACTICAL TRANSFORMATION.</p><h2>Turning complexity into<br/><em>confident delivery.</em></h2>
      <div className="hero-impact-grid">{businessImpacts.map(([label,note,Icon])=><div key={label}><Icon size={21} aria-hidden="true"/><h3>{label}</h3><p>{note}</p></div>)}</div>
      <p className="visual-foot">Combining structured coordination, technical ownership and automation to improve transparency, consistency and delivery confidence.</p>
     </aside>
