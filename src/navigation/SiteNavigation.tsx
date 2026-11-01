@@ -6,16 +6,16 @@ import { resourceFiles, resourceUrl } from '../resourceAssets'
 import type { AssetState } from '../resourceAssets'
 import { handleSectionLink } from './sectionNavigation'
 
-export const navigationItems = [['Overview', 'about'], ['Expertise', 'explore-expertise'], ['Case Studies', 'projects'], ['Live Demo', 'decision-centre'], ['Experience', 'experience'], ['Contact', 'contact']] as const
-const menuItems = [...navigationItems.slice(0, 5), ['Resources', 'resources'] as const, ...navigationItems.slice(5)]
-const navigationGroup: Record<string, string> = { top: 'about', about: 'about', 'explore-expertise': 'explore-expertise', 'operating-model': 'explore-expertise', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'explore-expertise', approach: 'explore-expertise', 'decision-centre': 'decision-centre', experience: 'experience', stack: 'explore-expertise', education: 'experience', resources: 'resources', opportunities: 'contact', contact: 'contact' }
+export const navigationItems = [['Home', 'top'], ['About', 'about'], ['Expertise', 'portfolio-guide'], ['Projects', 'projects'], ['Experience', 'experience'], ['Contact', 'contact']] as const
+const menuItems = [...navigationItems.slice(0, 5), ['Resources', 'resources'] as const, ['Live Demo', 'decision-centre'] as const, ...navigationItems.slice(5)]
+const navigationGroup: Record<string, string> = { top: 'top', about: 'about', 'portfolio-guide': 'portfolio-guide', 'explore-expertise': 'portfolio-guide', 'operating-model': 'portfolio-guide', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'portfolio-guide', approach: 'portfolio-guide', 'decision-centre': 'decision-centre', experience: 'experience', stack: 'portfolio-guide', education: 'experience', resources: 'resources', opportunities: 'contact', contact: 'contact' }
 
 export default function SiteNavigation({ open, onToggle, onClose, cv, presentation = 'unavailable' }: { open: boolean; onToggle: () => void; onClose: () => void; cv: AssetState; presentation?: AssetState }) {
   const [active, setActive] = useState('about')
   useEffect(() => {
     let frame = 0
     const sections = [...document.querySelectorAll<HTMLElement>('main > section[id]')]
-    const update = () => { frame = 0; let current = 'about'; for (const section of sections) if (section.getBoundingClientRect().top <= 115) current = navigationGroup[section.id] ?? current; setActive(current) }
+    const update = () => { frame = 0; let current = 'top'; for (const section of sections) if (section.getBoundingClientRect().top <= 115) current = navigationGroup[section.id] ?? current; setActive(current) }
     const schedule = () => { if (!frame) frame = requestAnimationFrame(update) }
     update(); window.addEventListener('scroll', schedule, { passive: true }); window.addEventListener('resize', schedule)
     return () => { cancelAnimationFrame(frame); window.removeEventListener('scroll', schedule); window.removeEventListener('resize', schedule) }
