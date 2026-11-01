@@ -1183,12 +1183,12 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
 @media(prefers-reduced-motion:reduce){.chapter-transition.is-visible .chapter-copy,.chapter-signals i,.chapter-orbit span{animation:none}}
 
 /* First-view invitation into the portfolio. */
-.scroll-cue{position:fixed;left:50%;bottom:18px;z-index:70;transform:translateX(-50%);display:inline-flex;flex-direction:column;align-items:center;gap:7px;margin:0;padding:8px 18px;border:0;border-radius:12px;background:#080d18c7;backdrop-filter:blur(10px);color:var(--muted);font:600 10px/1.4 Manrope;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 30px #0003}
+.scroll-cue{position:fixed;left:50%;bottom:22px;z-index:70;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;margin:0;padding:9px 10px 9px 16px;border:1px solid #62e6f266;border-radius:999px;background:linear-gradient(110deg,#101a2bf2,#17243af2);backdrop-filter:blur(12px);color:#eef8ff;font:700 10px/1.4 Manrope;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 34px #0007,0 0 22px #62e6f218}
 .scroll-cue[hidden]{display:none}
-.scroll-cue i{display:grid;place-items:center;width:34px;height:34px;border:1px solid #62e6f255;border-radius:50%;color:var(--cyan);background:#101827cc;box-shadow:0 8px 24px #0003;animation:scroll-cue-bounce 1.8s ease-in-out infinite}
-.scroll-cue:hover{color:#f3f7ff}.scroll-cue:hover i{border-color:var(--cyan);background:#16243a}
+.scroll-cue i{display:grid;place-items:center;width:32px;height:32px;border:1px solid #62e6f288;border-radius:50%;color:#07131d;background:var(--cyan);box-shadow:0 8px 24px #0003;animation:scroll-cue-bounce 1.8s ease-in-out infinite}
+.scroll-cue:hover{border-color:var(--cyan);background:linear-gradient(110deg,#15243a,#1b3150)}.scroll-cue:hover i{background:#a1f2f8}
 #enterprise-scope{scroll-margin-top:96px}
 #enterprise-scope:focus{outline:none}
 @keyframes scroll-cue-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-@media(max-width:600px){.scroll-cue{bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:7px 12px;font-size:8px}.scroll-cue i{width:30px;height:30px}}
+@media(max-width:600px){.scroll-cue{bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px 8px 8px 13px;font-size:9px}.scroll-cue i{width:29px;height:29px}}
 @media(prefers-reduced-motion:reduce){.scroll-cue i{animation:none}}

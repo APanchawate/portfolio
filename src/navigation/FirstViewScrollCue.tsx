@@ -9,5 +9,5 @@ export default function FirstViewScrollCue() {
     window.addEventListener('scroll', update, { passive: true })
     return () => window.removeEventListener('scroll', update)
   }, [])
-  return <button className="scroll-cue" type="button" hidden={!visible} aria-label="Scroll to explore the portfolio" onClick={() => goToSection('enterprise-scope')}><span>Scroll to explore</span><i><ChevronDown size={18} aria-hidden="true"/></i></button>
+  return <button className="scroll-cue" type="button" hidden={!visible} aria-label="See how I deliver" onClick={() => goToSection('enterprise-scope')}><span>See how I deliver</span><i><ChevronDown size={18} aria-hidden="true"/></i></button>
 }
