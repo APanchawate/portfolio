@@ -19,7 +19,7 @@ import AuroraObjects from './theme/AuroraObjects'
 import ChapterTransition from './theme/ChapterTransition'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
-import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, Lightbulb, ListChecks, MapPin, Plane, Repeat2, ShieldCheck, UsersRound, Workflow } from 'lucide-react'
+import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, MapPin, Plane, Repeat2, ShieldCheck, UsersRound, Workflow } from 'lucide-react'
 
 const experience = [
   { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', summary:'Coordinating international UAT delivery across business and technical stakeholders, with planning, progress tracking, management reporting and process modernization.', text:'Supporting Central and Market Rollout Managers through operational Test Management governance, coordination, automation and reporting within a global SAP S/4HANA Finance transformation. Supporting the complete testing lifecycle from Acceptance Testing and Pre-UAT through UAT and Regression Testing, including planning, readiness, execution control, tester coordination, defect governance, escalation, reporting and automation.', points:['Coordinating international SAP S/4HANA Finance UAT planning, readiness and execution commitments with Rollout Management, testers and Finance Product Teams.','Primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.','Modernizing reporting workflows to reduce repetitive preparation and improve stakeholder visibility into progress, defects, risks and dependencies.','Developing market- and release-specific testing plans, execution structures, responsibilities and ramp-up curves.','Coordinating tester assignments, training, availability and coverage gaps.','Monitoring planned versus actual execution and defining recovery actions.','Establishing repository, evidence, traceability, dashboard and reporting standards.','Providing management and market leadership with decision-ready testing, defect and readiness reporting.','Supporting release-readiness assessments through testing evidence and risk analysis; final approvals remain with authorized decision-makers.'] },
@@ -94,7 +94,6 @@ function App() {
      <h1>Enterprise Technology Management.<br/><em>PMO, AI, Transformation &amp; Automation.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
      <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
-     <p className="hero-human-note">I enjoy turning complexity into clear plans, useful automation and momentum that teams can feel.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
@@ -107,12 +106,11 @@ function App() {
    <div className="enterprise-scope-strip" id="enterprise-scope" aria-label="Additional enterprise scope and personal contribution" tabIndex={-1}><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <AuroraObjects/>
    <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
-    <div className="how-i-work-intro"><p className="kicker">HOW I WORK</p><h2 id="how-i-work-title">Structured delivery.<br/><em>Human collaboration.</em></h2><p>I combine disciplined programme execution with an approachable working style—so stakeholders understand what matters, teams know what comes next and progress stays visible.</p></div>
+    <div className="how-i-work-intro"><p className="kicker">HOW I DELIVER</p><h2 id="how-i-work-title">From alignment<br/><em>to action.</em></h2><p>A simple operating rhythm turns enterprise complexity into visible progress and scalable execution.</p></div>
     <div className="how-i-work-grid">{[
-      ['Collaborative', 'I connect business, project and technical teams around shared outcomes.', UsersRound],
-      ['Structured', 'I turn complex work into clear priorities, ownership and next steps.', ListChecks],
-      ['Curious', 'I keep exploring better processes, practical automation and responsible AI.', Lightbulb],
-      ['Dependable', 'I follow through, communicate risks early and keep delivery visible.', ShieldCheck],
+      ['Align', 'Bring business, technology and market stakeholders around priorities, ownership and dependencies.', UsersRound],
+      ['Make visible', 'Turn programme data into clear risks, decisions and next actions.', BarChart3],
+      ['Automate', 'Replace repetitive reporting and administration with scalable Jira workflows and dashboards.', Workflow],
     ].map(([title,text,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p></article> })}</div>
    </section>
    <PortfolioPathways/>

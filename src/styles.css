@@ -1243,3 +1243,11 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
 .floating-to-top.is-compact span{max-width:0;opacity:0}
 @media(max-width:900px){.floating-to-top.is-compact{width:42px;max-width:42px}}
 @media(prefers-reduced-motion:reduce){.floating-to-top,.floating-to-top span{transition:none}}
+
+/* A distinct second chapter: delivery method rather than repeated value claims. */
+.how-i-work{grid-template-columns:1fr;gap:30px}
+.how-i-work-intro{max-width:820px}
+.how-i-work-intro>p:last-child{max-width:680px}
+.how-i-work-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.how-i-work-grid article{min-height:170px}
+@media(max-width:800px){.how-i-work-grid{grid-template-columns:1fr}.how-i-work-grid article{min-height:0}}
