@@ -13,6 +13,7 @@ import { careerAvailability } from './careerAvailability'
 import DecisionCentre from './decision-centre/DecisionCentre'
 import ProfessionalResources from './ProfessionalResources'
 import FeaturedCaseStudies from './FeaturedCaseStudies'
+import PortfolioPathways from './PortfolioPathways'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
 import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, MapPin, Plane, Repeat2, ShieldCheck, Workflow } from 'lucide-react'
@@ -92,6 +93,7 @@ function App() {
      <p className="visual-foot">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
     </aside>
    </section>
+   <PortfolioPathways/>
    <ProfessionalOverview/>
    <ExpertiseExplorer/>
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
