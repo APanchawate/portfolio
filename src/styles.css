@@ -1225,7 +1225,7 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
  .hero{padding-top:30px;padding-bottom:28px;gap:clamp(32px,3.4vw,54px);align-items:start}
  .hero .eyebrow{margin-bottom:0}
  .profile-intro{margin:14px 0 13px}
- .hero-copy h1{margin-bottom:13px}
+ .hero-copy h1{margin-bottom:13px;font-size:clamp(2.35rem,3vw,3.45rem)}
  .hero-capabilities{margin:6px 0 9px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
  .hero-copy .hero-text{margin-block:8px;line-height:1.68}
  .hero-human-note{margin-top:10px;line-height:1.55}
