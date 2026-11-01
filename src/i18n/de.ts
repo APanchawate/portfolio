@@ -1518,6 +1518,8 @@ const de = {
   "portrait_alt": "Akshay Panchawate in professioneller Kleidung",
   "portrait_line_1": "Klarheit im Management.",
   "portrait_line_2": "Praktische Umsetzung.",
-  "portrait_roles": "PMO · Transformation · Automatisierung"
+  "portrait_roles": "PMO · Transformation · Automatisierung",
+  "nav_selected_work": "Ausgewählte Projekte",
+  "nav_capabilities": "Kompetenzen"
 } satisfies Record<TranslationKey, string>
 export default de

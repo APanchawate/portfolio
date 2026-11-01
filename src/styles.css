@@ -1192,3 +1192,14 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
 @keyframes scroll-cue-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
 @media(max-width:600px){.scroll-cue{bottom:calc(12px + env(safe-area-inset-bottom,0px));padding:8px 8px 8px 13px;font-size:9px}.scroll-cue i{width:29px;height:29px}}
 @media(prefers-reduced-motion:reduce){.scroll-cue i{animation:none}}
+
+/* Recruiter navigation: clearer hierarchy without adding visual noise. */
+@media(min-width:961px){
+ .nav-wrap .nav>a{position:relative;gap:7px;min-height:40px;padding:8px 11px;border:1px solid transparent;border-radius:999px;transition:color .2s ease,background .2s ease,border-color .2s ease}
+ .nav-wrap .nav>a:before{content:'';width:5px;height:5px;flex:0 0 5px;border-radius:50%;background:var(--cyan);opacity:0;transform:scale(.5);transition:opacity .2s ease,transform .2s ease}
+ .nav-wrap .nav>a:after{content:'';position:absolute;left:50%;bottom:3px;width:18px;height:2px;border-radius:2px;background:var(--cyan);opacity:0;transform:translateX(-50%) scaleX(.4);transition:opacity .2s ease,transform .2s ease}
+ .nav-wrap .nav>a:hover{color:#eef9ff;background:#ffffff08;border-color:#ffffff12}
+ .nav-wrap .nav>a[aria-current=location]{color:#eaffff;border-color:#62e6f244;background:linear-gradient(110deg,#62e6f213,#a995ff12);box-shadow:inset 0 1px #ffffff0a}
+ .nav-wrap .nav>a[aria-current=location]:before,.nav-wrap .nav>a[aria-current=location]:after{opacity:1;transform:translateX(0) scale(1)}
+ .nav-wrap .nav>a[aria-current=location]:after{transform:translateX(-50%) scaleX(1)}
+}

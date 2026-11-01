@@ -3,9 +3,10 @@ import { ChevronDown } from 'lucide-react'
 import { goToSection } from './sectionNavigation'
 
 export default function FirstViewScrollCue() {
-  const [visible, setVisible] = useState(() => window.scrollY < 80)
+  const [visible, setVisible] = useState(true)
   useEffect(() => {
     const update = () => setVisible(window.scrollY < 80)
+    update()
     window.addEventListener('scroll', update, { passive: true })
     return () => window.removeEventListener('scroll', update)
   }, [])

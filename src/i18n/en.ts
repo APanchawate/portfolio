@@ -1518,7 +1518,9 @@ const en = {
   "portrait_alt": "Akshay Panchawate in professional attire",
   "portrait_line_1": "Management clarity.",
   "portrait_line_2": "Hands-on delivery.",
-  "portrait_roles": "PMO · Transformation · Automation"
+  "portrait_roles": "PMO · Transformation · Automation",
+  "nav_selected_work": "Selected Work",
+  "nav_capabilities": "Capabilities"
 } as const
 export default en
 export type TranslationKey = keyof typeof en
