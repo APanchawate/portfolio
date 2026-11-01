@@ -1002,3 +1002,16 @@ html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages but
 
 /* Technical Enablers show all card content without disclosure controls. */
 .stack-grid article>p+p{margin-top:10px}
+
+
+/* Structured portfolio: recruiter pathways */
+.portfolio-pathways-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.portfolio-pathway-card{display:flex;flex-direction:column;gap:.85rem;min-width:0;padding:1.5rem;border:1px solid rgba(160,178,205,.22);border-radius:18px;background:rgba(255,255,255,.035);color:inherit;text-decoration:none;transition:border-color .2s ease,transform .2s ease}
+.portfolio-pathway-card:hover,.portfolio-pathway-card:focus-visible{border-color:rgba(129,194,255,.7);transform:translateY(-2px)}
+.portfolio-pathway-card h3{font-size:1.15rem;line-height:1.35;margin:0}
+.portfolio-pathway-card p{margin:0;line-height:1.6;flex:1;opacity:.82}
+.portfolio-pathway-link{display:inline-flex;align-items:center;gap:.4rem;font-weight:650;font-size:.9rem}
+.portfolio-pathways-note{margin-top:1rem;font-size:.86rem;opacity:.7}
+@media(max-width:1000px){.portfolio-pathways-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.portfolio-pathways-grid{grid-template-columns:1fr}.portfolio-pathway-card{padding:1.2rem}}
+@media(prefers-reduced-motion:reduce){.portfolio-pathway-card{transition:none}.portfolio-pathway-card:hover{transform:none}}
