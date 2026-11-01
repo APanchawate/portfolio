@@ -1538,7 +1538,7 @@ const de = {
   "scale_title_1": "Belege für",
   "scale_title_2": "den Mehrwert.",
   "scale_intro": "Konkrete Programmgrößen aus Enterprise-Testmanagement, Plattform-Governance und Automatisierungsumsetzung.",
-  "hero_positioning_title": "Transformation, die Ergebnisse liefert.",
-  "hero_positioning_focus": "PMO · KI · Automatisierung"
+  "hero_positioning_title": "PMO, KI, Transformation & Automatisierung.",
+  "hero_positioning_focus": "Enterprise-Testmanagement · IT-Projektkoordination · Prozessautomatisierung · KI-gestützte Entwicklung"
 } satisfies Record<TranslationKey, string>
 export default de
