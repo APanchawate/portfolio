@@ -14,6 +14,7 @@ import DecisionCentre from './decision-centre/DecisionCentre'
 import ProfessionalResources from './ProfessionalResources'
 import FeaturedCaseStudies from './FeaturedCaseStudies'
 import PortfolioPathways from './PortfolioPathways'
+import AuroraObjects from './theme/AuroraObjects'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
 import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, Lightbulb, ListChecks, MapPin, Plane, Repeat2, ShieldCheck, UsersRound, Workflow } from 'lucide-react'
@@ -95,6 +96,7 @@ function App() {
     </aside>
    </section>
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
+   <AuroraObjects/>
    <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
     <div className="how-i-work-intro"><p className="kicker">HOW I WORK</p><h2 id="how-i-work-title">Structured delivery.<br/><em>Human collaboration.</em></h2><p>I combine disciplined programme execution with an approachable working style—so stakeholders understand what matters, teams know what comes next and progress stays visible.</p></div>
     <div className="how-i-work-grid">{[

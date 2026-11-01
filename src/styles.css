@@ -959,6 +959,15 @@ html[data-theme=aurora] .ambient{position:fixed;opacity:.22;filter:blur(95px);wi
 html[data-theme=aurora] .ambient.one{animation:aurora-drift-one 17s ease-in-out infinite alternate}
 html[data-theme=aurora] .ambient.two{animation:aurora-drift-two 21s ease-in-out infinite alternate}
 html[data-theme=aurora] .ambient.three{opacity:.14;animation:aurora-drift-three 19s ease-in-out infinite alternate}
+.aurora-objects{display:none}
+html[data-theme=aurora] .aurora-objects{display:block;position:relative;width:calc(100% - 48px);max-width:1132px;height:84px;margin:2px auto 16px;overflow:hidden;pointer-events:none;border-block:1px solid #a995ff24;background:linear-gradient(90deg,transparent,#a995ff08 30%,#67f5dd08 70%,transparent)}
+html[data-theme=aurora] .aurora-object{--push-x:0px;--push-y:0px;position:absolute;will-change:transform}
+html[data-theme=aurora] .aurora-object span{display:grid;place-items:center;min-width:58px;height:42px;padding:0 15px;border:1px solid #b6f7ed80;border-radius:999px;background:linear-gradient(135deg,#183c4ecf,#29224dcc);box-shadow:inset 0 1px #ffffff24,0 14px 32px #0005;color:#eafffb;font:700 11px/1 Manrope;letter-spacing:.12em;transform:translate(var(--push-x),var(--push-y));transition:transform .18s cubic-bezier(.2,.8,.2,1);backdrop-filter:blur(8px)}
+html[data-theme=aurora] .orbit-pmo{top:20px;left:8%;animation:object-float-a 8s ease-in-out infinite alternate}
+html[data-theme=aurora] .orbit-ai{top:20px;left:34%;animation:object-float-b 10s ease-in-out infinite alternate}
+html[data-theme=aurora] .orbit-uat{top:20px;left:59%;animation:object-float-a 11s ease-in-out -3s infinite alternate}
+html[data-theme=aurora] .orbit-data{top:20px;left:82%;animation:object-float-b 9s ease-in-out -5s infinite alternate}
+html[data-theme=aurora] .orbit-ai span,html[data-theme=aurora] .orbit-uat span{border-color:#d7a9ff80;background:linear-gradient(135deg,#39234bcf,#172d4acf)}
 html[data-theme=aurora] .nav-wrap{background:#080d18b8;backdrop-filter:blur(18px);border-color:#a995ff38}
 html[data-theme=aurora] .governance-visual,html[data-theme=aurora] .case,html[data-theme=aurora] .cap-card,html[data-theme=aurora] .how-i-work-grid article,html[data-theme=aurora] .portfolio-pathway-card{background:linear-gradient(145deg,rgba(28,37,65,.82),rgba(9,15,30,.72));backdrop-filter:blur(12px);box-shadow:inset 0 1px #ffffff0a,0 20px 55px #0003}
 html[data-theme=aurora] .hero h1 em{background-image:linear-gradient(110deg,#67f5dd 10%,#a58cff 55%,#ffbf6b);background-size:180% 180%;animation:aurora-text 7s ease-in-out infinite alternate}
@@ -966,9 +975,12 @@ html[data-theme=aurora] .hero h1 em{background-image:linear-gradient(110deg,#67f
 @keyframes aurora-drift-two{to{transform:translate(48vw,-26vh) scale(.82)}}
 @keyframes aurora-drift-three{to{transform:translate(-35vw,32vh) scale(1.12)}}
 @keyframes aurora-text{to{background-position:100% 50%}}
+@keyframes object-float-a{to{transform:translate(16px,8px) rotate(5deg)}}
+@keyframes object-float-b{to{transform:translate(-18px,10px) rotate(-5deg)}}
 @media(max-width:1180px){.theme-switcher{width:44px;padding:0}.theme-switcher span{display:none}}
 @media(max-width:600px){.theme-switcher{width:40px;min-height:40px}.language-switcher{margin-left:0}}
-@media(prefers-reduced-motion:reduce){html[data-theme=aurora] .ambient,html[data-theme=aurora] .hero h1 em{animation:none}}
+@media(pointer:coarse){html[data-theme=aurora] .aurora-object{opacity:.55}html[data-theme=aurora] .orbit-data,html[data-theme=aurora] .orbit-uat{display:none}}
+@media(prefers-reduced-motion:reduce){html[data-theme=aurora] .ambient,html[data-theme=aurora] .hero h1 em,html[data-theme=aurora] .aurora-object{animation:none}html[data-theme=aurora] .aurora-object span{transition:none}}
 html[lang=de] .dc-navigation-title,html[lang=de] .uat-tabs button,html[lang=de] .stack-grid h3{overflow-wrap:anywhere;hyphens:auto}
 html[lang=de] .button{white-space:normal;text-align:center}
 html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages button,html[lang=de] .uat-timeline button,html[lang=de] .scope-process h3,html[lang=de] .reporting-view-card h5,html[lang=de] .ai-experience-card h4,html[lang=de] .scenario-market-grid .market-card-title{overflow-wrap:anywhere;hyphens:auto;min-width:0}
