@@ -625,6 +625,22 @@ footer>.brand,footer>a:last-child{flex-shrink:0}
 
 /* Automation Hub and historical market refinements. */
 .hero-enterprise-metrics .hub-metric-icon{display:block;height:37px;color:var(--cyan)}
+.hero-impact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px;margin:0 0 24px}
+.hero-impact-grid>div{border-top:1px solid var(--line);padding-top:16px;min-width:0}
+.hero-impact-grid svg{color:var(--cyan)}
+.hero-impact-grid h3{font-size:14px;line-height:1.5;margin:10px 0 5px}
+.hero-impact-grid p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.delivery-scale{padding-top:54px;padding-bottom:54px}
+.delivery-scale-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(145deg,#131b2ccc,#0d1220cc)}
+.delivery-scale-grid article{min-width:0;padding:26px;border-right:1px solid var(--line)}
+.delivery-scale-grid article:last-child{border-right:0}
+.delivery-scale-grid strong{display:block;color:var(--cyan);font:700 34px/1.1 Manrope;letter-spacing:-.04em}
+.delivery-scale-grid .hub-metric-icon{height:37px;color:var(--cyan)}
+.delivery-scale-grid h3{font-size:15px;line-height:1.5;margin:14px 0 7px}
+.delivery-scale-grid p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.delivery-scale-note{margin:16px 0 0;padding-left:14px;border-left:2px solid var(--warm);color:#c5cee0;font-size:12px;line-height:1.8}
+@media(max-width:900px){.delivery-scale-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.delivery-scale-grid article:nth-child(2){border-right:0}.delivery-scale-grid article:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:600px){.hero-impact-grid{grid-template-columns:1fr;gap:12px}.hero-impact-grid>div{display:grid;grid-template-columns:28px 1fr;column-gap:10px}.hero-impact-grid svg{grid-row:1/3}.hero-impact-grid h3{margin:0 0 3px}.delivery-scale-grid{grid-template-columns:1fr}.delivery-scale-grid article{padding:20px;border-right:0;border-bottom:1px solid var(--line)}.delivery-scale-grid article:last-child{border-bottom:0}.delivery-scale-grid strong{font-size:30px}}
 .rollout-market-cards{grid-template-columns:repeat(5,minmax(0,1fr))}
 .rollout-market-cards .historical-market{border-color:#a995ff55;background:linear-gradient(145deg,#a995ff0d,#111526)}
 .rollout-market-cards .historical-market>span{color:var(--violet)}

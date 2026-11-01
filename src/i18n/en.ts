@@ -1520,7 +1520,24 @@ const en = {
   "portrait_line_2": "Hands-on delivery.",
   "portrait_roles": "PMO · Transformation · Automation",
   "nav_selected_work": "Selected Work",
-  "nav_capabilities": "Capabilities"
+  "nav_capabilities": "Capabilities",
+  "impact_aria": "Business impact and transformation contribution",
+  "impact_kicker": "BUSINESS IMPACT. PRACTICAL TRANSFORMATION.",
+  "impact_title_1": "Clarity for decisions.",
+  "impact_title_2": "Momentum for delivery.",
+  "impact_decisions": "Decision Visibility",
+  "impact_decisions_text": "Turned delivery data into management-ready visibility, risks and next actions.",
+  "impact_scale": "Scalable Governance",
+  "impact_scale_text": "Supported repeatable ways of working across international teams and company structures.",
+  "impact_alignment": "Cross-functional Alignment",
+  "impact_alignment_text": "Connected business, technical, market and central stakeholders around shared outcomes.",
+  "impact_automation": "Practical Automation",
+  "impact_automation_text": "Built automation for reporting, dashboards and recurring administration.",
+  "impact_summary": "Combining structured coordination, technical ownership and automation to improve transparency, consistency and delivery confidence.",
+  "scale_kicker": "ENTERPRISE DELIVERY SCALE",
+  "scale_title_1": "Evidence behind",
+  "scale_title_2": "the impact.",
+  "scale_intro": "Concrete programme scale from enterprise Test Management, platform governance and automation delivery."
 } as const
 export default en
 export type TranslationKey = keyof typeof en

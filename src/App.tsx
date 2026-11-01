@@ -34,12 +34,18 @@ const opportunityRoles = [
  'IT Project / PMO Support',
 ]
 const classifications = ['Partner system', 'Training', 'Test data', 'Implementation', 'New requirement', 'New minor requirement', 'Migration']
-const enterpriseMetrics = [
+const deliveryScaleMetrics = [
   ['7,000+', 'Master Test Cases', 'Central reusable repository supported'],
   ['22', 'Finance Product Teams', 'Cross-functional programme environment'],
   ['400+', 'Test Plans / Executions', 'Repository and execution scope'],
   ['', 'Automation Hub', 'Integrated Jira/Xray automation for test management, dashboards and reporting.'],
 ]
+const businessImpacts = [
+  ['Decision Visibility', 'Turned delivery data into management-ready visibility, risks and next actions.', BarChart3],
+  ['Scalable Governance', 'Supported repeatable ways of working across international teams and company structures.', Repeat2],
+  ['Cross-functional Alignment', 'Connected business, technical, market and central stakeholders around shared outcomes.', UsersRound],
+  ['Practical Automation', 'Built automation for reporting, dashboards and recurring administration.', Workflow],
+] as const
 const stages = [
   { title: 'Scope Preparation', objective: 'Turn rollout inputs into a proposed market-specific UAT scope.', contributions: ['Review company codes, rollout requirements, Finance Product coverage and the reusable master test-case repository.', 'Map reusable master cases, consolidate proposed market scope and identify potential coverage gaps.'], output: 'Draft UAT scope for review.', note: 'Business and implementation stakeholders own FIT/GAP analysis; I coordinate the downstream testing preparation.' },
   { title: 'Business Validation', objective: 'Coordinate relevance reviews and test-case quality readiness.', contributions: ['Coordinate scope reviews with Central Finance Product Teams, market representatives and rollout stakeholders; track relevance decisions.', 'Identify missing GAP scenarios and support new test-case preparation and quality reviews.'], output: 'Reviewed scope and test-case quality readiness.', note: 'Finance Product Teams and business stakeholders determine scope relevance. Product Teams or implementation partners create required GAP cases; I coordinate the process and quality reviews, without independently approving business scope.' },
@@ -92,10 +98,10 @@ function App() {
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
-    <aside className="governance-visual enterprise-hero-panel" aria-label="Enterprise experience and contribution">
-     <p className="kicker">BUSINESS GOVERNANCE. TECHNICAL OWNERSHIP.</p><h2>Enterprise context.<br/><em>Hands-on delivery.</em></h2>
-     <div className="hero-enterprise-metrics">{enterpriseMetrics.map(([value,label,note])=><div key={label}>{label === 'Automation Hub' ? <Workflow className="hub-metric-icon" size={32} aria-hidden="true"/> : <strong>{value}</strong>}<h3>{label}</h3><p>{note}</p></div>)}</div>
-     <p className="visual-foot">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
+    <aside className="governance-visual enterprise-hero-panel" aria-label="Business impact and transformation contribution">
+     <p className="kicker">BUSINESS IMPACT. PRACTICAL TRANSFORMATION.</p><h2>Clarity for decisions.<br/><em>Momentum for delivery.</em></h2>
+     <div className="hero-impact-grid">{businessImpacts.map(([label,note,Icon])=><div key={label}><Icon size={21} aria-hidden="true"/><h3>{label}</h3><p>{note}</p></div>)}</div>
+     <p className="visual-foot">Combining structured coordination, technical ownership and automation to improve transparency, consistency and delivery confidence.</p>
     </aside>
    </section>
    <div className="enterprise-scope-strip" id="enterprise-scope" aria-label="Additional enterprise scope and personal contribution" tabIndex={-1}><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
@@ -110,6 +116,11 @@ function App() {
     ].map(([title,text,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p></article> })}</div>
    </section>
    <PortfolioPathways/>
+   <section className="section delivery-scale" id="delivery-scale" aria-labelledby="delivery-scale-title" tabIndex={-1}>
+    <div className="section-head"><div><p className="kicker">ENTERPRISE DELIVERY SCALE</p><h2 id="delivery-scale-title">Evidence behind <em>the impact.</em></h2></div><p>Concrete programme scale from enterprise Test Management, platform governance and automation delivery.</p></div>
+    <div className="delivery-scale-grid">{deliveryScaleMetrics.map(([value,label,note])=><article key={label}>{label === 'Automation Hub' ? <Workflow className="hub-metric-icon" size={30} aria-hidden="true"/> : <strong>{value}</strong>}<h3>{label}</h3><p>{note}</p></article>)}</div>
+    <p className="delivery-scale-note">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
+   </section>
    <ChapterTransition number="01" label="GOVERNANCE" title="Govern" accent="complex delivery." detail="PMO · UAT · Stakeholder Coordination"/>
    <FeaturedCaseStudies/>
    <details className="portfolio-deep-dive">

@@ -1520,6 +1520,23 @@ const de = {
   "portrait_line_2": "Praktische Umsetzung.",
   "portrait_roles": "PMO · Transformation · Automatisierung",
   "nav_selected_work": "Ausgewählte Projekte",
-  "nav_capabilities": "Kompetenzen"
+  "nav_capabilities": "Kompetenzen",
+  "impact_aria": "Geschäftlicher Mehrwert und Transformationsbeitrag",
+  "impact_kicker": "GESCHÄFTLICHER MEHRWERT. PRAKTISCHE TRANSFORMATION.",
+  "impact_title_1": "Klarheit für Entscheidungen.",
+  "impact_title_2": "Dynamik für die Umsetzung.",
+  "impact_decisions": "Entscheidungstransparenz",
+  "impact_decisions_text": "Umsetzungsdaten in managementgerechte Transparenz, Risiken und nächste Schritte überführt.",
+  "impact_scale": "Skalierbare Governance",
+  "impact_scale_text": "Wiederholbare Arbeitsweisen über internationale Teams und Unternehmensstrukturen hinweg unterstützt.",
+  "impact_alignment": "Funktionsübergreifende Abstimmung",
+  "impact_alignment_text": "Business-, Technik-, Markt- und zentrale Stakeholder auf gemeinsame Ergebnisse ausgerichtet.",
+  "impact_automation": "Praktische Automatisierung",
+  "impact_automation_text": "Automatisierung für Reporting, Dashboards und wiederkehrende Administration entwickelt.",
+  "impact_summary": "Strukturierte Koordination, technische Verantwortung und Automatisierung für mehr Transparenz, Konsistenz und Umsetzungssicherheit.",
+  "scale_kicker": "ENTERPRISE-UMSETZUNG IM MASSSTAB",
+  "scale_title_1": "Belege für",
+  "scale_title_2": "den Mehrwert.",
+  "scale_intro": "Konkrete Programmgrößen aus Enterprise-Testmanagement, Plattform-Governance und Automatisierungsumsetzung."
 } satisfies Record<TranslationKey, string>
 export default de
