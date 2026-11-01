@@ -16,7 +16,7 @@ import FeaturedCaseStudies from './FeaturedCaseStudies'
 import PortfolioPathways from './PortfolioPathways'
 import { OperatingModel, ParallelRollouts, ScopeEngineering } from './EnterpriseContext'
 import type { ShowcaseRequest } from './resourceLinks'
-import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, Lightbulb, ListChecks, MapPin, Plane, Repeat2, ShieldCheck, UsersRound } from 'lucide-react'
+import { ArrowRight, BarChart3, CalendarDays, ClipboardCheck, Code2, Lightbulb, ListChecks, MapPin, Plane, Repeat2, ShieldCheck, UsersRound, Workflow } from 'lucide-react'
 
 const experience = [
   { period:'Current', company:'BMW Group — Group Finance Backbone (GFBB)', subtitle:'', role:'Test Management, Automation & Reporting', summary:'Coordinating international UAT delivery across business and technical stakeholders, with planning, progress tracking, management reporting and process modernization.', text:'Supporting Central and Market Rollout Managers through operational Test Management governance, coordination, automation and reporting within a global SAP S/4HANA Finance transformation. Supporting the complete testing lifecycle from Acceptance Testing and Pre-UAT through UAT and Regression Testing, including planning, readiness, execution control, tester coordination, defect governance, escalation, reporting and automation.', points:['Coordinating international SAP S/4HANA Finance UAT planning, readiness and execution commitments with Rollout Management, testers and Finance Product Teams.','Primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.','Modernizing reporting workflows to reduce repetitive preparation and improve stakeholder visibility into progress, defects, risks and dependencies.','Developing market- and release-specific testing plans, execution structures, responsibilities and ramp-up curves.','Coordinating tester assignments, training, availability and coverage gaps.','Monitoring planned versus actual execution and defining recovery actions.','Establishing repository, evidence, traceability, dashboard and reporting standards.','Providing management and market leadership with decision-ready testing, defect and readiness reporting.','Supporting release-readiness assessments through testing evidence and risk analysis; final approvals remain with authorized decision-makers.'] },
@@ -31,6 +31,12 @@ const opportunityRoles = [
  'IT Project / PMO Support',
 ]
 const classifications = ['Partner system', 'Training', 'Test data', 'Implementation', 'New requirement', 'New minor requirement', 'Migration']
+const enterpriseMetrics = [
+  ['7,000+', 'Master Test Cases', 'Central reusable repository supported'],
+  ['22', 'Finance Product Teams', 'Cross-functional programme environment'],
+  ['400+', 'Test Plans / Executions', 'Repository and execution scope'],
+  ['', 'Automation Hub', 'Integrated Jira/Xray automation for test management, dashboards and reporting.'],
+]
 const stages = [
   { title: 'Scope Preparation', objective: 'Turn rollout inputs into a proposed market-specific UAT scope.', contributions: ['Review company codes, rollout requirements, Finance Product coverage and the reusable master test-case repository.', 'Map reusable master cases, consolidate proposed market scope and identify potential coverage gaps.'], output: 'Draft UAT scope for review.', note: 'Business and implementation stakeholders own FIT/GAP analysis; I coordinate the downstream testing preparation.' },
   { title: 'Business Validation', objective: 'Coordinate relevance reviews and test-case quality readiness.', contributions: ['Coordinate scope reviews with Central Finance Product Teams, market representatives and rollout stakeholders; track relevance decisions.', 'Identify missing GAP scenarios and support new test-case preparation and quality reviews.'], output: 'Reviewed scope and test-case quality readiness.', note: 'Finance Product Teams and business stakeholders determine scope relevance. Product Teams or implementation partners create required GAP cases; I coordinate the process and quality reviews, without independently approving business scope.' },
@@ -74,7 +80,7 @@ function App() {
    <section className="hero section" id="top" tabIndex={-1}>
     <div className="hero-copy reveal">
      <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
-     <p className="intro">AKSHAY PANCHAWATE</p>
+     <div className="profile-intro"><img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate" width="96" height="96" fetchPriority="high"/><div><p className="intro">AKSHAY PANCHAWATE</p><p className="profile-role">Enterprise Technology Management · PMO · Transformation</p></div></div>
      <h1>Enterprise Technology Management.<br/><em>PMO, AI, Transformation &amp; Automation.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
      <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
@@ -82,9 +88,10 @@ function App() {
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
-    <aside className="hero-portrait-card" aria-label="Portrait of Akshay Panchawate">
-     <img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate in professional attire" width="1024" height="1536" fetchPriority="high"/>
-     <div className="hero-portrait-overlay"><p>Management clarity.<br/><strong>Hands-on delivery.</strong></p><span>PMO · Transformation · Automation</span></div>
+    <aside className="governance-visual enterprise-hero-panel" aria-label="Enterprise experience and contribution">
+     <p className="kicker">BUSINESS GOVERNANCE. TECHNICAL OWNERSHIP.</p><h2>Enterprise context.<br/><em>Hands-on delivery.</em></h2>
+     <div className="hero-enterprise-metrics">{enterpriseMetrics.map(([value,label,note])=><div key={label}>{label === 'Automation Hub' ? <Workflow className="hub-metric-icon" size={32} aria-hidden="true"/> : <strong>{value}</strong>}<h3>{label}</h3><p>{note}</p></div>)}</div>
+     <p className="visual-foot">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
     </aside>
    </section>
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>

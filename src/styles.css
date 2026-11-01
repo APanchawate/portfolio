@@ -1056,17 +1056,12 @@ main>.section{scroll-margin-top:100px}
 /* The persistent floating control is the single return-to-top action. */
 .section-return{display:none}
 
-.hero-portrait-card{position:relative;align-self:start;width:100%;height:720px;min-height:0;overflow:hidden;border:1px solid #f3b86b4d;border-radius:22px;background:#101625;box-shadow:0 28px 90px #0007}
-.hero-portrait-card:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 48%,#07101bea 84%,#07101b 100%);pointer-events:none}
-.hero-portrait-card img{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:50% 28%;filter:saturate(.92) contrast(1.03)}
-.hero-portrait-overlay{position:absolute;z-index:1;left:26px;right:26px;bottom:24px}
-.hero-portrait-overlay p{margin:0 0 9px;color:#f6f8fd;font:500 22px/1.35 Manrope,sans-serif;letter-spacing:-.025em}
-.hero-portrait-overlay strong{color:#ffd49f;font-weight:700}
-.hero-portrait-overlay span{display:inline-flex;padding:7px 10px;border:1px solid #f3b86b55;border-radius:999px;background:#0b1526cc;color:#f1c38a;font:600 10px/1.4 Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase;backdrop-filter:blur(8px)}
-@media(max-width:900px){.hero-portrait-card{height:560px}.hero-portrait-card img{object-position:50% 24%}}
-@media(max-width:600px){.hero-portrait-card{height:460px;border-radius:16px}.hero-portrait-overlay{left:18px;right:18px;bottom:18px}.hero-portrait-overlay p{font-size:19px}.hero-portrait-overlay span{font-size:9px}}
-.hero{min-height:min(850px,90svh);align-items:center}
-.hero-copy h1{font-size:clamp(3.2rem,6.2vw,6.8rem);line-height:1.03;letter-spacing:-.055em;text-wrap:balance}
+.profile-intro{display:flex;align-items:center;gap:16px;margin:22px 0 18px}
+.profile-intro img{width:82px;height:82px;flex:0 0 82px;border:2px solid #f3b86b80;border-radius:50%;object-fit:cover;object-position:50% 24%;box-shadow:0 0 0 6px #f3b86b0d}
+.profile-intro .intro{margin:0 0 5px;color:#f3f6fb;font-size:12px}
+.profile-role{margin:0;color:#aeb9cc;font:500 13px/1.5 Manrope,sans-serif}
+.hero{min-height:auto;align-items:center}
+.hero-copy h1{font-size:clamp(2.8rem,4.5vw,4.8rem);line-height:1.04;letter-spacing:-.05em;text-wrap:balance}
 .hero-copy .hero-text{max-width:670px;font-size:clamp(1.04rem,1.4vw,1.2rem);line-height:1.8}
 .hero-capabilities{letter-spacing:.015em;line-height:1.7}
 .section-head h2{letter-spacing:-.035em;text-wrap:balance}
@@ -1077,4 +1072,4 @@ main>.section{scroll-margin-top:100px}
 .portfolio-pathways{padding-top:clamp(3rem,6vw,6rem)}
 .portfolio-pathway-card{min-height:235px;justify-content:space-between}
 .portfolio-pathway-card h3{font-size:clamp(1.15rem,1.5vw,1.4rem);letter-spacing:-.025em}
-@media(max-width:760px){.hero{min-height:auto}.hero-copy h1{font-size:clamp(2.6rem,10vw,4.5rem)}.portfolio-pathway-card{min-height:auto}}
+@media(max-width:760px){.profile-intro{gap:13px;margin-block:18px 16px}.profile-intro img{width:68px;height:68px;flex-basis:68px}.profile-role{font-size:11px}.hero-copy h1{font-size:clamp(2.35rem,9vw,3.5rem)}.portfolio-pathway-card{min-height:auto}}
