@@ -8,6 +8,7 @@ import { ExpertiseExplorer, ProfessionalOverview } from './RecruiterOverview'
 import BackToTop from './navigation/BackToTop'
 import SiteNavigation from './navigation/SiteNavigation'
 import FloatingBackToTop from './navigation/FloatingBackToTop'
+import FirstViewScrollCue from './navigation/FirstViewScrollCue'
 import { goToSection, handleSectionLink } from './navigation/sectionNavigation'
 import { careerAvailability } from './careerAvailability'
 import DecisionCentre from './decision-centre/DecisionCentre'
@@ -78,6 +79,7 @@ function App() {
   <a className="skip-link" href="#main">Skip to content</a>
   <div className="ambient one"/><div className="ambient two"/><div className="ambient three"/>
   <SiteNavigation open={open} onToggle={() => setOpen(!open)} onClose={() => setOpen(false)} cv={assets.cv} presentation={assets.presentation}/>
+  <FirstViewScrollCue/>
   <main id="main" tabIndex={-1}>
    <section className="hero section" id="top" tabIndex={-1}>
     <div className="hero-copy reveal">
@@ -96,7 +98,7 @@ function App() {
      <p className="visual-foot">Core member of a two-person Central Test Management team, with primary technical ownership of Jira/Xray configurations, test repository governance and automation solutions.</p>
     </aside>
    </section>
-   <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
+   <div className="enterprise-scope-strip" id="enterprise-scope" aria-label="Additional enterprise scope and personal contribution" tabIndex={-1}><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <AuroraObjects/>
    <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
     <div className="how-i-work-intro"><p className="kicker">HOW I WORK</p><h2 id="how-i-work-title">Structured delivery.<br/><em>Human collaboration.</em></h2><p>I combine disciplined programme execution with an approachable working style—so stakeholders understand what matters, teams know what comes next and progress stays visible.</p></div>
