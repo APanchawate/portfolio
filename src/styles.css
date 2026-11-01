@@ -981,6 +981,43 @@ html[data-theme=aurora] .hero h1 em{background-image:linear-gradient(110deg,#67f
 @media(max-width:600px){.theme-switcher{width:40px;min-height:40px}.language-switcher{margin-left:0}}
 @media(pointer:coarse){html[data-theme=aurora] .aurora-object{opacity:.55}html[data-theme=aurora] .orbit-data,html[data-theme=aurora] .orbit-uat{display:none}}
 @media(prefers-reduced-motion:reduce){html[data-theme=aurora] .ambient,html[data-theme=aurora] .hero h1 em,html[data-theme=aurora] .aurora-object{animation:none}html[data-theme=aurora] .aurora-object span{transition:none}}
+
+/* Wider desktop canvas and calmer responsive typography. */
+:root{--site-content:1360px;--site-inner:1312px}
+.section,footer{max-width:var(--site-content)}
+.nav-wrap{max-width:1420px}
+.enterprise-scope-strip,html[data-theme=aurora] .aurora-objects{width:calc(100% - 48px);max-width:var(--site-inner)}
+.portfolio-deep-dive{width:calc(100% - 48px);max-width:var(--site-content)}
+.hero{grid-template-columns:minmax(0,1.25fr) minmax(380px,.95fr);gap:clamp(36px,4vw,68px)}
+.hero-copy{min-width:0}
+.hero-copy h1{font-size:clamp(2.5rem,3.4vw,3.8rem);line-height:1.08;letter-spacing:-.045em}
+.hero-copy .hero-text{max-width:760px;font-size:clamp(1rem,1.1vw,1.12rem)}
+@media(max-width:1100px){.hero{grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);gap:32px}}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.hero-copy{max-width:780px}.governance-visual{width:100%}}
+@media(max-width:600px){
+ body{overflow-x:hidden}
+ .nav-wrap{height:68px;padding-inline:12px;gap:5px}
+ .nav-wrap>.brand{font-size:18px}
+ .nav-wrap .nav{top:68px;max-height:calc(100dvh - 80px)}
+ .theme-switcher{width:38px;min-height:38px}
+ .language-switcher>button{min-width:32px;min-height:40px;padding-inline:2px}
+ .nav-document-actions .nav-cv{min-width:46px;min-height:40px;padding-inline:7px}
+ .menu{min-width:40px;min-height:40px}
+ .section{padding-inline:18px}
+ .hero{padding-top:34px;gap:30px}
+ .profile-intro{align-items:flex-start}
+ .profile-intro img{width:62px;height:62px;flex-basis:62px}
+ .profile-intro .intro{font-size:10px;letter-spacing:.1em}
+ .profile-role{font-size:10px;line-height:1.55}
+ .hero-copy h1{font-size:clamp(2rem,9.6vw,2.65rem);line-height:1.1;letter-spacing:-.04em}
+ .hero-copy .hero-text{font-size:15px;line-height:1.72}
+ .hero-capabilities{font-size:10px}
+ .governance-visual{padding:20px;border-radius:14px}
+ .governance-visual h2{font-size:23px}
+ .contact h2{font-size:clamp(30px,9vw,38px)}
+ .portfolio-deep-dive>summary{gap:14px}
+ .enterprise-scope-strip,.portfolio-deep-dive{width:auto}
+}
 html[lang=de] .dc-navigation-title,html[lang=de] .uat-tabs button,html[lang=de] .stack-grid h3{overflow-wrap:anywhere;hyphens:auto}
 html[lang=de] .button{white-space:normal;text-align:center}
 html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages button,html[lang=de] .uat-timeline button,html[lang=de] .scope-process h3,html[lang=de] .reporting-view-card h5,html[lang=de] .ai-experience-card h4,html[lang=de] .scenario-market-grid .market-card-title{overflow-wrap:anywhere;hyphens:auto;min-width:0}
@@ -1112,3 +1149,14 @@ main>.section{scroll-margin-top:100px}
 .portfolio-pathway-card{min-height:235px;justify-content:space-between}
 .portfolio-pathway-card h3{font-size:clamp(1.15rem,1.5vw,1.4rem);letter-spacing:-.025em}
 @media(max-width:760px){.profile-intro{gap:13px;margin-block:18px 16px}.profile-intro img{width:68px;height:68px;flex-basis:68px}.profile-role{font-size:11px}.hero-copy h1{font-size:clamp(2.35rem,9vw,3.5rem)}.portfolio-pathway-card{min-height:auto}}
+
+/* Final responsive type overrides follow the editorial layer. */
+.hero-copy h1{font-size:clamp(2.5rem,3.4vw,3.8rem);line-height:1.08;letter-spacing:-.045em}
+.hero-copy .hero-text{max-width:760px;font-size:clamp(1rem,1.1vw,1.12rem)}
+@media(max-width:600px){
+ .profile-intro img{width:62px;height:62px;flex-basis:62px}
+ .profile-intro .intro{font-size:10px;letter-spacing:.1em}
+ .profile-role{font-size:10px;line-height:1.55}
+ .hero-copy h1{font-size:clamp(2rem,9.6vw,2.65rem);line-height:1.1;letter-spacing:-.04em}
+ .hero-copy .hero-text{font-size:15px;line-height:1.72}
+}
