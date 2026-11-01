@@ -94,13 +94,16 @@ function App() {
     </aside>
    </section>
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
-   <FeaturedCaseStudies/>
    <PortfolioPathways/>
-   <ProfessionalOverview/>
-   <ExpertiseExplorer/>
-   <OperatingModel/>
-   <ScopeEngineering/>
-   <ParallelRollouts/>
+   <FeaturedCaseStudies/>
+   <details className="portfolio-deep-dive">
+    <summary><span><strong>Explore the full portfolio</strong><small>Detailed governance methods, operating models and the interactive decision centre</small></span><span aria-hidden="true">+</span></summary>
+    <div className="portfolio-deep-dive-content">
+    <ProfessionalOverview/>
+    <ExpertiseExplorer/>
+    <OperatingModel/>
+    <ScopeEngineering/>
+    <ParallelRollouts/>
    <section className="section" id="expertise" tabIndex={-1}>
     <SectionHead kicker="A HANDS-ON DIFFERENTIATOR" title="Jira/Xray Platform & Test Repository Governance" text="The platform responsibilities behind reusable test structures: configuration, repository standards, filters, dashboards and automation."/>
     <div className="cap-grid platform-governance-grid">{[
@@ -137,6 +140,8 @@ function App() {
    <BackToTop/>
    </section>
    <DecisionCentre showcaseRequest={showcaseRequest}/>
+    </div>
+   </details>
    <section className="section experience" id="experience" tabIndex={-1}>
     <SectionHead kicker="PROFESSIONAL EXPERIENCE" title="From engineering delivery to enterprise transformation."/>
     <div className="timeline">{experience.map((e,i)=><article key={e.company}><div className="time-marker"><span>{String(i+1).padStart(2,'0')}</span></div><div className="exp-period">{e.period}</div><div className="exp-main">{e.subtitle && <p>{e.subtitle}</p>}<h3>{e.company}</h3><h4>{e.role}</h4>{'points' in e ? <><ul className="exp-points">{e.points?.slice(0,3).map(point=><li key={point}>{point}</li>)}</ul><ExploreDetails heading="Explore Responsibilities & Achievements"><p>{e.summary}</p><p>{e.text}</p>{(e.points?.length ?? 0)>3 && <ul className="exp-points">{e.points?.slice(3).map(point=><li key={point}>{point}</li>)}</ul>}</ExploreDetails></> : <div>{e.text}</div>}</div></article>)}</div>

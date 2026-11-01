@@ -6,9 +6,9 @@ import { resourceFiles, resourceUrl } from '../resourceAssets'
 import type { AssetState } from '../resourceAssets'
 import { handleSectionLink } from './sectionNavigation'
 
-export const navigationItems = [['Home', 'top'], ['Projects', 'projects'], ['Expertise', 'portfolio-guide'], ['About', 'about'], ['Experience', 'experience'], ['Contact', 'contact']] as const
-const menuItems = [...navigationItems.slice(0, 5), ['Resources', 'resources'] as const, ['Live Demo', 'decision-centre'] as const, ...navigationItems.slice(5)]
-const navigationGroup: Record<string, string> = { top: 'top', about: 'about', 'portfolio-guide': 'portfolio-guide', 'explore-expertise': 'portfolio-guide', 'operating-model': 'portfolio-guide', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'portfolio-guide', approach: 'portfolio-guide', 'decision-centre': 'decision-centre', experience: 'experience', stack: 'portfolio-guide', education: 'experience', resources: 'resources', opportunities: 'contact', contact: 'contact' }
+export const navigationItems = [['Home', 'top'], ['Work', 'projects'], ['Experience', 'experience'], ['Skills', 'stack'], ['Contact', 'contact']] as const
+const menuItems = [...navigationItems.slice(0, 4), ['Resources', 'resources'] as const, ...navigationItems.slice(4)]
+const navigationGroup: Record<string, string> = { top: 'top', about: 'top', 'portfolio-guide': 'projects', 'explore-expertise': 'projects', 'operating-model': 'projects', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'projects', approach: 'projects', 'decision-centre': 'projects', experience: 'experience', stack: 'stack', education: 'stack', resources: 'resources', opportunities: 'contact', contact: 'contact' }
 
 export default function SiteNavigation({ open, onToggle, onClose, cv, presentation = 'unavailable' }: { open: boolean; onToggle: () => void; onClose: () => void; cv: AssetState; presentation?: AssetState }) {
   const [active, setActive] = useState('about')

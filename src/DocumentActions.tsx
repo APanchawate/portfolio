@@ -19,6 +19,6 @@ export function PresentationAction({ assets, showPowerPointDownload = true }: { 
 export default function HeroActions({ assets }: { assets: ResourceAvailability }) {
   return <Localized>{<div className="actions hero-actions">{assets.cv === 'available' ? <a className="button primary" href={resourceUrl(resourceFiles.cv)} download="Akshay-Panchawate-CV.pdf"><Download size={16} aria-hidden="true"/>Download CV</a> : <span className="document-unavailable"><FileText size={16} aria-hidden="true"/>{assets.cv === 'checking' ? 'Checking CV…' : 'CV not yet available'}</span>}
     <PresentationAction assets={assets} showPowerPointDownload={false}/>
-    <a className="button ghost" href="#explore-expertise" onClick={event => handleSectionLink(event, 'explore-expertise')}><Compass size={16} aria-hidden="true"/>Explore Portfolio</a>
+    <a className="button ghost" href="#projects" onClick={event => handleSectionLink(event, 'projects')}><Compass size={16} aria-hidden="true"/>View Selected Work</a>
   </div>}</Localized>
 }

@@ -1020,6 +1020,22 @@ html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages but
 /* Premium editorial layer: visual hierarchy, not content removal */
 :root{--editorial-max:1240px}
 main>.section{scroll-margin-top:100px}
+
+/* Keep the recruiter path concise while preserving the complete technical portfolio on demand. */
+.portfolio-deep-dive{max-width:1180px;margin:0 auto 32px;border:1px solid #62e6f233;border-radius:16px;background:linear-gradient(135deg,#101a2bd9,#11182ad9);overflow:hidden}
+.portfolio-deep-dive>summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px;padding:22px 28px;cursor:pointer;list-style:none;color:#f3f7ff}
+.portfolio-deep-dive>summary::-webkit-details-marker{display:none}
+.portfolio-deep-dive>summary span:first-child{display:grid;gap:5px}
+.portfolio-deep-dive>summary strong{font-size:18px;letter-spacing:-.02em}
+.portfolio-deep-dive>summary small{color:var(--muted);font-size:13px;font-weight:400}
+.portfolio-deep-dive>summary span:last-child{display:grid;place-items:center;width:36px;height:36px;flex:0 0 36px;border:1px solid #62e6f255;border-radius:50%;color:var(--cyan);font-size:24px;line-height:1;transition:transform .2s ease,background .2s ease}
+.portfolio-deep-dive>summary:hover span:last-child{background:#62e6f21a}
+.portfolio-deep-dive[open]>summary{border-bottom:1px solid var(--line)}
+.portfolio-deep-dive[open]>summary span:last-child{transform:rotate(45deg)}
+.portfolio-deep-dive-content{padding-bottom:12px}
+.portfolio-deep-dive-content>.section{padding-inline:28px}
+@media(max-width:1228px){.portfolio-deep-dive{margin-inline:24px}}
+@media(max-width:600px){.portfolio-deep-dive{margin:0 16px 24px;border-radius:12px}.portfolio-deep-dive>summary{min-height:78px;padding:18px}.portfolio-deep-dive>summary small{font-size:12px}.portfolio-deep-dive-content>.section{padding-inline:18px}}
 .hero{min-height:min(850px,90svh);align-items:center}
 .hero-copy h1{font-size:clamp(3.2rem,6.2vw,6.8rem);line-height:1.03;letter-spacing:-.055em;text-wrap:balance}
 .hero-copy .hero-text{max-width:670px;font-size:clamp(1.04rem,1.4vw,1.2rem);line-height:1.8}
