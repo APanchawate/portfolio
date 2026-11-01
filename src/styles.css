@@ -1015,3 +1015,21 @@ html[lang=de] .uat-defect-flow button,html[lang=de] .phase-management-stages but
 @media(max-width:1000px){.portfolio-pathways-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.portfolio-pathways-grid{grid-template-columns:1fr}.portfolio-pathway-card{padding:1.2rem}}
 @media(prefers-reduced-motion:reduce){.portfolio-pathway-card{transition:none}.portfolio-pathway-card:hover{transform:none}}
+
+
+/* Premium editorial layer: visual hierarchy, not content removal */
+:root{--editorial-max:1240px}
+main>.section{scroll-margin-top:100px}
+.hero{min-height:min(850px,90svh);align-items:center}
+.hero-copy h1{font-size:clamp(3.2rem,6.2vw,6.8rem);line-height:1.03;letter-spacing:-.055em;text-wrap:balance}
+.hero-copy .hero-text{max-width:670px;font-size:clamp(1.04rem,1.4vw,1.2rem);line-height:1.8}
+.hero-capabilities{letter-spacing:.015em;line-height:1.7}
+.section-head h2{letter-spacing:-.035em;text-wrap:balance}
+.projects .section-head{margin-bottom:clamp(1.5rem,3vw,3rem)}
+.projects .case-grid{gap:clamp(1rem,2vw,1.7rem)}
+.projects .featured-case{border-radius:22px}
+.projects .featured-case h3{letter-spacing:-.025em}
+.portfolio-pathways{padding-top:clamp(3rem,6vw,6rem)}
+.portfolio-pathway-card{min-height:235px;justify-content:space-between}
+.portfolio-pathway-card h3{font-size:clamp(1.15rem,1.5vw,1.4rem);letter-spacing:-.025em}
+@media(max-width:760px){.hero{min-height:auto}.hero-copy h1{font-size:clamp(2.6rem,10vw,4.5rem)}.portfolio-pathway-card{min-height:auto}}
