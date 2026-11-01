@@ -81,7 +81,7 @@ function App() {
     <div className="hero-copy reveal">
      <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
      <p className="intro">AKSHAY PANCHAWATE</p>
-     <h1>Enterprise Technology.<br/><em>Automation &amp; AI.</em></h1>
+     <h1>Enterprise Technology Management.<br/><em>PMO, AI, Transformation &amp; Automation.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
      <p className="hero-text">I bridge business operations and technical engineering to make complex enterprise transformations easier to deliver. From international SAP S/4HANA testing governance to Python automation, management intelligence and practical AI solutions, my focus is measurable execution and clarity.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
