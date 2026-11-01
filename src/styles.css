@@ -1219,3 +1219,27 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
  .nav-wrap .nav>a[aria-current=location]:before,.nav-wrap .nav>a[aria-current=location]:after{opacity:1;transform:translateX(0) scale(1)}
  .nav-wrap .nav>a[aria-current=location]:after{transform:translateX(-50%) scaleX(1)}
 }
+
+/* Final first-view refinement: focused positioning and complete laptop viewport. */
+@media(min-width:901px){
+ .hero{padding-top:30px;padding-bottom:28px;gap:clamp(32px,3.4vw,54px);align-items:start}
+ .hero .eyebrow{margin-bottom:0}
+ .profile-intro{margin:14px 0 13px}
+ .hero-copy h1{margin-bottom:13px}
+ .hero-capabilities{margin:6px 0 9px;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+ .hero-copy .hero-text{margin-block:8px;line-height:1.68}
+ .hero-human-note{margin-top:10px;line-height:1.55}
+ .hero-mobility{margin:10px 0}
+ .hero-actions{margin-top:14px}
+ .enterprise-hero-panel{padding:24px}
+ .enterprise-hero-panel h2{margin:11px 0 16px}
+ .enterprise-hero-panel .hero-impact-grid{gap:0 24px}
+}
+.scroll-cue{gap:8px;padding:7px 8px 7px 13px;font-size:9px;box-shadow:0 10px 28px #0006,0 0 18px #62e6f214}
+.scroll-cue i{width:28px;height:28px}
+.floating-to-top{overflow:hidden;transition:width .22s ease,padding .22s ease,border-color .2s ease,background .2s ease,transform .2s ease}
+.floating-to-top span{max-width:90px;opacity:1;transition:max-width .22s ease,opacity .16s ease}
+.floating-to-top.is-compact{width:44px;max-width:44px;padding:10px}
+.floating-to-top.is-compact span{max-width:0;opacity:0}
+@media(max-width:900px){.floating-to-top.is-compact{width:42px;max-width:42px}}
+@media(prefers-reduced-motion:reduce){.floating-to-top,.floating-to-top span{transition:none}}

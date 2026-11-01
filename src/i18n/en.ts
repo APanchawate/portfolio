@@ -1537,7 +1537,9 @@ const en = {
   "scale_kicker": "ENTERPRISE DELIVERY SCALE",
   "scale_title_1": "Evidence behind",
   "scale_title_2": "the impact.",
-  "scale_intro": "Concrete programme scale from enterprise Test Management, platform governance and automation delivery."
+  "scale_intro": "Concrete programme scale from enterprise Test Management, platform governance and automation delivery.",
+  "hero_positioning_title": "Transformation that delivers.",
+  "hero_positioning_focus": "PMO · AI · Automation"
 } as const
 export default en
 export type TranslationKey = keyof typeof en
