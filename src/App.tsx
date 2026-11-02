@@ -108,12 +108,12 @@ function App() {
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <AuroraObjects/>
    <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
-    <div className="how-i-work-intro"><p className="kicker">HOW I DELIVER</p><h2 id="how-i-work-title">From alignment<br/><em>to action.</em></h2><p>A simple operating rhythm turns enterprise complexity into visible progress and scalable execution.</p></div>
+    <div className="how-i-work-intro"><p className="kicker">HOW I DELIVER</p><h2 id="how-i-work-title">From alignment<br/><em>to action.</em></h2><p>An experience-led operating rhythm that aligns stakeholders, makes delivery visible and automates repeatable work.</p></div>
     <div className="how-i-work-grid">{[
-      ['Align', 'Bring business, technology and market stakeholders around priorities, ownership and dependencies.', UsersRound],
-      ['Make visible', 'Turn programme data into clear risks, decisions and next actions.', BarChart3],
-      ['Automate', 'Replace repetitive reporting and administration with scalable Jira workflows and dashboards.', Workflow],
-    ].map(([title,text,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p></article> })}</div>
+      ['Align', 'Coordinated international SAP S/4HANA Finance UAT across rollout management, testers and 22 Finance Product Teams.', '20+ company codes · international scope', UsersRound],
+      ['Make visible', 'Turned execution, defect, risk and dependency data into management-ready reporting and next actions.', '200+ automated dashboards · 1,500+ defects', BarChart3],
+      ['Automate', 'Built Jira/Xray automation for test structures, filters, dashboards and recurring reporting workflows.', 'Python · REST APIs · Jira/Xray', Workflow],
+    ].map(([title,text,proof,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p><span className="work-proof">{proof as string}</span></article> })}</div>
    </section>
    <PortfolioPathways/>
    <section className="section delivery-scale" id="delivery-scale" aria-labelledby="delivery-scale-title" tabIndex={-1}>

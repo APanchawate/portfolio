@@ -1343,3 +1343,7 @@ html[data-theme=aurora] .visual-system-core{background:radial-gradient(circle at
 .exp-main .exp-location{display:flex;align-items:center;gap:7px;margin:7px 0 0;color:#9eabc1;font:500 12px/1.5 Manrope,sans-serif;letter-spacing:0;text-transform:none}
 .exp-location svg{flex:0 0 auto;color:var(--cyan)}
 .exp-location+h4{margin-top:7px}
+
+.how-i-work-grid article{display:flex;flex-direction:column}
+.how-i-work-grid article>p{flex:1}
+.work-proof{display:block;margin-top:22px;padding-top:13px;border-top:1px solid var(--line);color:#d7e6f5;font:700 10px/1.5 Manrope,sans-serif;letter-spacing:.06em;text-transform:uppercase}
