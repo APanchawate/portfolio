@@ -1445,3 +1445,37 @@ footer>p{
  footer{width:calc(100% - 40px);min-height:190px;padding:36px 20px 84px}
  .footer-availability{line-height:1.65}
 }
+
+/* Aurora-only entry cue: echoes the chapter cards without changing Executive. */
+html[data-theme=aurora] .scroll-cue{
+ border-color:#a995ff80;
+ background:
+  linear-gradient(#111a2eeb,#111a2eeb) padding-box,
+  linear-gradient(110deg,#67f5dd,#a58cff 58%,#ffbf6b) border-box;
+ box-shadow:0 14px 38px #0008,0 0 30px #a58cff2b;
+ animation:aurora-cue-breathe 3.4s ease-in-out infinite alternate;
+}
+html[data-theme=aurora] .scroll-cue:before{
+ content:'';
+ position:absolute;
+ inset:-1px;
+ z-index:-1;
+ border-radius:inherit;
+ background:linear-gradient(100deg,transparent 18%,#a995ff38 48%,transparent 76%);
+ background-size:220% 100%;
+ animation:aurora-cue-shimmer 4.5s linear infinite;
+}
+html[data-theme=aurora] .scroll-cue i{
+ border-color:#67f5ddaa;
+ background:linear-gradient(145deg,#67f5dd,#8ee9ff);
+ box-shadow:0 8px 24px #0003,0 0 18px #67f5dd3b;
+}
+html[data-theme=aurora] .scroll-cue:hover{
+ border-color:transparent;
+ background:
+  linear-gradient(#182342f5,#182342f5) padding-box,
+  linear-gradient(110deg,#67f5dd,#a58cff 58%,#ffbf6b) border-box;
+}
+@keyframes aurora-cue-breathe{to{box-shadow:0 16px 42px #0008,0 0 40px #a58cff42}}
+@keyframes aurora-cue-shimmer{to{background-position:-220% 0}}
+@media(prefers-reduced-motion:reduce){html[data-theme=aurora] .scroll-cue,html[data-theme=aurora] .scroll-cue:before{animation:none}}
