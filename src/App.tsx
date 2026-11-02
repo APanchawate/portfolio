@@ -97,13 +97,23 @@ function App() {
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
-    <aside className="governance-visual enterprise-hero-panel" aria-label="Business impact and transformation contribution">
-     <p className="kicker">BUSINESS IMPACT. PRACTICAL TRANSFORMATION.</p><h2>Turning complexity into<br/><em>confident delivery.</em></h2>
-     <div className="hero-impact-grid">{businessImpacts.map(([label,note,Icon])=><div key={label}><Icon size={21} aria-hidden="true"/><h3>{label}</h3><p>{note}</p></div>)}</div>
-     <p className="visual-foot">Combining structured coordination, technical ownership and automation to improve transparency, consistency and delivery confidence.</p>
+    <aside className="hero-calm-visual" aria-hidden="true">
+     <div className="hero-visual-glow"/>
+     <div className="delivery-orbit">
+      <span className="orbit-ring orbit-ring-one"/><span className="orbit-ring orbit-ring-two"/><span className="orbit-ring orbit-ring-three"/>
+      <span className="delivery-node node-visibility"><BarChart3 size={22}/></span>
+      <span className="delivery-node node-governance"><Repeat2 size={22}/></span>
+      <span className="delivery-node node-alignment"><UsersRound size={22}/></span>
+      <span className="delivery-node node-automation"><Workflow size={22}/></span>
+      <span className="delivery-core"><Workflow size={34}/></span>
+     </div>
     </aside>
    </section>
-   <div className="enterprise-scope-strip" id="enterprise-scope" aria-label="Additional enterprise scope and personal contribution" tabIndex={-1}><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
+   <section className="section business-impact-section" id="enterprise-scope" aria-label="Business impact and transformation contribution" tabIndex={-1}>
+    <div className="business-impact-intro"><p className="kicker">BUSINESS IMPACT. PRACTICAL TRANSFORMATION.</p><h2>Turning complexity into<br/><em>confident delivery.</em></h2><p>Structured coordination, technical ownership and automation improve transparency, consistency and delivery confidence.</p></div>
+    <div className="hero-impact-grid">{businessImpacts.map(([label,note,Icon])=><div key={label}><Icon size={21} aria-hidden="true"/><h3>{label}</h3><p>{note}</p></div>)}</div>
+   </section>
+   <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <AuroraObjects/>
    <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
     <div className="how-i-work-intro"><p className="kicker">HOW I DELIVER</p><h2 id="how-i-work-title">From alignment<br/><em>to action.</em></h2><p>A simple operating rhythm turns enterprise complexity into visible progress and scalable execution.</p></div>

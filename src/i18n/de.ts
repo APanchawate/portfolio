@@ -1531,7 +1531,7 @@ const de = {
   "impact_alignment_text": "Business-, Technologie-, Markt- und zentrale Stakeholder auf Verantwortung, Abhängigkeiten und Umsetzungsprioritäten ausgerichtet.",
   "impact_automation": "Automatisierung, die Aufwand reduziert",
   "impact_automation_text": "Über 200 automatisierte Jira-Dashboards und wiederholbare Abläufe entwickelt, um manuelles Reporting und Administration zu reduzieren.",
-  "impact_summary": "Strukturierte Koordination, technische Verantwortung und Automatisierung für mehr Transparenz, Konsistenz und Umsetzungssicherheit.",
+  "impact_summary": "Strukturierte Koordination, technische Verantwortung und Automatisierung verbessern Transparenz, Konsistenz und Umsetzungssicherheit.",
   "scale_kicker": "ENTERPRISE-UMSETZUNG IM MASSSTAB",
   "scale_title_1": "Belege für",
   "scale_title_2": "den Mehrwert.",

@@ -1531,7 +1531,7 @@ const en = {
   "impact_alignment_text": "Aligned business, technology, market and central stakeholders around ownership, dependencies and delivery priorities.",
   "impact_automation": "Automation that saves effort",
   "impact_automation_text": "Built 200+ Jira automated dashboards and repeatable workflows, reducing manual reporting and administration.",
-  "impact_summary": "Combining structured coordination, technical ownership and automation to improve transparency, consistency and delivery confidence.",
+  "impact_summary": "Structured coordination, technical ownership and automation improve transparency, consistency and delivery confidence.",
   "scale_kicker": "ENTERPRISE DELIVERY SCALE",
   "scale_title_1": "Evidence behind",
   "scale_title_2": "the impact.",
