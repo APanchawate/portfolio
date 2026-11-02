@@ -1544,6 +1544,7 @@ const de = {
   "hero_statement_focus": "PMO · KI · Transformation · Automatisierung",
   "hero_statement_summary": "Ich bringe Menschen, Pläne, Daten und Technologie zusammen, damit komplexe Unternehmenstransformationen mit klarer Verantwortung, sichtbarem Fortschritt und sicheren Entscheidungen vorankommen.",
   "hero_profile_role": "Enterprise Technologiemanagement",
-  "hero_explore_work": "Ausgewählte Projekte entdecken"
+  "hero_explore_work": "Ausgewählte Projekte entdecken",
+  "hero_profile_ai_automation": "KI & Automatisierung"
 } satisfies Record<TranslationKey, string>
 export default de

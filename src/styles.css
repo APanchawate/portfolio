@@ -1309,3 +1309,15 @@ html[data-theme=aurora] .visual-system-core{background:radial-gradient(circle at
 @media(max-width:900px){.hero-statement-kicker{margin-top:20px}.visual-profile-card{top:20px;right:20px}.hero-deliver-visual{min-height:390px}}
 @media(max-width:600px){.hero-statement-kicker{margin-top:18px;font-size:9px}.hero-copy h1{font-size:clamp(2rem,9vw,2.55rem)}.hero-deliver-visual{min-height:310px}.visual-profile-card{left:16px;right:16px;top:16px;min-width:0;padding:10px 12px}.visual-profile-card img{width:48px;height:48px;flex-basis:48px}.visual-profile-card strong{font-size:13px}.visual-profile-card span{font-size:10px}.visual-system-core{width:min(43%,150px);margin-top:36px}.hero-signal{padding:7px 9px;font-size:8px}.signal-pmo{top:36%}.signal-data{top:44%}.signal-ai{bottom:12%}.signal-automation{right:8%;bottom:8%}.hero-actions .button{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.hero-signal{animation:none}}
+
+/* Professional profile alignment: expertise belongs with the profile, not as scattered labels. */
+.visual-profile-card{left:28px;right:28px;top:28px;min-width:0;align-items:center;gap:16px;padding:16px 18px;box-shadow:0 18px 42px #0004,inset 0 1px #ffffff0a}
+.visual-profile-card img{width:68px;height:68px;flex-basis:68px}
+.visual-profile-card .visual-profile-copy{display:grid;min-width:0;gap:4px}
+.visual-profile-card .visual-profile-role{font-size:12px;line-height:1.45}
+.visual-profile-focus{display:flex!important;flex-wrap:wrap;gap:7px!important;margin-top:7px}
+.visual-profile-focus span{padding:5px 8px;border:1px solid #62e6f23d;border-radius:999px;background:#62e6f20a;color:#dffbff;font:700 9px/1 Manrope,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.visual-profile-focus span:nth-child(2){border-color:#a995ff4a;background:#a995ff0a}
+.visual-profile-focus span:nth-child(3){border-color:#f3b86b4a;background:#f3b86b0a}
+.visual-system-core{transform:translateY(58px) perspective(700px) rotateX(10deg)}
+@media(max-width:600px){.visual-profile-card{left:14px;right:14px;top:14px;padding:11px 12px;gap:11px}.visual-profile-card img{width:52px;height:52px;flex-basis:52px}.visual-profile-card .visual-profile-role{font-size:9px}.visual-profile-focus{gap:4px!important;margin-top:3px}.visual-profile-focus span{padding:4px 6px;font-size:7px}.visual-system-core{margin-top:58px;transform:translateY(30px) perspective(700px) rotateX(10deg)}}
