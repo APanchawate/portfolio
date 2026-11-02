@@ -2,7 +2,6 @@ import Localized from './i18n/Localized'
 import ExploreDetails from './ExploreDetails'
 import AiExperience from './AiExperience'
 import { useEffect, useState } from 'react'
-import HeroActions from './DocumentActions'
 import { usePortfolioResources } from './resourceAssets'
 import { ExpertiseExplorer, ProfessionalOverview } from './RecruiterOverview'
 import BackToTop from './navigation/BackToTop'
@@ -95,7 +94,6 @@ function App() {
      <p className="hero-capabilities">PMO · AI · Transformation · Automation</p>
      <p className="hero-text">I bring people, plans, data and technology together so complex enterprise transformations move forward with clear ownership, visible progress and confident decisions.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
-     <HeroActions assets={assets}/>
     </div>
     <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
      <div className="hero-visual-glow"/>
