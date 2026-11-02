@@ -1579,3 +1579,7 @@ html[data-theme=aurora] .how-i-work-grid{
  html[data-theme=aurora] .how-i-work-intro:before,
  html[data-theme=aurora] .how-i-work-intro:after{animation:none}
 }
+
+/* Keep the Aurora delivery evidence concise; the chapter panel is intentionally removed. */
+html[data-theme=aurora] .how-i-work-intro{display:none}
+html[data-theme=aurora] .how-i-work{padding-top:var(--section-space-compact)}
