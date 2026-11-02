@@ -101,7 +101,7 @@ function App() {
      <div className="hero-visual-glow"/>
      <div className="hero-visual-grid" aria-hidden="true"/>
      <div className="visual-profile-card"><img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate" width="80" height="80" fetchPriority="high"/><div><strong>Akshay Panchawate</strong><span>Enterprise Technology Management</span></div></div>
-     <div className="deliver-word" aria-hidden="true">DELIVER</div>
+     <div className="visual-system-core" aria-hidden="true"><span/><span/><span/><i/></div>
      <span className="hero-signal signal-pmo">PMO</span><span className="hero-signal signal-ai">AI</span><span className="hero-signal signal-data">DATA</span><span className="hero-signal signal-automation">AUTOMATION</span>
     </aside>
    </section>
