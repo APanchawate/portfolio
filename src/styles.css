@@ -1324,3 +1324,18 @@ html[data-theme=aurora] .visual-system-core{background:radial-gradient(circle at
 
 .hero-copy .consultant-headline{font-size:clamp(2.25rem,2.8vw,3.25rem);line-height:1.08;letter-spacing:-.045em}
 @media(max-width:600px){.hero-copy .consultant-headline{font-size:clamp(1.9rem,8.4vw,2.45rem);line-height:1.1}}
+
+/* Visible but restrained motion for the hero system visual. */
+.hero-visual-grid{animation:system-grid-drift 16s linear infinite}
+.visual-system-core{animation:system-core-breathe 4.2s ease-in-out infinite alternate}
+.visual-system-core span{transform-origin:50% 50%;animation:system-orbit-one 9s linear infinite}
+.visual-system-core span:nth-child(2){animation:system-orbit-two 13s linear infinite reverse}
+.visual-system-core span:nth-child(3){animation:system-orbit-three 7s linear infinite}
+.visual-system-core i{animation:system-light-pulse 2.4s ease-in-out infinite alternate}
+@keyframes system-grid-drift{to{background-position:48px 32px,48px 32px}}
+@keyframes system-orbit-one{from{transform:rotate(18deg) scaleY(.42)}to{transform:rotate(378deg) scaleY(.42)}}
+@keyframes system-orbit-two{from{transform:rotate(-24deg) scaleY(.48)}to{transform:rotate(336deg) scaleY(.48)}}
+@keyframes system-orbit-three{from{transform:rotate(72deg) scaleY(.36)}to{transform:rotate(432deg) scaleY(.36)}}
+@keyframes system-core-breathe{from{filter:brightness(.92) saturate(.9)}to{filter:brightness(1.16) saturate(1.18)}}
+@keyframes system-light-pulse{to{transform:scale(1.18);box-shadow:0 0 26px #edffff,0 0 68px #62e6f2}}
+@media(prefers-reduced-motion:reduce){.hero-visual-grid,.visual-system-core,.visual-system-core span,.visual-system-core i{animation:none}}
