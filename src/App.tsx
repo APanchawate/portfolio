@@ -89,10 +89,9 @@ function App() {
    <section className="hero section" id="top" tabIndex={-1}>
     <div className="hero-copy reveal">
      <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
-     <p className="hero-statement-kicker">ENTERPRISE TECHNOLOGY MANAGEMENT</p>
-     <h1>I align complex programmes<br/><em>and turn delivery data into decisions.</em></h1>
-     <p className="hero-capabilities">PMO · AI · Transformation · Automation</p>
-     <p className="hero-text">I bring people, plans, data and technology together so complex enterprise transformations move forward with clear ownership, visible progress and confident decisions.</p>
+     <h1>Enterprise Technology Management.<br/><em>PMO, AI, Transformation &amp; Automation.</em></h1>
+     <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
+     <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
     </div>
     <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
