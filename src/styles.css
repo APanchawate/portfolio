@@ -1479,3 +1479,109 @@ html[data-theme=aurora] .scroll-cue:hover{
 @keyframes aurora-cue-breathe{to{box-shadow:0 16px 42px #0008,0 0 40px #a58cff42}}
 @keyframes aurora-cue-shimmer{to{background-position:-220% 0}}
 @media(prefers-reduced-motion:reduce){html[data-theme=aurora] .scroll-cue,html[data-theme=aurora] .scroll-cue:before{animation:none}}
+
+/* Aurora delivery chapter: cinematic gateway followed by evidence cards. */
+html[data-theme=aurora] .how-i-work{
+ display:grid;
+ grid-template-columns:1fr;
+ gap:clamp(34px,4vw,54px);
+ padding-top:var(--section-space-compact);
+}
+html[data-theme=aurora] .how-i-work-intro{
+ position:relative;
+ isolation:isolate;
+ display:grid;
+ place-content:center;
+ width:100%;
+ max-width:none;
+ min-height:clamp(300px,34vw,430px);
+ overflow:hidden;
+ padding:clamp(44px,6vw,80px) 24px;
+ border:1px solid #a995ff45;
+ border-radius:22px;
+ text-align:center;
+ background:
+  linear-gradient(25deg,transparent 7%,#67f5dd4d 7.2%,transparent 7.6%) 7% 16%/110px 80px no-repeat,
+  linear-gradient(-19deg,transparent 12%,#67f5dd42 12.3%,transparent 12.8%) 83% 21%/120px 90px no-repeat,
+  linear-gradient(31deg,transparent 9%,#a995ff4d 9.3%,transparent 9.8%) 72% 78%/150px 110px no-repeat,
+  linear-gradient(-24deg,transparent 10%,#67f5dd38 10.3%,transparent 10.8%) 18% 76%/140px 100px no-repeat,
+  radial-gradient(circle at 50% 50%,#6353b665,transparent 35%),
+  linear-gradient(145deg,#101a32 0%,#17204a 48%,#321d47 100%);
+ box-shadow:inset 0 1px #ffffff0f,0 30px 90px #0003;
+}
+html[data-theme=aurora] .how-i-work-intro:before,
+html[data-theme=aurora] .how-i-work-intro:after{
+ content:'';
+ position:absolute;
+ left:50%;
+ top:50%;
+ z-index:-1;
+ width:190px;
+ height:116px;
+ border:2px solid #67f5dd8a;
+ border-radius:50%;
+ transform:translate(-50%,-50%) rotate(18deg);
+ animation:delivery-chapter-orbit 11s linear infinite;
+}
+html[data-theme=aurora] .how-i-work-intro:after{
+ width:112px;
+ height:210px;
+ border-color:#ff79ad80;
+ transform:translate(-50%,-50%) rotate(-16deg);
+ animation-duration:14s;
+ animation-direction:reverse;
+}
+html[data-theme=aurora] .how-i-work-intro .kicker{
+ justify-self:center;
+ margin:0 0 22px;
+ padding:9px 14px;
+ border:1px solid #b5c8ff59;
+ background:#0b1331c9;
+ color:#e8edff;
+ font-size:10px;
+ letter-spacing:.15em;
+}
+html[data-theme=aurora] .how-i-work-intro h2{
+ position:relative;
+ z-index:1;
+ margin:0;
+ color:#f7f8ff;
+ font-size:clamp(46px,6vw,82px);
+ line-height:.94;
+ letter-spacing:-.06em;
+ text-transform:uppercase;
+ text-shadow:0 12px 44px #0b102080;
+}
+html[data-theme=aurora] .how-i-work-intro h2 em{
+ display:inline-block;
+ background:linear-gradient(90deg,#67f5dd,#8ec7ff 52%,#b89cff);
+ background-clip:text;
+ color:transparent;
+}
+html[data-theme=aurora] .how-i-work-intro>p:last-child{
+ position:relative;
+ z-index:1;
+ max-width:760px;
+ margin:25px auto 0;
+ color:#d4dced;
+ font:600 11px/1.7 Manrope,sans-serif;
+ letter-spacing:.1em;
+ text-transform:uppercase;
+}
+html[data-theme=aurora] .how-i-work-grid{
+ width:100%;
+}
+@keyframes delivery-chapter-orbit{
+ to{transform:translate(-50%,-50%) rotate(378deg)}
+}
+@media(max-width:600px){
+ html[data-theme=aurora] .how-i-work-intro{min-height:260px;padding:42px 18px;border-radius:16px}
+ html[data-theme=aurora] .how-i-work-intro h2{font-size:clamp(36px,12vw,52px)}
+ html[data-theme=aurora] .how-i-work-intro>p:last-child{margin-top:20px;font-size:9px;letter-spacing:.07em}
+ html[data-theme=aurora] .how-i-work-intro:before{width:145px;height:86px}
+ html[data-theme=aurora] .how-i-work-intro:after{width:84px;height:155px}
+}
+@media(prefers-reduced-motion:reduce){
+ html[data-theme=aurora] .how-i-work-intro:before,
+ html[data-theme=aurora] .how-i-work-intro:after{animation:none}
+}
