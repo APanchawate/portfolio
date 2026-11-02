@@ -1284,3 +1284,24 @@ html[data-theme=aurora] .orbit-ring-two{border-color:#67f5dd50;animation:hero-or
 @media(max-width:900px){.hero-calm-visual{min-height:330px}.delivery-orbit{width:min(64%,330px)}.business-impact-section{grid-template-columns:1fr;gap:28px}}
 @media(max-width:600px){.hero-calm-visual{min-height:260px;border-radius:18px}.delivery-orbit{width:min(76%,250px)}.delivery-core{width:68px;height:68px}.delivery-node{width:42px;height:42px}.business-impact-section{padding-top:42px;padding-bottom:38px}.business-impact-intro h2{font-size:32px}}
 @media(prefers-reduced-motion:reduce){.hero-visual-glow,.delivery-node,html[data-theme=aurora] .orbit-ring{animation:none}}
+
+/* Editorial hero: memorable value statement with a restrained dimensional focal point. */
+.hero-statement-kicker{margin:26px 0 12px;color:var(--cyan);font:700 11px/1.5 Manrope,sans-serif;letter-spacing:.14em}
+.hero-deliver-visual{isolation:isolate;min-height:480px;background:linear-gradient(145deg,#10192baa,#0a101db8)}
+.hero-visual-grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(#a9bdd910 1px,transparent 1px),linear-gradient(90deg,#a9bdd910 1px,transparent 1px);background-size:33.333% 33.333%;mask-image:linear-gradient(to bottom,#000b,transparent 94%)}
+.visual-profile-card{position:absolute;z-index:3;top:28px;right:28px;display:flex;align-items:center;gap:13px;min-width:300px;padding:12px 16px;border:1px solid #b5c6df33;border-radius:12px;background:#111a2de8;box-shadow:8px 8px 0 #62e6f21b,0 18px 42px #0004;backdrop-filter:blur(12px)}
+.visual-profile-card img{width:58px;height:58px;flex:0 0 58px;border:1px solid #ffffff3d;border-radius:50%;object-fit:cover;object-position:50% 24%}
+.visual-profile-card div{display:grid;gap:4px}.visual-profile-card strong{font-size:15px;color:#f3f7ff}.visual-profile-card span{font-size:11px;color:var(--muted)}
+.deliver-word{position:relative;z-index:1;color:#89a0ff;font:800 clamp(4rem,7.1vw,7.1rem)/.82 Manrope,sans-serif;letter-spacing:-.08em;transform:perspective(700px) rotateX(8deg) rotateY(-9deg) rotate(-4deg);text-shadow:1px 1px 0 #6275d8,2px 2px 0 #5c6dca,3px 3px 0 #5565bb,4px 4px 0 #4c5baa,5px 5px 0 #45529a,12px 18px 36px #0007;filter:drop-shadow(0 0 26px #736dff30)}
+.hero-signal{position:absolute;z-index:2;padding:9px 13px;border:1px solid #62e6f25c;border-radius:999px;background:#122339db;color:#dffffb;font:700 10px/1 Manrope,sans-serif;letter-spacing:.12em;box-shadow:0 12px 28px #0004;backdrop-filter:blur(9px);animation:hero-signal-float 6s ease-in-out infinite alternate;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.hero-signal:hover{transform:translateY(-7px) rotate(3deg) scale(1.06);border-color:var(--cyan);background:#18344c}
+.signal-pmo{left:9%;top:19%;transform:rotate(-7deg)}
+.signal-ai{left:15%;bottom:16%;border-color:#a995ff70;background:#292044dd;animation-delay:-2s}
+.signal-data{right:8%;top:42%;transform:rotate(6deg);animation-delay:-3.5s}
+.signal-automation{right:13%;bottom:10%;border-color:#f3b86b70;background:#34271add;animation-delay:-5s}
+html[data-theme=aurora] .deliver-word{background:linear-gradient(115deg,#67f5dd 5%,#8eb7ff 44%,#b494ff 78%,#ffbf6b);background-clip:text;color:transparent;text-shadow:1px 1px 0 #6572d2,2px 2px 0 #5c67bf,3px 3px 0 #535cac,4px 4px 0 #494f98,5px 5px 0 #3f4383,12px 18px 38px #0008}
+@keyframes hero-signal-float{to{translate:0 -9px}}
+@media(min-width:901px){.hero-copy h1{font-size:clamp(2.45rem,3.15vw,3.6rem);line-height:1.05}.hero-copy .hero-text{max-width:690px}.hero-deliver-visual{align-self:stretch}}
+@media(max-width:900px){.hero-statement-kicker{margin-top:20px}.visual-profile-card{top:20px;right:20px}.hero-deliver-visual{min-height:390px}}
+@media(max-width:600px){.hero-statement-kicker{margin-top:18px;font-size:9px}.hero-copy h1{font-size:clamp(2rem,9vw,2.55rem)}.hero-deliver-visual{min-height:310px}.visual-profile-card{left:16px;right:16px;top:16px;min-width:0;padding:10px 12px}.visual-profile-card img{width:48px;height:48px;flex-basis:48px}.visual-profile-card strong{font-size:13px}.visual-profile-card span{font-size:10px}.deliver-word{font-size:clamp(3.35rem,17vw,5rem)}.hero-signal{padding:7px 9px;font-size:8px}.signal-pmo{top:36%}.signal-data{top:44%}.signal-ai{bottom:12%}.signal-automation{right:8%;bottom:8%}.hero-actions .button{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.hero-signal{animation:none}}

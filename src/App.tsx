@@ -90,23 +90,19 @@ function App() {
    <section className="hero section" id="top" tabIndex={-1}>
     <div className="hero-copy reveal">
      <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
-     <div className="profile-intro"><img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate" width="96" height="96" fetchPriority="high"/><div><p className="intro">AKSHAY PANCHAWATE</p><p className="profile-role">Enterprise Technology Management · PMO · Transformation</p></div></div>
-     <h1>Enterprise Technology Management.<br/><em>PMO, AI, Transformation &amp; Automation.</em></h1>
-     <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
-     <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
+     <p className="hero-statement-kicker">ENTERPRISE TECHNOLOGY MANAGEMENT</p>
+     <h1>I align complex programmes<br/><em>and turn delivery data into decisions.</em></h1>
+     <p className="hero-capabilities">PMO · AI · Transformation · Automation</p>
+     <p className="hero-text">I bring people, plans, data and technology together so complex enterprise transformations move forward with clear ownership, visible progress and confident decisions.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
      <HeroActions assets={assets}/>
     </div>
-    <aside className="hero-calm-visual" aria-hidden="true">
+    <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
      <div className="hero-visual-glow"/>
-     <div className="delivery-orbit">
-      <span className="orbit-ring orbit-ring-one"/><span className="orbit-ring orbit-ring-two"/><span className="orbit-ring orbit-ring-three"/>
-      <span className="delivery-node node-visibility"><BarChart3 size={22}/></span>
-      <span className="delivery-node node-governance"><Repeat2 size={22}/></span>
-      <span className="delivery-node node-alignment"><UsersRound size={22}/></span>
-      <span className="delivery-node node-automation"><Workflow size={22}/></span>
-      <span className="delivery-core"><Workflow size={34}/></span>
-     </div>
+     <div className="hero-visual-grid" aria-hidden="true"/>
+     <div className="visual-profile-card"><img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate" width="80" height="80" fetchPriority="high"/><div><strong>Akshay Panchawate</strong><span>Enterprise Technology Management</span></div></div>
+     <div className="deliver-word" aria-hidden="true">DELIVER</div>
+     <span className="hero-signal signal-pmo">PMO</span><span className="hero-signal signal-ai">AI</span><span className="hero-signal signal-data">DATA</span><span className="hero-signal signal-automation">AUTOMATION</span>
     </aside>
    </section>
    <section className="section business-impact-section" id="enterprise-scope" aria-label="Business impact and transformation contribution" tabIndex={-1}>

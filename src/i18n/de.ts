@@ -1537,6 +1537,13 @@ const de = {
   "scale_title_2": "den Mehrwert.",
   "scale_intro": "Konkrete Programmgrößen aus Enterprise-Testmanagement, Plattform-Governance und Automatisierungsumsetzung.",
   "hero_positioning_title": "PMO, KI, Transformation & Automatisierung.",
-  "hero_positioning_focus": "Enterprise-Testmanagement · IT-Projektkoordination · Prozessautomatisierung · KI-gestützte Entwicklung"
+  "hero_positioning_focus": "Enterprise-Testmanagement · IT-Projektkoordination · Prozessautomatisierung · KI-gestützte Entwicklung",
+  "hero_statement_kicker": "ENTERPRISE TECHNOLOGIEMANAGEMENT",
+  "hero_statement_1": "Ich richte komplexe Programme aus",
+  "hero_statement_2": "und mache aus Umsetzungsdaten Entscheidungen.",
+  "hero_statement_focus": "PMO · KI · Transformation · Automatisierung",
+  "hero_statement_summary": "Ich bringe Menschen, Pläne, Daten und Technologie zusammen, damit komplexe Unternehmenstransformationen mit klarer Verantwortung, sichtbarem Fortschritt und sicheren Entscheidungen vorankommen.",
+  "hero_profile_role": "Enterprise Technologiemanagement",
+  "hero_explore_work": "Ausgewählte Projekte entdecken"
 } satisfies Record<TranslationKey, string>
 export default de

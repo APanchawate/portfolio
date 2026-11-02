@@ -1537,7 +1537,14 @@ const en = {
   "scale_title_2": "the impact.",
   "scale_intro": "Concrete programme scale from enterprise Test Management, platform governance and automation delivery.",
   "hero_positioning_title": "PMO, AI, Transformation & Automation.",
-  "hero_positioning_focus": "Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering"
+  "hero_positioning_focus": "Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering",
+  "hero_statement_kicker": "ENTERPRISE TECHNOLOGY MANAGEMENT",
+  "hero_statement_1": "I align complex programmes",
+  "hero_statement_2": "and turn delivery data into decisions.",
+  "hero_statement_focus": "PMO · AI · Transformation · Automation",
+  "hero_statement_summary": "I bring people, plans, data and technology together so complex enterprise transformations move forward with clear ownership, visible progress and confident decisions.",
+  "hero_profile_role": "Enterprise Technology Management",
+  "hero_explore_work": "Explore Selected Work"
 } as const
 export default en
 export type TranslationKey = keyof typeof en
