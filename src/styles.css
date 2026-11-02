@@ -1321,3 +1321,6 @@ html[data-theme=aurora] .visual-system-core{background:radial-gradient(circle at
 .visual-profile-focus span:nth-child(3){border-color:#f3b86b4a;background:#f3b86b0a}
 .visual-system-core{transform:translateY(58px) perspective(700px) rotateX(10deg)}
 @media(max-width:600px){.visual-profile-card{left:14px;right:14px;top:14px;padding:11px 12px;gap:11px}.visual-profile-card img{width:52px;height:52px;flex-basis:52px}.visual-profile-card .visual-profile-role{font-size:9px}.visual-profile-focus{gap:4px!important;margin-top:3px}.visual-profile-focus span{padding:4px 6px;font-size:7px}.visual-system-core{margin-top:58px;transform:translateY(30px) perspective(700px) rotateX(10deg)}}
+
+.hero-copy .consultant-headline{font-size:clamp(2.25rem,2.8vw,3.25rem);line-height:1.08;letter-spacing:-.045em}
+@media(max-width:600px){.hero-copy .consultant-headline{font-size:clamp(1.9rem,8.4vw,2.45rem);line-height:1.1}}
