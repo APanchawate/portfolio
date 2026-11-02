@@ -1339,3 +1339,7 @@ html[data-theme=aurora] .visual-system-core{background:radial-gradient(circle at
 @keyframes system-core-breathe{from{filter:brightness(.92) saturate(.9)}to{filter:brightness(1.16) saturate(1.18)}}
 @keyframes system-light-pulse{to{transform:scale(1.18);box-shadow:0 0 26px #edffff,0 0 68px #62e6f2}}
 @media(prefers-reduced-motion:reduce){.hero-visual-grid,.visual-system-core,.visual-system-core span,.visual-system-core i{animation:none}}
+
+.exp-main .exp-location{display:flex;align-items:center;gap:7px;margin:7px 0 0;color:#9eabc1;font:500 12px/1.5 Manrope,sans-serif;letter-spacing:0;text-transform:none}
+.exp-location svg{flex:0 0 auto;color:var(--cyan)}
+.exp-location+h4{margin-top:7px}

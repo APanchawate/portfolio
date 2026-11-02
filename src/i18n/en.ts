@@ -1546,7 +1546,9 @@ const en = {
   "hero_statement_summary": "I bring people, plans, data and technology together so complex enterprise transformations move forward with clear ownership, visible progress and confident decisions.",
   "hero_profile_role": "Enterprise Technology Management",
   "hero_explore_work": "Explore Selected Work",
-  "hero_profile_ai_automation": "AI & Automation"
+  "hero_profile_ai_automation": "AI & Automation",
+  "experience_munich": "Munich, Germany",
+  "experience_stuttgart": "Stuttgart, Germany"
 } as const
 export default en
 export type TranslationKey = keyof typeof en

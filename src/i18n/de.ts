@@ -1546,6 +1546,8 @@ const de = {
   "hero_statement_summary": "Ich bringe Menschen, Pläne, Daten und Technologie zusammen, damit komplexe Unternehmenstransformationen mit klarer Verantwortung, sichtbarem Fortschritt und sicheren Entscheidungen vorankommen.",
   "hero_profile_role": "Enterprise Technologiemanagement",
   "hero_explore_work": "Ausgewählte Projekte entdecken",
-  "hero_profile_ai_automation": "KI & Automatisierung"
+  "hero_profile_ai_automation": "KI & Automatisierung",
+  "experience_munich": "München, Deutschland",
+  "experience_stuttgart": "Stuttgart, Deutschland"
 } satisfies Record<TranslationKey, string>
 export default de
