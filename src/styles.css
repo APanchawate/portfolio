@@ -1492,11 +1492,12 @@ html[data-theme=aurora] .how-i-work-intro{
  isolation:isolate;
  display:grid;
  place-content:center;
- width:100%;
- max-width:none;
- min-height:clamp(300px,34vw,430px);
+ width:min(100%,1080px);
+ max-width:1080px;
+ min-height:clamp(250px,25vw,330px);
+ margin-inline:auto;
  overflow:hidden;
- padding:clamp(44px,6vw,80px) 24px;
+ padding:clamp(38px,4vw,58px) 24px;
  border:1px solid #a995ff45;
  border-radius:22px;
  text-align:center;
@@ -1532,21 +1533,14 @@ html[data-theme=aurora] .how-i-work-intro:after{
  animation-direction:reverse;
 }
 html[data-theme=aurora] .how-i-work-intro .kicker{
- justify-self:center;
- margin:0 0 22px;
- padding:9px 14px;
- border:1px solid #b5c8ff59;
- background:#0b1331c9;
- color:#e8edff;
- font-size:10px;
- letter-spacing:.15em;
+ display:none;
 }
 html[data-theme=aurora] .how-i-work-intro h2{
  position:relative;
  z-index:1;
  margin:0;
  color:#f7f8ff;
- font-size:clamp(46px,6vw,82px);
+ font-size:clamp(40px,4.8vw,66px);
  line-height:.94;
  letter-spacing:-.06em;
  text-transform:uppercase;
@@ -1561,8 +1555,8 @@ html[data-theme=aurora] .how-i-work-intro h2 em{
 html[data-theme=aurora] .how-i-work-intro>p:last-child{
  position:relative;
  z-index:1;
- max-width:760px;
- margin:25px auto 0;
+ max-width:680px;
+ margin:20px auto 0;
  color:#d4dced;
  font:600 11px/1.7 Manrope,sans-serif;
  letter-spacing:.1em;
@@ -1575,8 +1569,8 @@ html[data-theme=aurora] .how-i-work-grid{
  to{transform:translate(-50%,-50%) rotate(378deg)}
 }
 @media(max-width:600px){
- html[data-theme=aurora] .how-i-work-intro{min-height:260px;padding:42px 18px;border-radius:16px}
- html[data-theme=aurora] .how-i-work-intro h2{font-size:clamp(36px,12vw,52px)}
+ html[data-theme=aurora] .how-i-work-intro{width:100%;min-height:220px;padding:36px 18px;border-radius:16px}
+ html[data-theme=aurora] .how-i-work-intro h2{font-size:clamp(32px,10vw,44px)}
  html[data-theme=aurora] .how-i-work-intro>p:last-child{margin-top:20px;font-size:9px;letter-spacing:.07em}
  html[data-theme=aurora] .how-i-work-intro:before{width:145px;height:86px}
  html[data-theme=aurora] .how-i-work-intro:after{width:84px;height:155px}
