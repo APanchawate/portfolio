@@ -1567,7 +1567,17 @@ const en = {
   "streamline_path_test": "International UAT governance and readiness.",
   "streamline_path_automation": "Python and Jira/Xray API workflows.",
   "streamline_path_reporting": "KPIs, risk signals and decision visibility.",
-  "streamline_path_ai": "Knowledge assistants and AI-assisted engineering."
+  "streamline_path_ai": "Knowledge assistants and AI-assisted engineering.",
+  "ai_case_title": "Enterprise AI Knowledge Agents",
+  "ai_case_preview_challenge": "Programme and Test Management knowledge was distributed across many Confluence pages.",
+  "ai_case_preview_role": "Configured and grounded two AI agents on BMW’s internal GAIA LLM platform.",
+  "ai_case_preview_value": "Faster access to approved knowledge, easier onboarding and fewer repetitive searches.",
+  "ai_case_challenge": "Programme and Test Management knowledge was spread across multiple Confluence sources, making reliable information retrieval slower for team members and new joiners.",
+  "ai_case_role": "Configured two internal knowledge agents, curated and connected approved Confluence content, designed prompts and agent instructions, and tested and refined retrieval quality and responses.",
+  "ai_case_approach": "Created separate Programme Knowledge and Test Management agents on BMW’s internal GAIA LLM platform. Grounded each agent in selected Confluence knowledge sources, defined role-specific instructions and prompt patterns, prepared evaluation questions, reviewed responses and iteratively refined retrieval and answer behaviour.",
+  "ai_case_value": "Improved access to relevant programme and Test Management guidance, supported onboarding and reduced repetitive knowledge searches while keeping accountable stakeholders responsible for enterprise decisions.",
+  "ai_case_technical": "BMW internal GAIA LLM platform · Confluence knowledge sources · Retrieval grounding · Prompt engineering · Agent instructions · Evaluation and iterative refinement. This was agent configuration and knowledge grounding, not training or fine-tuning the underlying foundation model.",
+  "ai_case_stakeholders": "Programme team members, Test Management colleagues, management stakeholders and new joiners."
 } as const
 export default en
 export type TranslationKey = keyof typeof en

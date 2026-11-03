@@ -1567,6 +1567,16 @@ const de = {
   "streamline_path_test": "Internationale UAT-Governance und Testbereitschaft.",
   "streamline_path_automation": "Python- und Jira/Xray-API-Workflows.",
   "streamline_path_reporting": "KPIs, Risikosignale und Entscheidungstransparenz.",
-  "streamline_path_ai": "Wissensassistenten und KI-gestützte Softwareentwicklung."
+  "streamline_path_ai": "Wissensassistenten und KI-gestützte Softwareentwicklung.",
+  "ai_case_title": "Enterprise-KI-Wissensagenten",
+  "ai_case_preview_challenge": "Programm- und Testmanagementwissen war über viele Confluence-Seiten verteilt.",
+  "ai_case_preview_role": "Zwei KI-Agenten auf der internen BMW GAIA LLM-Plattform konfiguriert und mit Wissen verankert.",
+  "ai_case_preview_value": "Schnellerer Zugriff auf freigegebenes Wissen, einfacheres Onboarding und weniger wiederkehrende Suchen.",
+  "ai_case_challenge": "Programm- und Testmanagementwissen war über mehrere Confluence-Quellen verteilt, wodurch die zuverlässige Informationssuche für Teammitglieder und neue Kolleginnen und Kollegen langsamer war.",
+  "ai_case_role": "Zwei interne Wissensagenten konfiguriert, freigegebene Confluence-Inhalte kuratiert und angebunden, Prompts und Agentenanweisungen entwickelt sowie Abrufqualität und Antworten getestet und verfeinert.",
+  "ai_case_approach": "Separate Agenten für Programmwissen und Testmanagement auf der internen BMW GAIA LLM-Plattform erstellt. Jeden Agenten mit ausgewählten Confluence-Wissensquellen verankert, rollenspezifische Anweisungen und Prompt-Muster definiert, Evaluierungsfragen vorbereitet, Antworten geprüft und Abruf- und Antwortverhalten iterativ verbessert.",
+  "ai_case_value": "Den Zugriff auf relevante Programm- und Testmanagementinformationen verbessert, das Onboarding unterstützt und wiederkehrende Wissenssuchen reduziert; verantwortliche Stakeholder behalten die Entscheidungshoheit.",
+  "ai_case_technical": "Interne BMW GAIA LLM-Plattform · Confluence-Wissensquellen · Retrieval Grounding · Prompt Engineering · Agentenanweisungen · Evaluierung und iterative Verfeinerung. Dies war Agentenkonfiguration und Wissensverankerung, kein Training oder Fine-Tuning des zugrunde liegenden Foundation Models.",
+  "ai_case_stakeholders": "Programmteam, Testmanagement, Management-Stakeholder und neue Kolleginnen und Kollegen."
 } satisfies Record<TranslationKey, string>
 export default de
