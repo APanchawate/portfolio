@@ -1181,6 +1181,11 @@ main>.section{scroll-margin-top:100px}
 .chapter-transition{display:none}
 html[data-theme=aurora] .chapter-transition{position:relative;isolation:isolate;display:grid;place-items:center;width:calc(100% - 48px);max-width:var(--site-content);min-height:clamp(260px,34vh,390px);margin:42px auto;overflow:hidden;border:1px solid #a995ff3d;border-radius:22px;background:radial-gradient(circle at 50% 50%,#6353b65c,transparent 34%),linear-gradient(145deg,#101a32 0%,#17204a 48%,#291b43 100%);box-shadow:inset 0 1px #ffffff0d,0 30px 90px #0003}
 html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#7a82ff22,#ff7cab2e);opacity:.8}
+html[data-theme=executive] .chapter-transition{position:relative;isolation:isolate;display:grid;place-items:center;width:calc(100% - 48px);max-width:var(--site-content);min-height:clamp(230px,30vh,340px);margin:48px auto;overflow:hidden;border:1px solid #62e6f22f;border-radius:18px;background:radial-gradient(circle at 50% 50%,#28658945,transparent 34%),linear-gradient(145deg,#0d1525 0%,#13233a 52%,#17172f 100%);box-shadow:inset 0 1px #ffffff0b,0 24px 70px #0003}
+html[data-theme=executive] .chapter-transition:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#62e6f20c,#a995ff14);opacity:.75}
+html[data-theme=executive] .chapter-copy h2 em{background:linear-gradient(90deg,#62e6f2,#80bdf2 58%,#a995ff);background-clip:text;color:transparent}
+html[data-theme=executive] .chapter-signals{opacity:.38}
+html[data-theme=executive] .chapter-orbit{opacity:.36}
 .chapter-copy{position:relative;z-index:2;text-align:center;padding:48px 24px;opacity:1}
 .chapter-transition.is-visible .chapter-copy{animation:chapter-copy-enter .75s cubic-bezier(.2,.8,.2,1) both}
 .chapter-copy>p{display:inline-block;margin:0 0 22px;padding:8px 12px;border:1px solid #b5c8ff55;background:#0b1331b8;color:#dfe8ff;font:700 10px/1 Manrope;letter-spacing:.14em}
@@ -1195,7 +1200,7 @@ html[data-theme=aurora] .chapter-transition:before{content:'';position:absolute;
 @keyframes chapter-signal{to{transform:translate(22px,12px) rotate(34deg);opacity:.35}}
 @keyframes chapter-orbit{to{transform:rotate(360deg)}}
 @keyframes chapter-copy-enter{from{transform:translateY(18px) scale(.98);opacity:.25}to{transform:none;opacity:1}}
-@media(max-width:600px){html[data-theme=aurora] .chapter-transition{width:auto;min-height:180px;margin:26px 16px;border-radius:15px}.chapter-copy{padding:34px 18px;transform:none;opacity:1}.chapter-copy>p{margin-bottom:15px}.chapter-copy h2{font-size:clamp(30px,10vw,42px);line-height:1}.chapter-copy>span{margin-top:17px;font-size:9px}.chapter-signals{opacity:.35}.chapter-orbit{width:150px;height:150px}}
+@media(max-width:600px){html[data-theme=aurora] .chapter-transition,html[data-theme=executive] .chapter-transition{width:auto;min-height:180px;margin:26px 16px;border-radius:15px}.chapter-copy{padding:34px 18px;transform:none;opacity:1}.chapter-copy>p{margin-bottom:15px}.chapter-copy h2{font-size:clamp(30px,10vw,42px);line-height:1}.chapter-copy>span{margin-top:17px;font-size:9px}.chapter-signals{opacity:.35}.chapter-orbit{width:150px;height:150px}}
 @media(prefers-reduced-motion:reduce){.chapter-transition.is-visible .chapter-copy,.chapter-signals i,.chapter-orbit span{animation:none}}
 
 /* First-view invitation into the portfolio. */
