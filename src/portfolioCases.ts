@@ -52,10 +52,10 @@ export const featuredCases: readonly FeaturedCase[] = [
     supportingProjects: ['07'],
   },
   {
-    title: 'Automation Engineering & AI',
-    preview: {"challenge": "Recurring administration relied on separate manual actions and scripts.", "role": "Developed an integrated Hub to centralize repeatable testing workflows.", "value": "More accessible, repeatable and maintainable automation workflows."},
+    title: 'Automation Engineering, Jira/Xray & AI',
+    preview: {"challenge": "Testing administration relied on repeated setup and disconnected scripts.", "role": "Owned testing-specific Jira/Xray configuration and developed an integrated Automation Hub.", "value": "More consistent setup, accessible workflows and less repetitive administration."},
     challenge: 'Recurring testing administration and reporting relied on separate manual actions and scripts, making workflows fragmented.',
-    role: 'Translated operational requirements into technical workflows, coordinated their implementation with users and stakeholders, and developed the Test Management Automation Hub for repeatable Jira/Xray administration and reporting.',
+    role: 'Combined primary technical ownership of testing-specific Jira/Xray configuration with development of the Test Management Automation Hub and AI-assisted engineering workflows.',
     approach: 'Integrated plan, execution, test-case, filter and dashboard automation through a React/TypeScript interface and FastAPI/Python services, connecting operational requirements with reusable technical workflows and API-driven reporting.',
     value: 'A central interface and reusable workflows connect business needs with technical delivery, supporting consistent testing setup, clearer reporting and less repetitive administration.',
     technical: 'Python and REST API delivery includes 30+ scripts supporting the integrated Hub and related automation workflows. FastAPI services, React/TypeScript, SQLite, GitHub Actions, self-hosted runners and Playwright have distinct architectural roles. AI-assisted Python development and debugging support delivery; two configured AI knowledge assistants complement the Hub.',

@@ -27,10 +27,9 @@ const experience = [
 ]
 
 const opportunityRoles = [
- 'Test Manager', 'Technical Test Manager', 'UAT / Test Coordinator',
- 'Test Management Support', 'Defect Manager', 'QA Governance Specialist',
- 'Automation Specialist', 'Jira/Xray Specialist', 'Process Automation Specialist',
- 'IT Project / PMO Support',
+ 'Enterprise Test Management & UAT Governance',
+ 'IT Project Coordination, PMO & Transformation',
+ 'Process Automation & Jira/Xray Solutions',
 ]
 const classifications = ['Partner system', 'Training', 'Test data', 'Implementation', 'New requirement', 'New minor requirement', 'Migration']
 const deliveryScaleMetrics = [
@@ -40,10 +39,10 @@ const deliveryScaleMetrics = [
   ['', 'Automation Hub', 'Integrated Jira/Xray automation for test management, dashboards and reporting.'],
 ]
 const businessImpacts = [
-  ['Management-ready visibility', 'Transformed complex programme data into dashboards, risk signals and clear next actions.', BarChart3],
-  ['Governance at enterprise scale', 'Established repeatable test and reporting practices across 22 product teams and 20+ company codes.', Repeat2],
-  ['Cross-functional coordination', 'Aligned business, technology, market and central stakeholders around ownership, dependencies and delivery priorities.', UsersRound],
-  ['Automation that saves effort', 'Built 200+ Jira automated dashboards and repeatable workflows, reducing manual reporting and administration.', Workflow],
+  ['Decision visibility', 'Turn complex programme data into concise signals for priorities, risks and next actions.', BarChart3],
+  ['Scalable ways of working', 'Establish reusable standards that keep international testing consistent as scope grows.', Repeat2],
+  ['Cross-functional alignment', 'Connect business, technology, market and central teams around ownership and delivery priorities.', UsersRound],
+  ['Efficient operations', 'Replace repetitive preparation with maintainable Jira/Xray workflows and practical automation.', Workflow],
 ] as const
 const stages = [
   { title: 'Scope Preparation', objective: 'Turn rollout inputs into a proposed market-specific UAT scope.', contributions: ['Review company codes, rollout requirements, Finance Product coverage and the reusable master test-case repository.', 'Map reusable master cases, consolidate proposed market scope and identify potential coverage gaps.'], output: 'Draft UAT scope for review.', note: 'Business and implementation stakeholders own FIT/GAP analysis; I coordinate the downstream testing preparation.' },
@@ -90,7 +89,7 @@ function App() {
     <div className="hero-copy reveal">
      <h1 className="consultant-headline">I bring business, technology,<br/>data and AI together<br/><em>to move transformation from strategy to delivery.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
-     <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
+     <p className="hero-text">I coordinate international SAP S/4HANA testing, turn programme data into decision-ready visibility and build practical automation for repeatable enterprise workflows.</p>
      <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p><div className="eyebrow hero-availability"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div></div>
     </div>
     <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
@@ -106,15 +105,6 @@ function App() {
    </section>
    <div className="enterprise-scope-strip" aria-label="Additional enterprise scope and personal contribution"><p><strong>20+ company codes</strong> · international testing scope supported</p><p><strong>200+ dashboards</strong> · personally created through automation</p><p><strong>1,500+ defects</strong> · management and reporting environment</p></div>
    <AuroraObjects/>
-   <section className="section how-i-work" id="about" aria-labelledby="how-i-work-title" tabIndex={-1}>
-    <div className="how-i-work-intro"><p className="kicker">HOW I DELIVER</p><h2 id="how-i-work-title">From alignment<br/><em>to action.</em></h2><p>An experience-led operating rhythm that aligns stakeholders, makes delivery visible and automates repeatable work.</p></div>
-    <div className="how-i-work-grid">{[
-      ['Align', 'Coordinated international SAP S/4HANA Finance UAT across rollout management, testers and 22 Finance Product Teams.', '20+ company codes · international scope', UsersRound],
-      ['Make visible', 'Turned execution, defect, risk and dependency data into management-ready reporting and next actions.', '200+ automated dashboards · 1,500+ defects', BarChart3],
-      ['Automate', 'Built Jira/Xray automation for test structures, filters, dashboards and recurring reporting workflows.', 'Python · REST APIs · Jira/Xray', Workflow],
-    ].map(([title,text,proof,Icon]) => { const WorkIcon = Icon as typeof UsersRound; return <article key={title as string}><WorkIcon size={22} aria-hidden="true"/><h3>{title as string}</h3><p>{text as string}</p><span className="work-proof">{proof as string}</span></article> })}</div>
-   </section>
-   <PortfolioPathways/>
    <section className="section delivery-scale" id="delivery-scale" aria-labelledby="delivery-scale-title" tabIndex={-1}>
     <div className="section-head"><div><p className="kicker">ENTERPRISE DELIVERY SCALE</p><h2 id="delivery-scale-title">Evidence behind <em>the impact.</em></h2></div><p>Concrete programme scale from enterprise Test Management, platform governance and automation delivery.</p></div>
     <div className="delivery-scale-grid">{deliveryScaleMetrics.map(([value,label,note])=><article key={label}>{label === 'Automation Hub' ? <Workflow className="hub-metric-icon" size={30} aria-hidden="true"/> : <strong>{value}</strong>}<h3>{label}</h3><p>{note}</p></article>)}</div>
@@ -122,6 +112,7 @@ function App() {
    </section>
    <ChapterTransition number="01" label="GOVERNANCE" title="Govern" accent="complex delivery." detail="PMO · UAT · Stakeholder Coordination"/>
    <FeaturedCaseStudies/>
+   <PortfolioPathways/>
    <details className="portfolio-deep-dive">
     <summary><span><strong>Explore the full portfolio</strong><small>Detailed governance methods, operating models and the interactive decision centre</small></span><span aria-hidden="true">+</span></summary>
     <div className="portfolio-deep-dive-content">
@@ -214,11 +205,11 @@ function App() {
     </div>
    <BackToTop/>
    </section>
-   <section className="contact section" id="contact" tabIndex={-1}><div className="contact-glow"/><p className="kicker">CONTACT</p><h2>Let’s build something <em>valuable together.</em></h2><p>Whether you’re strengthening programme governance, improving delivery visibility or exploring practical automation and AI, I’d be happy to learn about your challenge.</p><p className="availability-summary">{careerAvailability.summary}</p><div className="contact-actions"><a className="button primary" href="mailto:akshaysipune15@gmail.com">Start a conversation <ArrowRight size={17}/></a><a className="button secondary" href="#resources">CV &amp; Presentation <ArrowRight size={17}/></a></div><BackToTop/>
+   <section className="contact section" id="contact" tabIndex={-1}><div className="contact-glow"/><p className="kicker">CONTACT</p><h2>Let’s build something <em>valuable together.</em></h2><p>If your programme needs clearer ownership, stronger delivery signals or scalable workflows, I’d be happy to learn about the challenge.</p><div className="contact-actions"><a className="button primary" href="mailto:akshaysipune15@gmail.com">Start a conversation <ArrowRight size={17}/></a><a className="button secondary" href="#resources">CV &amp; Presentation <ArrowRight size={17}/></a></div><BackToTop/>
    </section>
   </main>
   <FloatingBackToTop menuOpen={open}/>
-  <footer><a className="brand" href="#top" aria-label="Back to home"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate.<span className="footer-availability">{careerAvailability.summary}</span></p></footer>
+  <footer><a className="brand" href="#top" aria-label="Back to home"><span>AP</span><i/></a><p>© {new Date().getFullYear()} Akshay Panchawate.</p></footer>
  </div>}</Localized>
 }
 export default App

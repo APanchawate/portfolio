@@ -17,5 +17,5 @@ export default function FirstViewScrollCue() {
     }
   }, [])
   const label = aurora ? 'Explore My Approach' : 'See how I deliver'
-  return <button className="scroll-cue" type="button" hidden={!visible} aria-label={label} onClick={() => goToSection(aurora ? 'about' : 'enterprise-scope')}><span>{label}</span><i><ChevronDown size={18} aria-hidden="true"/></i></button>
+  return <button className="scroll-cue" type="button" hidden={!visible} aria-label={label} onClick={() => goToSection('enterprise-scope')}><span>{label}</span><i><ChevronDown size={18} aria-hidden="true"/></i></button>
 }
