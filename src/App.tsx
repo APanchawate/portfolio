@@ -88,11 +88,10 @@ function App() {
   <main id="main" tabIndex={-1}>
    <section className="hero section" id="top" tabIndex={-1}>
     <div className="hero-copy reveal">
-     <div className="eyebrow"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div>
      <h1 className="consultant-headline">I bring business, technology,<br/>data and AI together<br/><em>to move transformation from strategy to delivery.</em></h1>
      <p className="hero-capabilities">Enterprise Test Management · IT Project Coordination · Process Automation · AI-Assisted Engineering</p>
      <p className="hero-text">I bring people, plans, data and technology together to make complex enterprise transformations easier to deliver. From international SAP S/4HANA governance to practical automation and AI, my focus is clear ownership, confident decisions and measurable progress.</p>
-     <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p></div>
+     <div className="hero-mobility"><p className="location"><MapPin size={16} aria-hidden="true"/><span>{careerAvailability.mobilitySummary}</span></p><div className="eyebrow hero-availability"><span className="pulse"/><span>Available from {careerAvailability.date}</span></div></div>
     </div>
     <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
      <div className="hero-visual-glow"/>

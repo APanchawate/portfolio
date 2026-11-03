@@ -1583,3 +1583,5 @@ html[data-theme=aurora] .how-i-work-grid{
 /* Keep the Aurora delivery evidence concise; the chapter panel is intentionally removed. */
 html[data-theme=aurora] .how-i-work-intro{display:none}
 html[data-theme=aurora] .how-i-work{padding-top:var(--section-space-compact)}
+
+.hero-mobility .hero-availability{margin-top:12px}
