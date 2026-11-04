@@ -36,10 +36,10 @@ const copy = {
 
 const photos = [
   ['budapest.jpg', 'Travel portrait by the illuminated Hungarian Parliament in Budapest', 'feature'],
-  ['football.jpg', 'Akshay at a football match in Munich', 'football'],
-  ['lakeside.jpg', 'Akshay exploring a sunny lakeside in Germany', 'lakeside'],
+  ['football-v2.jpg', 'Akshay at a football match in Munich', 'football'],
+  ['lakeside-v2.jpg', 'Akshay exploring a sunny lakeside in Germany', 'lakeside'],
   ['ukulele.jpg', 'Akshay playing the ukulele outdoors', 'ukulele'],
-  ['exploring.jpg', 'Akshay exploring a historic stone arch and village', 'exploring'],
+  ['exploring-v2.jpg', 'Akshay exploring a historic stone arch and village', 'exploring'],
   ['celebration.jpg', 'Akshay celebrating in traditional Indian clothing', 'celebration'],
 ] as const
 
