@@ -95,7 +95,7 @@ function App() {
     <aside className="hero-calm-visual hero-deliver-visual" aria-label="Akshay Panchawate — Enterprise Technology Management, PMO and Transformation">
      <div className="hero-visual-glow"/>
      <div className="hero-visual-grid" aria-hidden="true"/>
-     <div className="visual-profile-card"><img src="/akshay-panchawate-portrait.png" alt="Akshay Panchawate" width="80" height="80" fetchPriority="high"/><div className="visual-profile-copy"><strong>Akshay Panchawate</strong><span className="visual-profile-role">Enterprise Technology Management</span><div className="visual-profile-focus"><span>PMO</span><span>Transformation</span><span>AI &amp; Automation</span></div></div></div>
+     <div className="visual-profile-card"><img src="/akshay-panchawate-portrait-v2.jpg" alt="Akshay Panchawate" width="80" height="80" fetchPriority="high"/><div className="visual-profile-copy"><strong>Akshay Panchawate</strong><span className="visual-profile-role">Enterprise Technology Management</span><div className="visual-profile-focus"><span>PMO</span><span>Transformation</span><span>AI &amp; Automation</span></div></div></div>
      <div className="visual-system-core" aria-hidden="true"><span/><span/><span/><i/></div>
     </aside>
    </section>
