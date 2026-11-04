@@ -11,8 +11,9 @@ export const navigationItems = [['Overview', 'top'], ['Selected Work', 'projects
 const menuItems = [...navigationItems.slice(0, 4), ['Resources', 'resources'] as const, ...navigationItems.slice(4)]
 const navigationGroup: Record<string, string> = { top: 'top', about: 'top', 'portfolio-guide': 'projects', 'explore-expertise': 'projects', 'operating-model': 'projects', projects: 'projects', 'scope-engineering': 'projects', rollouts: 'projects', expertise: 'projects', approach: 'projects', 'decision-centre': 'projects', experience: 'experience', stack: 'stack', education: 'stack', resources: 'resources', opportunities: 'contact', contact: 'contact' }
 
-export default function SiteNavigation({ open, onToggle, onClose, cv, presentation = 'unavailable' }: { open: boolean; onToggle: () => void; onClose: () => void; cv: AssetState; presentation?: AssetState }) {
+export default function SiteNavigation({ open, onToggle, onClose, cv, presentation = 'unavailable', context = 'portfolio' }: { open: boolean; onToggle: () => void; onClose: () => void; cv: AssetState; presentation?: AssetState; context?: 'portfolio' | 'beyond-work' }) {
   const [active, setActive] = useState('about')
+  const beyondWorkPage = context === 'beyond-work'
   useEffect(() => {
     let frame = 0
     const sections = [...document.querySelectorAll<HTMLElement>('main > section[id]')]
@@ -32,8 +33,8 @@ export default function SiteNavigation({ open, onToggle, onClose, cv, presentati
     </a>}</Localized>
   }
   return <Localized>{<header className="nav-wrap" onBlurCapture={event => { if (open && !event.currentTarget.contains(event.relatedTarget)) onClose() }} onKeyDown={event => { if (event.key === 'Escape' && open) { onClose(); document.getElementById('menu-toggle')?.focus() } }}>
-    <a className="brand" href="#top" aria-label="Akshay Panchawate — Home" onClick={event => { onClose(); handleSectionLink(event, 'top') }}><span>AP</span><i/></a>
-    <nav id="primary-nav" className={open ? 'nav open' : 'nav'} aria-label="Primary navigation">{menuItems.map(([label, id]) => <a className={id === 'resources' ? 'nav-mobile-only' : undefined} key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={event => { onClose(); handleSectionLink(event, id) }}>{label}</a>)}{presentationLink(true)}</nav>
+    <a className="brand" href={beyondWorkPage ? '/' : '#top'} aria-label="Akshay Panchawate — Home" onClick={event => { onClose(); if (!beyondWorkPage) handleSectionLink(event, 'top') }}><span>AP</span><i/></a>
+    <nav id="primary-nav" className={open ? 'nav open' : 'nav'} aria-label="Primary navigation">{beyondWorkPage ? <><a href="/">Portfolio</a><a href="/beyond-work" aria-current="page">Beyond Work</a><a href="/#contact">Contact</a></> : <>{menuItems.slice(0,4).map(([label, id]) => <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={event => { onClose(); handleSectionLink(event, id) }}>{label}</a>)}<a href="/beyond-work">Beyond Work</a>{menuItems.slice(4).map(([label, id]) => <a className={id === 'resources' ? 'nav-mobile-only' : undefined} key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} onClick={event => { onClose(); handleSectionLink(event, id) }}>{label}</a>)}</>}{presentationLink(true)}</nav>
     <ThemeSwitcher/>
     <LanguageSwitcher/>
     <div className="nav-document-actions">{presentationLink(false)}

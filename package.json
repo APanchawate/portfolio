@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.ts",
-    "build": "tsc -b && vite build --config vite.config.ts",
+    "build": "tsc -b && vite build --config vite.config.ts && cp dist/index.html dist/404.html",
     "preview": "vite preview --config vite.config.ts",
     "test": "node --test tests/*.test.mjs"
   },

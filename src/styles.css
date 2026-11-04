@@ -1203,6 +1203,41 @@ html[data-theme=executive] .chapter-orbit{opacity:.36}
 @media(max-width:600px){html[data-theme=aurora] .chapter-transition,html[data-theme=executive] .chapter-transition{width:auto;min-height:180px;margin:26px 16px;border-radius:15px}.chapter-copy{padding:34px 18px;transform:none;opacity:1}.chapter-copy>p{margin-bottom:15px}.chapter-copy h2{font-size:clamp(30px,10vw,42px);line-height:1}.chapter-copy>span{margin-top:17px;font-size:9px}.chapter-signals{opacity:.35}.chapter-orbit{width:150px;height:150px}}
 @media(prefers-reduced-motion:reduce){.chapter-transition.is-visible .chapter-copy,.chapter-signals i,.chapter-orbit span{animation:none}}
 
+/* Beyond Work: a warmer editorial page that remains part of the portfolio system. */
+.beyond-work-page main{padding-bottom:34px}
+.beyond-hero,.beyond-section,.beyond-gallery,.beyond-closing{width:calc(100% - 48px);max-width:var(--site-content);margin-inline:auto}
+.beyond-hero{min-height:calc(100svh - 76px);display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,.72fr);align-items:center;gap:clamp(48px,7vw,110px);padding-block:clamp(70px,9vw,128px)}
+.beyond-hero-copy h1{max-width:850px;margin:16px 0 26px;font-size:clamp(48px,5.7vw,86px);line-height:.98;letter-spacing:-.055em}
+.beyond-hero-copy h1 em,.beyond-section-heading h2 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),#80bdf2 55%,var(--violet));background-clip:text;color:transparent}
+.beyond-hero-copy>p:last-child{max-width:720px;color:var(--muted);font-size:clamp(16px,1.35vw,20px);line-height:1.8}
+.beyond-feature{position:relative;height:min(68svh,720px);min-height:480px;margin:0;overflow:hidden;border:1px solid #62e6f23d;border-radius:180px 180px 22px 22px;background:#111b2e;box-shadow:0 35px 90px #0005}
+.beyond-feature:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,#07101bd9)}
+.beyond-feature img,.beyond-gallery img{width:100%;height:100%;display:block;object-fit:cover}
+.beyond-feature img{object-position:center 24%}
+.beyond-feature figcaption{position:absolute;z-index:1;left:28px;right:28px;bottom:25px;color:#eff8ff;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.beyond-section{padding-block:clamp(82px,10vw,145px)}
+.beyond-section-heading{display:grid;grid-template-columns:.8fr 1fr;align-items:end;gap:40px;margin-bottom:46px}
+.beyond-section-heading h2{font-size:clamp(40px,5vw,72px);line-height:1.05;letter-spacing:-.045em;margin:12px 0 0}
+.interest-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.interest-grid article{min-height:270px;padding:30px 26px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#151e31,#101726);transition:transform .25s,border-color .25s}
+.interest-grid article:hover{transform:translateY(-5px);border-color:#62e6f266}
+.interest-grid svg{color:#ffbd65}.interest-grid h3{margin:44px 0 13px;font-size:21px}.interest-grid p{color:var(--muted);font-size:14px;line-height:1.8}
+.beyond-gallery{display:grid;grid-template-columns:1.08fr .92fr .92fr;grid-template-rows:410px 410px;gap:18px;padding-block:20px 90px}
+.beyond-gallery figure{position:relative;margin:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#111827}
+.beyond-gallery figure:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px #fff08;pointer-events:none}
+.beyond-gallery img{transition:transform .55s cubic-bezier(.2,.7,.2,1)}.beyond-gallery figure:hover img{transform:scale(1.035)}
+.gallery-football{grid-row:1/3}.gallery-football img{object-position:center 32%}.gallery-lakeside{grid-column:2/4}.gallery-lakeside img{object-position:center 47%}.gallery-ukulele img{object-position:center 30%}.gallery-exploring img{object-position:center 60%}.gallery-celebration{display:none}
+.learning-panel{position:relative;display:grid;grid-template-columns:.72fr 1fr;gap:70px;align-items:center;padding-inline:clamp(34px,5vw,76px);border:1px solid #62e6f23d;border-radius:20px;background:linear-gradient(135deg,#14233b,#121a2d 60%,#1d1830);overflow:hidden}
+.learning-panel h2{font-size:clamp(35px,4vw,58px);margin:12px 0}.learning-panel>p{color:#c6d0e3;font-size:17px;line-height:1.85}.learning-panel>span{position:absolute;right:34px;bottom:-30px;color:#62e6f20c;font-weight:800;font-size:190px;line-height:1}
+.beyond-values{display:grid;grid-template-columns:1.1fr .75fr;gap:clamp(50px,8vw,130px);align-items:center}.beyond-values h2{font-size:clamp(36px,4.3vw,62px);line-height:1.08;margin:14px 0 22px}.beyond-values>div>p:last-child{max-width:740px;color:var(--muted);font-size:17px;line-height:1.85}
+.beyond-values aside{padding:34px;border:1px solid var(--line);border-radius:15px;background:#131c2e}.beyond-values aside svg{color:var(--cyan)}.beyond-values aside h3{margin:24px 0 12px;font-size:21px}.beyond-values aside p{color:var(--muted);line-height:1.8}
+.beyond-closing{text-align:center;padding:80px 24px 110px;border-top:1px solid var(--line)}.beyond-closing>svg{color:#ffbd65}.beyond-closing>p{margin:22px auto 30px;color:var(--muted);font-size:20px;line-height:1.75}.beyond-closing strong{color:#edf4ff;font-size:clamp(25px,3vw,38px)}.beyond-closing>div{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+html[data-theme=aurora] .beyond-feature,html[data-theme=aurora] .learning-panel{border-color:#a995ff52;box-shadow:0 30px 90px #604cff1e}
+html[data-theme=aurora] .interest-grid article,html[data-theme=aurora] .beyond-values aside{background:linear-gradient(145deg,#141d32,#1c1731)}
+@media(max-width:1000px){.beyond-hero{grid-template-columns:1fr .72fr;gap:34px}.interest-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.beyond-gallery{grid-template-columns:1fr 1fr;grid-template-rows:430px 330px 330px}.gallery-football{grid-row:1/3}.gallery-lakeside{grid-column:2;grid-row:1}.gallery-ukulele{grid-column:2;grid-row:2}.gallery-exploring{grid-column:1;grid-row:3}.gallery-celebration{display:block;grid-column:2;grid-row:3}}
+@media(max-width:760px){.beyond-hero,.beyond-section,.beyond-gallery,.beyond-closing{width:auto;margin-inline:16px}.beyond-hero{min-height:auto;grid-template-columns:1fr;padding-block:64px}.beyond-hero-copy h1{font-size:clamp(42px,13vw,64px)}.beyond-feature{height:62svh;min-height:470px;border-radius:120px 120px 18px 18px}.beyond-section{padding-block:72px}.beyond-section-heading,.learning-panel,.beyond-values{grid-template-columns:1fr;gap:28px}.interest-grid{grid-template-columns:1fr}.interest-grid article{min-height:220px}.interest-grid h3{margin-top:32px}.beyond-gallery{grid-template-columns:1fr 1fr;grid-template-rows:360px 250px 250px;gap:10px;padding-bottom:60px}.gallery-football{grid-column:1/3;grid-row:1}.gallery-lakeside{grid-column:1;grid-row:2}.gallery-ukulele{grid-column:2;grid-row:2}.gallery-exploring{grid-column:1;grid-row:3}.gallery-celebration{grid-column:2;grid-row:3}.learning-panel{padding:45px 28px}.learning-panel>span{font-size:120px}.beyond-closing{padding-bottom:85px}.beyond-closing .button{width:100%}}
+@media(prefers-reduced-motion:reduce){.interest-grid article,.beyond-gallery img{transition:none}.interest-grid article:hover,.beyond-gallery figure:hover img{transform:none}}
+
 /* First-view invitation into the portfolio. */
 .scroll-cue{position:fixed;left:50%;bottom:22px;z-index:70;transform:translateX(-50%);display:inline-flex;align-items:center;gap:10px;margin:0;padding:9px 10px 9px 16px;border:1px solid #62e6f266;border-radius:999px;background:linear-gradient(110deg,#101a2bf2,#17243af2);backdrop-filter:blur(12px);color:#eef8ff;font:700 10px/1.4 Manrope;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 12px 34px #0007,0 0 22px #62e6f218}
 .scroll-cue[hidden]{display:none}
